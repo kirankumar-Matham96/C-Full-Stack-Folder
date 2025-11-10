@@ -17,6 +17,37 @@ namespace OOPs
             employeeDesignation = designation;
         }
 
+        public int GetEmpId()
+        {
+            return employeeId;
+        }
+
+        public string GetEmpName()
+        {
+            return employeeName;
+        }
+
+        public double GetEmpSalary()
+        {
+            return employeeSalary;
+        }
+
+        public void SetEmpId(int id)
+        {
+            employeeId = id;
+        }
+        
+        public void SetEmpName(string name)
+        {
+            employeeName = name;
+        }
+        
+        public void SetEmpSalary(double salary)
+        {
+            employeeSalary = salary;
+        }       
+
+
         public void EmpDetails(int id, string name, double salary)
         {
             Console.WriteLine($"ID: {id}\nName: {name}\nSalary: {salary}");

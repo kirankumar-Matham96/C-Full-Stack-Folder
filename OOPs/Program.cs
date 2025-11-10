@@ -97,14 +97,21 @@ namespace OOPs
             // Console.WriteLine("\n###################\n\n");
 
             // Console.WriteLine("Can donate blood question:\n###################\n");
-            Console.WriteLine("Please enter the employee id\n"); // integer
-            int empId = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please enter the employee name\n");
-            string empName = Console.ReadLine();
-            Console.WriteLine("Please enter the employee salary\n");
-            double empSalary = Convert.ToDouble(Console.ReadLine());
-            e.EmpDetails(empId, empName, empSalary);
+            // Console.WriteLine("\nPlease enter the employee id\n");
+            // int empId = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine("\nPlease enter the employee name\n");
+            // string empName = Console.ReadLine();
+            // Console.WriteLine("\nPlease enter the employee salary\n");
+            // double empSalary = Convert.ToDouble(Console.ReadLine());
+            // e.EmpDetails(empId, empName, empSalary);
             // Console.WriteLine("\n###################\n\n");
+
+            /* setters and getters */
+            // getting min age to donate blood
+            Console.WriteLine(p.GetMinAge());
+            // setting min age to donate blood
+            p.SetMinAge(21);
+            Console.WriteLine(p.GetMinAge());
         }
     }
 }

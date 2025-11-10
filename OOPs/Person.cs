@@ -43,6 +43,55 @@ namespace OOPs
                 Console.WriteLine($"Cannot donate blood: age must be more that or equal to {this.minAge}!");
             }
         }
+
+        public int GetMinAge()
+        {
+            return minAge;
+        }
+
+        public void SetMinAge(int age)
+        {
+            minAge = age;
+        }
+
+        public int GetMaleMaxWeight()
+        {
+            return maleMaxWeight;
+        }
+
+        public void SetMaleMaxWeight(int weight)
+        {
+            maleMaxWeight = weight;
+        }
+
+        public int GetMaleMinWeight()
+        {
+            return maleMinWeight;
+        }
+
+        public void SetMaleMinWeight(int weight)
+        {
+            maleMinWeight = weight;
+        }
+
+        public int GetFemaleMaxWeight()
+        {
+            return femaleMaxWeight;
+        }
+
+        public void SetFemaleMaxWeight(int weight)
+        {
+            femaleMaxWeight = weight;
+        }
         
+        public int GetFemaleMinWeight()
+        {
+            return femaleMinWeight;
+        }
+
+        public void SetFemaleMinWeight(int weight)
+        {
+            femaleMinWeight = weight;
+        }
     }
 }
