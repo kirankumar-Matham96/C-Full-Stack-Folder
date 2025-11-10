@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Tables</title>
+	</head>
+	<body>
+		<!-- Task:1 -->
+		<h1>Login Page....</h1>
+		
+		<form style="display: flex; flex-direction: column">
+			<label style="margin-bottom: 10px">
+				Username:<input type="text" placeholder="Enter User Name" name="username" id="username" required minlength="3" maxlength="20" />
+			</label>
+			<label style="margin-bottom: 10px">
+				Password:<input type="password" placeholder="Enter User Password" name="password" id="password" required  minlength="8" maxlength="16"/>
+			</label>
+			<button style="align-self: start">Login</button>
+		</form>
+		
+		<!-- Task:2 -->
+		<h1>Student Result Calculation</h1>
+		
+		<form style="display: flex; flex-direction: column">
+			<label style="margin-bottom: 10px">
+				Student ID:<input type="number" placeholder="1001" name="studentId" id="studentId" required disabled />
+			</label>
+			<label style="margin-bottom: 10px">
+				Student Name:<input type="text" placeholder="Enter Student Name" name="studentName" id="studentName" required />
+			</label>
+			<label style="margin-bottom: 10px">
+				Maths Marks:<input type="number" style="width: 170px;" placeholder="Enter Maths Marks" min="35" max="100" name="maths" id="maths" required />
+			</label>
+			<label style="margin-bottom: 10px">
+				Science Marks:<input type="number" style="width: 170px;" placeholder="Enter Science Marks" min="35" max="100" name="science" id="science" required />
+			</label>
+			<label style="margin-bottom: 10px">
+				Social Marks:<input type="number" style="width: 170px;" placeholder="Enter Social Marks" min="35" max="100" name="social" id="social" required />
+			</label>
+			<button style="align-self: start">Calculate the Result</button>
+		</form>
+		
+		<!-- Task:3 -->
+		<h1>Book Application</h1>
+		<form style="display: flex; flex-direction: column; background-color: lightgray; width:350px; padding: 1rem;">
+			<label style="margin-bottom: 10px">
+				Enter book ISBN:<input type="number" placeholder="Enter Book ISBN" name="bookisbn" id="bookisbn" value="1001" required disabled />
+			</label>
+			<label style="margin-bottom: 10px">
+				Enter book Name:<input type="text" placeholder="Enter Book Name" name="bookName" id="bookName" required />
+			</label>
+			<label style="margin-bottom: 10px">
+				Enter book Author:<input type="text" placeholder="Enter Book Author Name" name="bookAuthor" id="bookAuthor" value="Ratan Sir" required readonly />
+			</label>
+			<label style="margin-bottom: 10px">
+				Enter book price:<input type="number" placeholder="Enter Book Price" name="bookPrice" id="bookPrice" required />
+			</label>
+			<label style="margin-bottom: 10px">
+				Enter book Quantity:<input type="number" placeholder="Enter Book Quantity" min="2" max="5" name="bookQuantity" id="bookQuantity" required />
+			</label>
+			<button style="align-self: start">Submit</button>
+		</form>
+		
+	</body>
+</html>

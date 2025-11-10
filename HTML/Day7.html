@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Tables</title>
+	</head>
+	<body>
+		<!-- Task:1 -->
+		<h1>Registration Form....</h1>
+		<form style="display: flex; flex-direction: column; width: 70vw">
+			<fieldset style="display: flex; flex-direction: column;">
+				<legend>Personal Information...</legend>
+				
+				<label style="margin-bottom: 10px">Username*:
+					<input type="text" style="width: 200px" placeholder="Enter User Name" name="username" id="username" required />
+				</label>
+				<label style="margin-bottom: 10px">
+					Password*:<input type="password" placeholder="Enter User Password" name="password" id="password" required  minlength="8" maxlength="16"/>
+				</label>
+				<label style="margin-bottom: 10px">
+					Email:<input type="email" placeholder="Enter User Email" name="email" id="email" required />
+				<label style="margin-bottom: 10px;">
+					Mobile:<input type="number"  style="width: 170px" placeholder="Enter Mobile Number" name="mobile" id="mobile" required min="10" max="10" />
+				</label>
+				</label>
+				<label style="margin-bottom: 10px">
+					Gender:<input type="radio" name="gender" value="male" id="gender" required /><label>Male</label>
+					<input type="radio" name="gender" value="female" id="gender" required /><label>Female</label>
+				</label>
+				<label style="margin-bottom: 10px;">
+					DOB:<input type="date" name="dob" id="dob" required />
+				</label>
+			</fieldset>
+			
+			<fieldset style="display: flex; flex-direction: column;">
+				<legend>Astrology...</legend>
+				<label style="margin-bottom: 10px;">
+					Lucky Time: <input type="time" required />
+				</label>
+				<label style="margin-bottom: 10px;">
+					Choose Color: <input type="color" required />
+				</label>
+				<label style="margin-bottom: 10px;">
+					Select Range: <input type="range" required />
+				</label>
+			</fieldset>
+			
+			<fieldset style="display: flex; flex-direction: column;">
+				<legend>Personal Interests...</legend>
+				<label style="margin-bottom: 10px;">Your Hobbies:<br/>
+					<label><input type="checkbox" value="sleeping" required />Sleeping</label>
+					<label><input type="checkbox" value="chatting" required />Chatting</label>
+					<label><input type="checkbox" value="eating" required />Eating</label>
+					<label><input type="checkbox" value="roaming" required />Roaming</label>
+					<label><input type="checkbox" value="playing" required />Playing</label>
+				</label>
+				
+				<label style="margin-bottom: 10px;">Country:
+					<select placeholder="Select">
+						<option value="india" selected >Select</option>
+						<option value="india" >India</option>
+						<option value="sri lanka">Sri Lanka</option>
+						<option value="japan">Japan</option>
+						<option value="china">China</option>
+						<option value="usa">USA</option>
+						<option value="russia">Russia</option>
+						<option value="sweden">Sweden</option>
+					</select>
+				</label>
+				<label style="margin-bottom: 10px;">Course Selection:
+					<select placeholder="Select" multiple>
+						<option value="corejava" >Core Java</option>
+						<option value="advjava" >Adv Java</option>
+						<option value="spring">Spring</option>
+						<option value="springboot">Spring Boot</option>
+						<option value="dotnet">Dotnet</option>
+						<option value="aspdotnetcore">ASP Dotnet Core</option>
+						<option value="aspdotnetmvc">ASP Dotnet MVC</option>
+					</select>
+				</label>
+			</fieldset>
+			
+			<fieldset style="display: flex; flex-direction: column;">
+				<legend>Document Upload...</legend>
+				<label style="margin-bottom: 10px;">Upload Resume:
+					<input type="file" />
+				</label>
+				<label style="margin-bottom: 10px;">Upload Photo:
+					<input type="file" />
+				</label>
+			</fieldset>
+			
+			<fieldset style="display: flex; flex-direction: column;">
+				<legend>Your Comments...</legend>
+				<label style="margin-bottom: 10px;">Comments About Ratan Sir:
+					<textarea rows="6" cols="80"></textarea>
+				</label>
+			</fieldset>
+			<div style="margin-top: 10px;">
+				<button style="align-self: start">Reset</button>
+				<button style="align-self: start">Register</button>
+			</div>
+		</form>
+	</body>
+</html>

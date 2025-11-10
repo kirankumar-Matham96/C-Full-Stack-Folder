@@ -1,0 +1,14 @@
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\obj\Debug\net9.0\ArithmaticOperations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\obj\Debug\net9.0\ArithmaticOperations.AssemblyInfoInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\obj\Debug\net9.0\ArithmaticOperations.AssemblyInfo.cs
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\obj\Debug\net9.0\ArithmaticOperations.csproj.CoreCompileInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\bin\Debug\net9.0\ArithmaticOperations.exe
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\bin\Debug\net9.0\ArithmaticOperations.deps.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\bin\Debug\net9.0\ArithmaticOperations.runtimeconfig.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\bin\Debug\net9.0\ArithmaticOperations.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\bin\Debug\net9.0\ArithmaticOperations.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\obj\Debug\net9.0\ArithmaticOperations.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\obj\Debug\net9.0\refint\ArithmaticOperations.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\obj\Debug\net9.0\ArithmaticOperations.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\obj\Debug\net9.0\ArithmaticOperations.genruntimeconfig.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\ArithmaticOperations\obj\Debug\net9.0\ref\ArithmaticOperations.dll
