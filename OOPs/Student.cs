@@ -2,9 +2,10 @@ namespace OOPs
 {
     public class Student
     {
-        public int id;
-        public string name;
-        public double fees;
+        private int id;
+        private string name;
+        private static int maxAge = 21;
+        private double fees;
 
         public Student(int id, string name, double fees)
         {
@@ -41,6 +42,16 @@ namespace OOPs
         public void SetFees(double fees)
         {
             this.fees = fees;
+        }
+
+        public static int GetMaxAge()
+        {
+            return maxAge;
+        }
+
+        public static void SetMaxAge(int age)
+        {
+            maxAge = age;
         }
     }
 }

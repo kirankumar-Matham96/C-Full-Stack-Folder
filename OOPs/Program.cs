@@ -112,6 +112,8 @@ namespace OOPs
             // setting min age to donate blood
             p.SetMinAge(21);
             Console.WriteLine(p.GetMinAge());
+            // getting max age of student (static variable)
+            Console.WriteLine(Student.GetMaxAge());
         }
     }
 }
