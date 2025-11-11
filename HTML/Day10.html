@@ -1,11 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Scemantics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav>ul>li>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        section {
+            margin: 2rem 0 2rem 2rem;
+        }
+
+        aside {
+            margin-top: 2rem;
+        }
+        p>a {
+            color: white;
+        }
+        aside>ul>li>a{
+            font-size: 1.2rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+        aside>ul{
+             padding: 0.5rem 0 2rem 2rem;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div style="height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+
+            <header style="background-color: rgb(0, 100, 100); color: white">
+                <div style="padding: 1.5rem;">
+                    <h1 style="font-size: 4rem">Technology News Today</h1>
+                    <span style="font-size: 1.5rem">Your source for the latest technology</span>
+                </div>
+                <nav>
+                    <ul
+                        style="list-style-type: none; display: flex; justify-content: start;gap: 2rem;background-color: darkblue; padding: 1rem 0 1rem 1.5rem">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Core Java</a></li>
+                        <li><a href="#">Advanced Java</a></li>
+                        <li><a href="#">Spring</a></li>
+                        <li><a href="#">Spring Boot</a></li>
+                        <li><a href="#">Microservices</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main style="display: flex;justify-content: space-between; gap:1rem;">
+                <article style="margin-right: 1rem;">
+                    <section>
+                        <h2>Latest in Technology: New Trends & Updates</h2>
+                        <span>August 19, 2024 by Mr. Ratan Sir</span>
+                    </section>
+                    <section>
+                        <h2>Core Java</h2>
+                        <span>Explore the fundamentals of core Java, introducing it's syntax, core APIs, and best
+                            practices.</span>
+                    </section>
+                    <section>
+                        <h2>Spring Framework</h2>
+                        <span>Learn abuot the spring Framework, including dependency injection, AOP, and data
+                            access.</span>
+                    </section>
+                    <section>
+                        <h2>Spring Boot</h2>
+                        <span>Discover how to use Spring Boot to build stand-alone, production-grade Spring-based
+                            applications.</span>
+                    </section>
+                </article>
+                <aside style="padding: 2rem">
+                    <h3>Related Articles</h3>
+                    <ul>
+                        <li><a href="#">Understanding modules of Spring</a></li>
+                        <li><a href="#">Advanced Features in Java 11</a></li>
+                        <li><a href="#">Building Microservices with Spring Boot</a></li>
+                    </ul>
+                    <h3>Recent News</h3>
+                    <ul>
+                        <li><a href="#">Java 21 New Features</a></li>
+                        <li><a href="#">Spring Boot 3.0 release notes</a></li>
+                        <li><a href="#">Trends in Cloud Native Technologies</a></li>
+                    </ul>
+                </aside>
+            </main>
+        </div>
+        <footer style="background-color: black; color: white; padding: 1.5rem">
+            <p>&COPY; 2024 Technology News Today. All Rights Reserved.</p>
+            <br>
+            <p>Follow us on: <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+        </footer>
+    </div>
 </body>
+
 </html>
