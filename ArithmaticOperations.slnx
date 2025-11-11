@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="ArithmaticOperations/ArithmaticOperations.csproj" />
   <Project Path="OOPs/OOPs.csproj" />
+  <Project Path="SingleLevelInheritance/SingleLevelInheritance.csproj" />
 </Solution>
