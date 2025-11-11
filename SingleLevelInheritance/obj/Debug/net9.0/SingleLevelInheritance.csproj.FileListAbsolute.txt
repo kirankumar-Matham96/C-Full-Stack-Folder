@@ -1,0 +1,15 @@
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\bin\Debug\net9.0\SingleLevelInheritance.exe
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\bin\Debug\net9.0\SingleLevelInheritance.deps.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\bin\Debug\net9.0\SingleLevelInheritance.runtimeconfig.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\bin\Debug\net9.0\SingleLevelInheritance.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\bin\Debug\net9.0\SingleLevelInheritance.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\SingleLevelInheritance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\SingleLevelInheritance.AssemblyInfoInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\SingleLevelInheritance.AssemblyInfo.cs
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\SingleLevelInheritance.csproj.CoreCompileInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\SingleLevelInheritance.sourcelink.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\SingleLevelInheritance.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\refint\SingleLevelInheritance.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\SingleLevelInheritance.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\SingleLevelInheritance.genruntimeconfig.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\SingleLevelInheritance\obj\Debug\net9.0\ref\SingleLevelInheritance.dll
