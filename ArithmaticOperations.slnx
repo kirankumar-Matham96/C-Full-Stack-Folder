@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="ArithmaticOperations/ArithmaticOperations.csproj" />
+  <Project Path="BankingApp/BankingApp.csproj" />
   <Project Path="HierarchealInheritance/HierarchealInheritance.csproj" />
   <Project Path="MultiLevelInheritance/MultiLevelInheritance.csproj" />
   <Project Path="OOPs/OOPs.csproj" />
