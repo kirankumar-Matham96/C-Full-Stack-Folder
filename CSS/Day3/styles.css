@@ -279,7 +279,7 @@
   margin-bottom: 0.5rem;
   display: inline-block;
   width: 100%;
-  background-image: url("./price-tag.svg");
+  background-image: url("../images/price-tag.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
