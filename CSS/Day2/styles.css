@@ -1,0 +1,33 @@
+.main-container{
+    font-size: 2rem;;
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+h1{
+    text-align: center;
+    text-shadow: 2rem blue;    
+}
+
+.color-text{
+    color: blue;
+    background-color: lightgray;
+}
+
+.font-text{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-line{
+    text-indent: 2rem;;
+    text-decoration: underline;
+}
+
+#highlight{
+    background-color: yellow;
+    font-style: italic;
+    padding: 1rem;
+    border-radius: 1rem;
+}

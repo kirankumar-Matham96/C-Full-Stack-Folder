@@ -1,0 +1,309 @@
+/* Task: 1 */
+#first-box {
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: cadetblue;
+  padding: 1rem;
+  color: white;
+  width: 25vw;
+}
+
+#first-box > p {
+  padding: 0.5rem 1rem;
+}
+
+.para1 {
+  border: 4px solid orange;
+}
+
+.para2 {
+  border: 4px dashed blue;
+}
+
+.para3 {
+  border: 4px dotted red;
+}
+
+.para4 {
+  border: 4px double green;
+}
+
+.para5 {
+  border: 4px solid purple;
+  box-shadow: 5px 10px 10px purple;
+}
+
+.para6 {
+  border: 4px ridge brown;
+}
+
+.para7 {
+  border: 4px groove gray;
+}
+
+.para8 {
+  border: 4px inset pink;
+}
+
+.para9 {
+  border: 4px outset teal;
+}
+
+.para10 {
+  border: 4px hidden olive;
+}
+
+/* Task: 2 */
+#second-box {
+  width: 20vw;
+  height: 250px;
+  border: 1px solid gray;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 15px 5px gray;
+  padding: 2rem;
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img {
+  text-align: center;
+}
+
+.img > img {
+  width: 100%;
+}
+
+.description {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.tim-data {
+  font-size: 1rem;
+  color: dimgray;
+}
+
+.icons {
+  word-spacing: 1rem;
+}
+
+/* Task: 3 */
+#third-box {
+  width: 50vw;
+  padding: 1rem;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  text-align: center;
+  border-radius: 1rem;
+  width: 25%;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.signup-btn {
+  padding: 1rem 1.5rem;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Task: 4 */
+#fourth-box {
+  margin: 1rem 5rem;
+  background-color: aliceblue;
+  padding: 1rem;
+}
+
+#courses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.div {
+  width: 27%;
+  padding: 2rem;
+  border-radius: 1rem 0 1rem 0;
+  text-align: center;
+}
+
+#div1 {
+  color: azure;
+  font-style: italic;
+  background-color: cornflowerblue;
+}
+
+#div2 {
+  color: blue;
+  font-style: oblique;
+  text-decoration: dashed underline;
+
+  background-color: aquamarine;
+}
+
+#div3 {
+  color: yellow;
+  font-weight: bold;
+
+  background-color: coral;
+}
+
+#div4 {
+  color: blueviolet;
+  text-decoration: underline;
+  background-color: gold;
+}
+
+#div5 {
+  color: darkgreen;
+  font-weight: lighter;
+  background-color: plum;
+}
+
+#div6 {
+  color: lightyellow;
+  font-weight: bolder;
+  text-decoration: underline overline;
+  font-style: italic;
+  background-color: salmon;
+}
+
+#text1 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+#text2 {
+  font-family: "Lucida Handwriting", cursive;
+}
+
+#text3 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+#text4 {
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+#text5 {
+  font-family: "Georgia", serif;
+}
+
+#text6 {
+  font-family: "Verdana", sans-serif;
+}
+
+#importance {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: darkslateblue;
+  color: aliceblue;
+  box-shadow: 0 0 10px 5px yellow;
+  margin: 2rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.block-title {
+  text-align: center;
+  color: #faf2f2;
+}
+
+.importance-text {
+  text-indent: 2rem;
+  color: rgba(236, 212, 236, 0.89);
+}
+
+.highlighted-text {
+  font-weight: bold;
+  font-size: large;
+}
+
+#welcome-box {
+  background-color: lightskyblue;
+  padding: 2rem;
+}
+
+.welcome-text-container {
+  background-color: steelblue;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid darkblue;
+}
+
+.welcome-title {
+  color: darkblue;
+}
+
+.welcome-sub-title {
+  color: white;
+}
+
+.welcome-text {
+  color: azure;
+  margin-top: 1rem;
+}
+
+/* Task: 5 */
+#fifth-box {
+  margin: 10rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card-title-2 {
+  text-align: start;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  width: 100%;
+  background-image: url("./price-tag.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+
+#fifth-box .img {
+  height: 50%;
+}
+
+#fifth-box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.price {
+  font-style: italic;
+}
+
+.card-description {
+  text-align: start;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-align: baseline;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+}

@@ -1,0 +1,115 @@
+/* universal styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* to give padding for all the contents inside */
+.container {
+  padding: 2rem;
+}
+
+/* header styles */
+header {
+  background-color: green;
+  padding: 0.5rem 1rem 1.5rem;
+  border-radius: 22rem;
+  text-align: center;
+  color: white;
+}
+
+/* header text styles for the title */
+.h1 {
+  font-size: 3rem;
+}
+
+/* sub-title styles */
+.sub-title {
+  font-size: 1rem;
+}
+
+/* main content styles */
+.main {
+  border: 1px solid gray;
+  margin: 1rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+/* card item styles */
+.card {
+  border-radius: 1rem;
+  width: 15rem;
+  padding: 0.5rem 0;
+  box-shadow: 0px 2px 5px 2px lightgray;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* image container styles */
+.img {
+  height: 50%;
+}
+
+/* image styles */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* card text container styles */
+.card-text-container {
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+/* card title styles */
+.card-title {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.3rem 0;
+}
+
+/* card price styles */
+.card-price {
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin: 0.3rem 0;
+}
+
+/* card description styles */
+.card-description {
+  font-size: 0.8rem;
+  color: black;
+  font-weight: bold;
+}
+
+/* card button styles */
+.card-btn {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* card button hover styles */
+.card-btn:hover {
+  background-color: darkgreen;
+  transform: scale(2) translate(0, 5px);
+  transition: all 0.3s ease-in-out;
+}
