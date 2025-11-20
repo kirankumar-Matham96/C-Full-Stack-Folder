@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -85,11 +86,12 @@ main section {
 
 footer{
     text-align: center;
-    background-color: lightgreen;
+    background-color: #008000;
     padding: 1rem;
 }
 footer p{
     font-size: 0.8rem;
     font-weight: bold;
     margin: 0.2rem 0;
+    color: #fffd;
 }

@@ -1,0 +1,148 @@
+/* colors used in the page */
+:root {
+  --primary-color: #008000;
+  --secondary-color: #f0f0f0;
+  --footer-text-color: #fffd;
+}
+
+/* reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 1rem;
+}
+
+/* header styles */
+
+.head {
+  grid-column: col-start 1 / span 12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+}
+
+.logo-container {
+  width: 22%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 2.5rem;
+  margin-right: 0.5rem;
+  border-radius: 22rem;;
+}
+
+.logo-container h3{
+  font-size: 2rem;
+}
+
+.head-mid h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.head-mid ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.head-mid ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+/* To show the underline for the header nav links on hover */
+.head-mid ul li a:hover::after {
+  content: "";
+  position: absolute;
+  border-radius: 22rem;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--secondary-color);
+  display: block;
+  transition: width 0.3s ease-in-out;
+}
+
+.head-end {
+  width: 22%;
+}
+
+.head-end input {
+  width: 100%;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+/* side nav styles */
+
+.side-nav {
+  grid-column: col-start 1 / span 1;
+  grid-row: 2 / span 10;
+  align-self: stretch;
+  padding-left: 1rem;
+}
+.side-nav ul {
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-nav ul li {
+  width: 100%;
+}
+
+.side-nav ul li img {
+  width: 100%;
+}
+
+/* main content styles */
+
+.main-container {
+  grid-column: col-start 2 / span 11;
+  grid-row: 2 / span 10;
+  padding-right: 1rem;
+}
+.main-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* footer styles */
+
+.footer {
+  grid-column: col-start 1 / span 12;
+  text-align: center;
+  grid-row: 12;
+  background-color: var(--primary-color);
+  padding: 0.3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--footer-text-color);
+}
