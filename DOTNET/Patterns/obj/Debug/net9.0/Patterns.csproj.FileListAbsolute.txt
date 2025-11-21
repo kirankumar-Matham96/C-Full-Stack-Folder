@@ -1,0 +1,15 @@
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\Patterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\Patterns.AssemblyInfoInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\Patterns.AssemblyInfo.cs
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\Patterns.csproj.CoreCompileInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\Patterns.sourcelink.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\bin\Debug\net9.0\Patterns.exe
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\bin\Debug\net9.0\Patterns.deps.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\bin\Debug\net9.0\Patterns.runtimeconfig.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\bin\Debug\net9.0\Patterns.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\bin\Debug\net9.0\Patterns.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\Patterns.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\refint\Patterns.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\Patterns.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\Patterns.genruntimeconfig.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Patterns\obj\Debug\net9.0\ref\Patterns.dll
