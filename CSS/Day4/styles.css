@@ -59,6 +59,7 @@ header {
 .card {
   border-radius: 1rem;
   width: 15rem;
+  width: 20%;
   padding: 0.5rem 0;
   box-shadow: 0px 2px 5px 2px lightgray;
   overflow: hidden;
@@ -119,11 +120,11 @@ img {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 /* card button hover styles */
 .card-btn:hover {
   background-color: darkgreen;
   transform: scale(2) translate(0, 5px);
-  transition: all 0.3s ease-in-out;
 }

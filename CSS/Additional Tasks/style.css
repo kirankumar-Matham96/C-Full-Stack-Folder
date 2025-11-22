@@ -1,0 +1,279 @@
+:root {
+  --bg-color: #333;
+  --card-bg-color: #fff;
+  --text-color: #ddd;
+  --bg-border-color: rgb(108, 148, 146);
+  --card-border-primary-color: #1d1d1d;
+  --button-bg-color: #0466c8;
+  --button-text-color: #eee;
+  --border-color-1: #8338ec;
+  --border-color-2: #ff006e;
+  --border-color-3: #38b000;
+  --border-color-4: #00b4d8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6rem;
+  padding: 2rem 5rem;
+  background-color: var(--bg-color);
+}
+
+.card-wrapper {
+  width: 25%;
+  padding: 0.5rem;
+  background-color: var(--card-bg-color);
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid var(--bg-color);
+  box-shadow: 8px 8px 1rem -5px yellow;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  border-radius: 0.8rem;
+  background-color: var(--card-bg-color);
+  border-radius: 10px;
+}
+
+.card-image {
+  width: 90%;
+  height: 60%;
+}
+
+.card-title,
+.card-price,
+.card-btn {
+  margin: 0.5rem 0;
+}
+
+.card-title {
+  font-size: 2rem;
+}
+
+.card-price {
+  font-size: 1.5rem;
+}
+
+.card-btn {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--button-text-color);
+  background-color: var(--button-bg-color);
+}
+
+/* styles for animation */
+
+.card-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.5rem;
+  width: 0px;
+  background-color: var(--border-color-1);
+  border-radius: 10px;
+}
+
+.card-wrapper:hover::before {
+  animation: card-1-top-border-spin 2s linear 0s infinite alternate;
+}
+
+.card-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0.5rem;
+  width: 0px;
+  background-color: var(--border-color-2);
+  border-radius: 10px;
+}
+.card-wrapper:hover::after {
+  animation: card-1-bottom-border-spin 2s linear 0s infinite alternate;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0px;
+  width: 0.5rem;
+  background-color: var(--border-color-1);
+  border-radius: 10px;
+}
+
+.card:hover::before {
+  animation: card-1-right-border-spin 2s linear 0s infinite alternate;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 0.5rem;
+  background-color: var(--border-color-2);
+  border-radius: 10px;
+}
+
+.card:hover::after {
+  animation: card-1-left-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-wrapper-2:hover::before {
+  background-color: var(--border-color-1);
+  animation: card-2-top-border-spin 4s linear 0s infinite alternate;
+}
+
+#card-wrapper-2:hover::after {
+  background-color: var(--border-color-2);
+  animation: card-2-bottom-border-spin 4s linear 0s infinite alternate;
+}
+
+#card-2:hover::before {
+  background-color: var(--border-color-3);
+  animation: card-2-right-border-spin 4s linear 0s infinite alternate;
+}
+
+#card-2:hover::after {
+  background-color: var(--border-color-4);
+  animation: card-2-left-border-spin 4s linear 0s infinite alternate;
+}
+
+#card-wrapper-3:hover::before {
+  background-color: var(--border-color-1);
+  animation: card-3-top-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-wrapper-3:hover::after {
+  background-color: var(--border-color-1);
+  animation: card-3-bottom-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-3:hover::before {
+  background-color: var(--border-color-1);
+  animation: card-3-right-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-3:hover::after {
+  background-color: var(--border-color-1);
+  animation: card-3-left-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-wrapper-4:hover::before {
+  background-color: var(--border-color-1);
+  animation: card-4-top-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-wrapper-4:hover::after {
+  background-color: var(--border-color-2);
+  animation: card-4-bottom-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-4:hover::before {
+  background-color: var(--border-color-3);
+  animation: card-4-right-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-4:hover::after {
+  background-color: var(--border-color-4);
+  animation: card-4-left-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-wrapper-5:hover::before {
+  background-color: var(--border-color-1);
+  animation: card-5-top-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-wrapper-5:hover::after {
+  background-color: var(--border-color-2);
+  animation: card-5-bottom-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-5:hover::before {
+  background-color: var(--border-color-3);
+  animation: card-5-right-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-5:hover::after {
+  background-color: var(--border-color-4);
+  animation: card-5-left-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-wrapper-6:hover::before {
+  animation: card-6-top-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-wrapper-6:hover::after {
+  animation: card-6-bottom-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-6:hover::before {
+  animation: card-6-right-border-spin 2s linear 0s infinite alternate;
+}
+
+#card-6:hover::after {
+  animation: card-6-left-border-spin 2s linear 0s infinite alternate;
+}
+
+/* Flip effects */
+
+.flip-card {
+  width: 25%;
+  height: 100%;
+  padding: 0.5rem;
+  background-color: var(--card-bg-color);
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 5px 1rem -5px #fff;
+  transition: transform 2s ease;
+}
+
+.flip-card::before,
+.flip-card::after {
+  display: none;
+}
+
+#card-7:hover {
+  transform: rotateY(180deg);
+}
+
+#card-8:hover {
+  transform: rotateX(180deg);
+}
+
+#card-9:hover {
+  transform: rotateZ(180deg);
+}
+
+#card-9:hover {
+  transform: rotate3d(1, 1, 1, 360deg);
+}
+
+#card-10:hover {
+  transform: rotate3d(-1, -1, -1, 360deg);
+}
+
+#card-11:hover {
+  transform: rotate3d(0, 0, 1, 3turn);
+}
