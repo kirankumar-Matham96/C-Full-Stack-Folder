@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Placement Assignment</h1>
+      <form action="" method="POST">
+        <div class="form-top">
+          <h2>Company Registration Form</h2>
+          <div class="form-reg-section">
+            <div>
+              <label for="cname"> Company Name: </label>
+              <input
+                type="text"
+                name="cname"
+                value="Techno"
+                class="input top-input"
+                id="cname"
+                disabled
+              />
+            </div>
+            <div>
+              <label for="cnumber"> Company Registration No: </label>
+              <input
+                type="text"
+                name="cnumber"
+                value="A&D12343"
+                class="input top-input"
+                id="cnumber"
+                disabled
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-mid">
+          <h2>Company Address</h2>
+          <div class="c-address-container">
+            <ul class="add-header">
+              <li class="add-headding">Type</li>
+              <li class="add-headding">House No.</li>
+              <li class="add-headding">Street</li>
+              <li class="add-headding">Landmark</li>
+              <li class="add-headding">City</li>
+              <li class="add-headding">State</li>
+              <li class="add-headding">Country</li>
+              <li class="add-headding">Zip Code</li>
+              <li class="add-headding">Actions</li>
+            </ul>
+            <ul class="add-values">
+              <li class="add-value">
+                <button class="btn">Back off</button>
+              </li>
+              <li>
+                <button class="btn">12</button>
+              </li>
+
+              <li>
+                <button class="btn">Malgary</button>
+              </li>
+              <li>
+                <button class="btn">Rajwada</button>
+              </li>
+              <li>
+                <button class="btn">Indore</button>
+              </li>
+              <li>
+                <button class="btn">MP</button>
+              </li>
+              <li>
+                <button class="btn">India</button>
+              </li>
+              <li>
+                <button class="btn">452001</button>
+              </li>
+              <li>
+                <button class="btn confirm-address-btn">Confirm Address</button>
+              </li>
+            </ul>
+          </div>
+          <button class="btn another-address-btn">Add Another Address</button>
+        </div>
+
+        <div class="hr-container">
+          <h2 id="hr-details-h2">HR Details</h2>
+          <div class="hr-details">
+            <div>
+              <label for="fname"> First Name </label>
+              <input type="text" class="input hr-input" id="fname" name="fname" />
+            </div>
+            <div>
+              <label for="mname"> Middle Name </label>
+              <input type="text" class="input hr-input" id="mname" name="mname" />
+            </div>
+            <div>
+              <label for="lname"> Last Name </label>
+              <input type="text" class="input hr-input" id="lname" name="lname" />
+            </div>
+            <div>
+              <label for="uname"> User Name </label>
+              <input type="text" class="input hr-input" id="uname" name="uname" />
+            </div>
+            <div>
+              <label for="gender"> Gender </label>
+              <select name="gender" id="gender" class="input hr-input">
+                <option disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+            <div>
+              <label for="dob">Date of Birth</label>
+              <input type="date" name="dob" id="dob" class="input" />
+            </div>
+            <div class="email-input-containetr">
+              <label for="email">Email</label>
+              <div>
+                <input type="email" name="email" id="email" class="input" />
+                <button type="reset" class="btn remove-btn">Remove</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn another-email-btn">Add Another Email</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
