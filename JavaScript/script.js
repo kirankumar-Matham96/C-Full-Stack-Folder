@@ -56,4 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     container.innerHTML = container.innerHTML + newCard;
   });
+
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      alert(card.querySelector(".card-title").textContent);
+    });
+  });
 });

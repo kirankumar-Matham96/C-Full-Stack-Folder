@@ -1,5 +1,5 @@
 :root {
-    --bg-color: gray;
+  --bg-color: gray;
   --card-bg-color: white;
   --text-color: black;
 }
@@ -28,8 +28,11 @@
   padding: 1rem;
   color: var(--text-color);
   text-align: center;
+  border: 1px solid gray;
   border-radius: 0.8rem;
   background-color: var(--card-bg-color);
+  box-shadow: 2px 2px 8px 2px #d1d1d1;
+  cursor: pointer;
 }
 
 .card-image {
