@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      .bg {
+        min-height: 100vh;
+        background-color: #3d3d3d;
+      }
+      /* .pagination{
+        border: 1px solid red;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid p-3 bg">
+      <section class="text">
+        <!-- text -->
+        <h1 class="fw-3 text-warning text-center py-4">
+          Wlcome to Bootstrap Framework
+        </h1>
+        <p class="fst-italic text-warning">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+          dignissimos necessitatibus suscipit neque quo odit? Quibusdam
+          provident sunt blanditiis. Consequuntur cumque aliquam sed minus
+          dignissimos tempore ipsa optio veniam consectetur.
+        </p>
+        <p class="text-dark bg-info px-1 fw-bolder">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+          dignissimos necessitatibus suscipit neque quo odit? Quibusdam
+          provident sunt blanditiis. Consequuntur cumque aliquam sed minus
+          dignissimos tempore ipsa optio veniam consectetur.
+        </p>
+
+        <!-- solid buttons -->
+        <div class="btn-goup">
+          <button class="btn px-5 py-2 mx-2 my-3 btn-primary">1</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-secondary">2</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-info">3</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-danger">4</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-warning">5</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-light">6</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-dark">7</button>
+        </div>
+
+        <!-- outline buttons -->
+        <div class="btn-goup">
+          <button class="btn px-5 py-2 mx-2 my-3 btn-outline-primary">1</button>
+          <button
+            class="btn px-5 py-2 mx-2 my-3 btn-outline-secondary text-white"
+          >
+            2
+          </button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-outline-info">3</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-outline-danger">4</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-outline-warning">5</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-outline-light">6</button>
+          <button class="btn px-5 py-2 mx-2 my-3 btn-outline-dark">7</button>
+        </div>
+      </section>
+
+      <section class="mt-4">
+        <table
+          class="table table-bordered table-lg w-75 mx-auto text-center table-striped"
+        >
+          <caption class="text-light">
+            Employee Info Table
+          </caption>
+          <thead>
+            <tr class="table-dark">
+              <th>Id</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Salary</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>101</td>
+              <td>Harsha</td>
+              <td>26</td>
+              <td>Male</td>
+              <td>45000</td>
+              <td>Junior Developer</td>
+            </tr>
+            <tr>
+              <td>102</td>
+              <td>Varsha</td>
+              <td>24</td>
+              <td>Female</td>
+              <td>45000</td>
+              <td>Junior Developer</td>
+            </tr>
+            <tr>
+              <td>103</td>
+              <td>Vishnu</td>
+              <td>30</td>
+              <td>Male</td>
+              <td>70000</td>
+              <td>Senior Developer</td>
+            </tr>
+            <tr>
+              <td>104</td>
+              <td>Nandini</td>
+              <td>32</td>
+              <td>Female</td>
+              <td>100000</td>
+              <td>Team Lead</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- carousel -->
+      <div id="carouselExample" class="carousel slide w-75 mx-auto mt-5 pb-5">
+        <div class="carousel-inner inner">
+          <div
+            class="carousel-item w-100 border border-primary border-2 item"
+            id="c-item1"
+          >
+            <img src="../images/bg2.jpg" class="d-block w-100" alt="bg1" />
+          </div>
+          <div
+            class="carousel-item active w-100 border border-primary border-2 item"
+            id="c-item2"
+          >
+            <img src="../images/bg2.jpg" class="d-block w-100" alt="bg2" />
+          </div>
+          <div
+            class="carousel-item w-100 border border-primary border-2 item"
+            id="c-item3"
+          >
+            <img src="../images/bg2.jpg" class="d-block w-100" alt="bg3" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="btn-group pagination mx-auto my-4">
+        <button class="btn btn-primary w-50 mx-2">Prev</button>
+        <button class="btn btn-primary w-25 mx-2">1</button>
+        <button class="btn btn-primary w-25 mx-2">2</button>
+        <button class="btn btn-primary w-25 mx-2">3</button>
+        <button class="btn btn-primary w-50 mx-2">Next</button>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

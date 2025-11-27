@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      .nav {
+        padding-top: 1rem;
+      }
+      .main-container {
+        min-height: 80vh;
+        height: 93vh;
+      }
+      .carousel-outer {
+        height: 100%;
+        overflow: hidden;
+      }
+      .logo-img{
+        width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-container">
+      <header>
+      <nav
+        class="navbar bg-dark navbar-expand-lg bg-body-tertiary pb-3 px-5 nav"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid d-flex justify-content-between">
+          <a class="navbar-brand" href="./index.html">
+            <img src="../images/organic-logo.jpg" alt="logo" class="rounded-circle pe-2 logo-img">
+            Organics</a>
+          <div id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./AboutUs.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./ContactUs.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+      <main class="main-container">
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide carousel-outer"
+          data-bs-ride="carousel"
+          data-bd-duration="1500"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../images/bg3.jpg"
+                class="d-block w-100"
+                alt="carousel-1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/bg3.jpg"
+                class="d-block w-100"
+                alt="carousel-2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/bg3.jpg"
+                class="d-block w-100"
+                alt="carousel-3"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

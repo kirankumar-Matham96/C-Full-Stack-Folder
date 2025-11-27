@@ -39,6 +39,21 @@
             triangles.PrintTriangleSequence5(n);
             triangles.PrintTriangleSequence6(n);
             triangles.PrintTriangleSequence7(n);
+            triangles.PrintTriangleSequence8(n);
+            triangles.PrintTriangleSequence9(n);
+            triangles.PrintTriangleSequence10(n);
+            triangles.PrintTriangleSequence11(n);
+            triangles.PrintTriangleSequence12(n);
+            triangles.PrintTriangleSequence13(n);
+            triangles.PrintTriangleSequence14(n);
+            triangles.PrintTriangleSequence15(n);
+            triangles.PrintTriangleSequence16(n);
+            triangles.PrintTriangleSequence17(n);
+            triangles.PrintTriangleSequence18(n);
+            triangles.PrintTriangleSequence19(n);
+            triangles.PrintTriangleSequence20(n);
+            triangles.PrintTriangleShape1(n);
+            triangles.PrintTriangleShape2(n);
         }
     }
 }
