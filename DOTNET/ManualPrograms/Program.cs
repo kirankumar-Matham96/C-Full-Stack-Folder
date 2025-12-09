@@ -9,10 +9,10 @@ namespace ManualProgramms
             Console.WriteLine("\nThis project executes all programms given in the Manual\n");
 
             // Basic Arithmatics
-            ArithmaticPrograms.RunTests();
+            // ArithmaticPrograms.RunTests();
 
             // Relational operators
-            // RelationalOperators.RunTests();
+            RelationalOperators.RunTests();
 
             // Logical Operators
             // LogicalOperators.RunTests();
