@@ -12,10 +12,10 @@ namespace ManualProgramms
             // ArithmaticPrograms.RunTests();
 
             // Relational operators
-            RelationalOperators.RunTests();
+            // RelationalOperators.RunTests();
 
             // Logical Operators
-            // LogicalOperators.RunTests();
+            LogicalOperators.RunTests();
 
             // Scanner clause
             // ConsoleReadLine.RunTests();

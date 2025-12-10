@@ -231,7 +231,7 @@ namespace ManualProgramms
                         // IsEligibleForLoan();
                         // IsEligibleForDiscount();
                         // CanReturnTheItem();
-                        IsEligibleToBuyAlcohol();
+                        // IsEligibleToBuyAlcohol();
                 }
 
         }
