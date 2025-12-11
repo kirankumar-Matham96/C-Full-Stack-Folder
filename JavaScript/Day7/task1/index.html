@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D7 Task-1</title>
+  </head>
+  <body>
+    <label for="age">
+      Enter your age: <input type="number" id="age" class="input" />
+    </label>
+    <button type="button" id="btn" class="btn">Check Eligibility</button>
+    <script>
+      const ageEl = document.getElementById("age");
+      const btnEl = document.getElementById("btn");
+
+      btnEl.addEventListener("click", () => {
+        if (ageEl.value >= 18) {
+          alert("You are eligible for voting");
+        } else {
+          alert("You are not aligible for voting");
+        }
+      });
+    </script>
+  </body>
+</html>

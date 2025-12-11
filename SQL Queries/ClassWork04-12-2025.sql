@@ -1,6 +1,6 @@
-CREATE DATABASE EMPLOYEE;
+CREATE DATABASE ECom;
 
-USE EMPLOYEE;
+USE ECom;
 
 
 /* creating orders table */
@@ -79,7 +79,10 @@ INSERT INTO Users VALUES
 
 SELECT * FROM Users;
 
-/* Checking user is invalid */
+/* Checking user is invalid (DB side) */
 SELECT * FROM Users WHERE Uname IS NULL OR pwd IS NULL;
 SELECT * FROM Users WHERE UName NOT LIKE '_%_' OR pwd NOT LIKE '_%_';
 SELECT * FROM Users WHERE (Uname IS NULL OR pwd IS NULL) OR (UName NOT LIKE '_%_' OR pwd NOT LIKE '_%_')
+
+/* Checking user is invalid (Server side) */
+SELECT * FROM Users WHERE Uname = '<user_given_username>' AND pwd = '<user_given_password>'; /* cannot run it here */

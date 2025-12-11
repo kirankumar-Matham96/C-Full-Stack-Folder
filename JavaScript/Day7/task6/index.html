@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day7 JS</title>
+  </head>
+  <body>
+    <form>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="input"
+        value=""
+        placeholder="Enter your name"
+        autocomplete="off"
+        oninput="takeName(value)"
+      />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="input"
+        value=""
+        placeholder="Enter your email"
+        autocomplete="off"
+        oninput="takeEmail(value)"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="input"
+        placeholder="Enter your password"
+        autocomplete="off"
+        value=""
+        oninput="takePass(value)"
+      />
+      <input
+        type="tel"
+        name="mobile"
+        id="mobile"
+        class="input"
+        placeholder="Enter your mobile number"
+        autocomplete="off"
+        value=""
+        oninput="takeMobile(value)"
+      />
+      <button type="button" class="btn" id="btn" onclick="printData()">
+        Submit
+      </button>
+    </form>
+    <script>
+      /**
+       * Need to revise and use alternative methods for DOM operations
+       */
+
+      const formData = {
+        name: "",
+        email: "",
+        password: "",
+        mobile: "",
+      };
+
+      const takeName = (e) => {
+        formData.name = e;
+      };
+
+      const takeEmail = (e) => {
+        formData.email = e;
+      };
+
+      const takePass = (e) => {
+        formData.password = e;
+      };
+
+      const takeMobile = (e) => {
+        formData.mobile = e;
+      };
+
+      const printData = () => {
+        console.log(formData);
+      };
+    </script>
+  </body>
+</html>

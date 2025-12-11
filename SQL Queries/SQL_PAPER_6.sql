@@ -1,9 +1,13 @@
+/* Creating database */
 CREATE DATABASE BANK;
 
-USE BANK
+/* Using database */
+USE BANK;
 
+/* To drop table */
 /* DROP TABLE Transactions; */
 
+/* Creating table */
 CREATE TABLE Transactions(
 	TransactionId INT PRIMARY KEY NOT NULL,
 	AccountNo BIGINT NOT NULL,
@@ -12,6 +16,7 @@ CREATE TABLE Transactions(
 	TrnsactionDate DATE NULL
 );
 
+/* Inserting data */
 INSERT INTO Transactions VALUES 
 (1001, 9856745892, 'Deposite', 5000.00, '2024-02-15'),
 (1002, 5894567859, 'Withdraw', 2000.00, '2024-02-18'),
@@ -39,6 +44,7 @@ INSERT INTO Transactions(TransactionId, AccountNo, Amount) VALUES (1006, 7845986
 /* Deleting 1004 record */
 DELETE FROM Transactions WHERE TransactionId = 1004;
 
+/* Creating table */
 CREATE TABLE Employee(
 	Eid INT PRIMARY KEY NOT NULL,
 	Ename VARCHAR(255) NOT NULL,
@@ -48,25 +54,35 @@ CREATE TABLE Employee(
 	Dno INT NOT NULL
 );
 
+/* Inserting data*/
 INSERT INTO Employee(Eid, Ename, Gender, Salary, Dno) VALUES
 (101, 'Nivitha', 'F', 47000.0, 10),
 (102, 'Sanjay', 'M', 56000.0, 20),
 (103, 'Hyshika', 'F', 34000.0, 10);
 
+/* updating data */
 UPDATE Employee SET AnnualSal = Salary * 12;
 
+/* Displaying data */
 SELECT * FROM Employee;
 
+/* Displaying requested data */
 SELECT Eid, AnnualSal, AnnualSal*15/100 AS HikeAmount FROM Employee;
 
+/* Displaying requested data */
 SELECT * FROM Employee WHERE Salary < 50000.0;
 
+/* Displaying requested data */
 SELECT * FROM Employee WHERE Dno != 20;
 
+/* Displaying requested data */
 SELECT * FROM Employee WHERE Gender = 'F';
 
+/* Updating data */
 UPDATE Employee SET Salary = 60000.0 WHERE Eid = 102;
 
+/* Displaying requested data */
 SELECT * FROM Employee WHERE Gender = 'M';
 
+/* Displaying requested data */
 SELECT * FROM Employee WHERE Dno = 20;

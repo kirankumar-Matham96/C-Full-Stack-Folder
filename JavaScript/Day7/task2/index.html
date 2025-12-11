@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D7 task-2</title>
+  </head>
+  <body>
+    <h1>Find the Bigger Number</h1>
+    <label for="num1"
+      >First Number: <input type="number" name="num1" id="num1" class="input"
+    /></label>
+    <label for="num2"
+      >Second Number: <input type="number" name="num2" id="num2" class="input"
+    /></label>
+    <button class="btn">Check</button>
+    <script>
+      const btnEl = document.querySelector(".btn");
+      btnEl.addEventListener("click", () => {
+        const num1El = document.querySelector("#num1");
+        const num2El = document.querySelector("#num2");
+
+        const num1 = parseInt(num1El.value);
+        const num2 = parseInt(num2El.value);
+
+        if (num1 > num2) {
+          alert(`${num1} is the biggest number`);
+        } else if (num1 == num2) {
+          alert(`Both First and Second numbers are equal`);
+        } else {
+          alert(`${num2} is the biggest number`);
+        }
+      });
+    </script>
+  </body>
+</html>

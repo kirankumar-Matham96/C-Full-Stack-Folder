@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D7 Task-4</title>
+  </head>
+  <body>
+    <h1>Check Your Age Group</h1>
+    <label
+      >Enter your age:
+      <input type="number" name="age" id="age" class="input" />
+    </label>
+    <button id="btn">Check Age Group</button>
+
+    <p>If the age is between 0 and 12, it displays: "You are a child"</p>
+    <p>If the age is between 13 and 19, it displays: "You are a teenager"</p>
+    <p>If the age is between 20 and 59, it displays: "You are an adult"</p>
+    <p>If the age is 60 or above, it displays: "You are a senior citizen"</p>
+
+    <script>
+      const btnEl = document.getElementById("btn");
+
+      let message;
+
+      btnEl.addEventListener("click", () => {
+        const age = parseInt(document.getElementById("age").value);
+        switch (true) {
+          case age >= 0 && age <= 12:
+            message = "You are a child";
+            break;
+          case age >= 13 && age <= 19:
+            message = "You are a teenager";
+            break;
+          case age >= 20 && age <= 59:
+            message = "You are an adult";
+            break;
+          case age >= 60:
+            message = "You are a senior citizen";
+        }
+        alert(message);
+      });
+    </script>
+  </body>
+</html>

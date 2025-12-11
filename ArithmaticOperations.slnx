@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/DOTNET/">
     <Project Path="DOTNET/ClassWork/ClassWork.csproj" />
+    <Project Path="DOTNET/ManualPrograms/ManualPrograms.csproj" />
   </Folder>
   <Project Path="ArithmaticOperations/ArithmaticOperations.csproj" />
   <Project Path="BankingApp/BankingApp.csproj" />
