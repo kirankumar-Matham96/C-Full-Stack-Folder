@@ -304,7 +304,7 @@
         }
 
         // 29. Consider Biryani cost is 395.25, Read quantity from user then find Total Bill Amount
-        public static void CalculateBiraniBill()
+        public static void CalculateBiryaniBill()
         {
             double biryaniCost = 395.25;
             Console.Write($"Biryani price: {biryaniCost}\nEnter the quantity: ");
@@ -554,7 +554,7 @@
             ClassWork.TakeIPAndPrint();
 
             System.Console.WriteLine("\n\n===================== Q29 ====================");
-            ClassWork.CalculateBiraniBill();
+            ClassWork.CalculateBiryaniBill();
 
             System.Console.WriteLine("\n\n===================== Q30 ====================");
             ClassWork.INRToUSD();
