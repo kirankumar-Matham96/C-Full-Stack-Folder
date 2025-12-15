@@ -89,10 +89,20 @@ SELECT c.custId, c.custName, i.itemId, i.itemName FROM Customers c INNER JOIN Or
 SELECT * FROM Products p LEFT JOIN Items i ON p.pid = i.pid;
 
 /* Query to display total items present in each Products in Products table */
+SELECT p.pname, COUNT(*) AS 'Total Items' FROM Products p INNER JOIN Items i ON p.pid = i.pid GROUP BY p.pid, p.pname;
+
 /* Query to display Customer info whose phno is 5462135895 */
+SELECT * FROM Customers WHERE phno = 5462135895;
+
 /* Query to display all Customers who are born in 1992 */
+SELECT * FROM Customers WHERE YEAR(dob) = 1992;
+
 /* Query to display Orders placed by Vishnu */
+SELECT i.*, c.custName FROM Customers c INNER JOIN Orders o ON c.custId = o.custId INNER JOIN Items i ON i.itemId = o.itemId WHERE c.custName = 'Vishnu';
+
 /* Query to display total bill amount of Vishnu */
+
+
 /* Query to display orderid, custId, custName, cot of all orders */
 /* Query to display all kebabs info */
 /* Query to update the cost of item with id 'I2' */

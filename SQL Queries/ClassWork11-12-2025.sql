@@ -1,3 +1,7 @@
+/*
+	INTERVIEW QUESTIONS
+*/
+
 /* Creating database */
 CREATE DATABASE CLASSWORK_SQL_11_12_2025;
 
@@ -74,26 +78,34 @@ SELECT MIN(AmountPaid) AS 'Minimum Payment' , MAX(AmountPaid) AS 'Maximum Paymen
 SELECT s.Name, SUM(p.AmountPaid) AS 'Total Amount Paid' FROM Students s LEFT JOIN Payments p ON s.StudentID = p.StudentID GROUP BY p.StudentID, s.Name HAVING SUM(p.AmountPaid) < 10000;
 
 /* 9. Count how many payments each student made */
-
+SELECT s.Name, COUNT(p.StudentID) AS 'Number of Payments by each student' FROM Students s LEFT JOIN Payments p ON s.StudentID = p.StudentID GROUP BY p.StudentID, s.Name;
 
 /* 10. Show courses that have more than 2 students */
+SELECT c.Course FROM Students s INNER JOIN Students c ON s.Course = c.Course GROUP BY c.Course HAVING COUNT(c.Course) > 2;
 
 /* 11. Show student's name, course, amount paid, and payment date */
+SELECT s.Name, s.Course, p.AmountPaid, p.PaymentDate FROM Students s INNER JOIN Payments p ON s.StudentID = p.StudentID;
 
 /* 12. List students who have not made any payments */
+/* SELECT * FROM Students s LEFT JOIN Payments p ON s.StudentID = p.StudentID WHERE p.StudentID LIKE NULL; */
 
 /* 13. Show students along with total fee and total paid amount */
+SELECT s.Name, s.Fee, SUM(p.AmountPaid) AS 'Total Amount Paid' FROM Students s LEFT JOIN Payments p ON s.StudentID = p.StudentID GROUP BY s.Name, s.Fee;
 
 /* 14. Show balance amount for each student. (Note: Balance = Fee - TotalAmountPaid) */
+/* SELECT s.Name, s.Fee - SUM(p.AmountPaid) AS 'Balance amount' FROM Students s LEFT JOIN Payments p ON s.StudentID = p.StudentID GROUP BY S.Name, P.StudentID, s.Fee; */
 
 /* 15. Show the highest paying student */
+SELECT TOP 1 s.Name, SUM(p.AmountPaid) AS 'Total Amount Paid' FROM Students s INNER JOIN Payments p ON s.StudentID = p.StudentID GROUP BY p.StudentID, s.Name ORDER BY SUM(p.AmountPaid) DESC;
 
 /* 16. Show the latest payment done (name + date + amount) */
+SELECT TOP 1 s.Name, p.PaymentDate, p.AmountPaid FROM Payments p INNER JOIN Students s ON p.StudentID = s.StudentID ORDER BY PaymentDate DESC;
 
 /* 17. Show students who completed 80% of their fee */
+SELECT s.Name, s.Fee, SUM(p.AmountPaid) AS 'Paid' FROM Students s INNER JOIN Payments p ON s.StudentID = p.StudentID GROUP BY P.StudentID, s.Name, s.Fee HAVING SUM(p.AmountPaid) > s.Fee * 10/100;
 
 /* 18. Show the course wise total collected fee */
-
+SELECT s.Course, SUM(p.AmountPaid) AS 'Total Amount Paid' FROM Students s INNER JOIN Payments p ON s.StudentID = p.StudentID GROUP BY s.Course;
 
 /* ======== MOCK INTERVIEW QUESTIONS ======== */
 

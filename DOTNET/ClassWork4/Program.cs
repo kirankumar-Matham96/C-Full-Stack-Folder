@@ -280,8 +280,10 @@
       string item = "";
 
       Console.WriteLine($"1.Iddli --- {iddliCost}\n2.Dosa --- {dosaCost}\n3.Vada --- {vadaCost}\n4.Puri --- {puriCost}");
+      
       Console.Write("\nEnter your choice: ");
       int choice = Convert.ToInt32(Console.ReadLine());
+      
       if (choice == 1) { item = "Iddli"; cost = iddliCost; }
       else if (choice == 2) { item = "Dosa"; cost = dosaCost; }
       else if (choice == 3) { item = "Vada"; cost = vadaCost; }
@@ -315,6 +317,66 @@
       Console.WriteLine($"Balance is: {paidAmt - finalBill}");
     }
 
+    /* 11. Home loan application processor */
+    public static void HomeLoanProcessor()
+    {
+      Console.Write("Enter your annual salary: ");
+      double annualSal = Convert.ToDouble(Console.ReadLine());
+      double monthlySal = annualSal / 12;
+      if (monthlySal >= 25000.0)
+      {
+        Console.Write("Enter your CBIL score: ");
+        int cbil = Convert.ToInt32(Console.ReadLine());
+        if (cbil >= 750)
+        {
+          Console.WriteLine("1.Home Loan -- 15.6%\n2.Car Loan -- 12.8%\n3.Personal Loan -- 18.9%");
+          Console.Write("Enter your choice: ");
+          int choice = Convert.ToInt32(Console.ReadLine());
+          double roi = 0;
+
+          switch (choice)
+          {
+            case 1:
+              roi = 15.6;
+              break;
+            case 2:
+              roi = 12.8;
+              break;
+            case 3:
+              roi = 18.9;
+              break;
+            default:
+              roi = 0;
+              System.Console.WriteLine("Invalid choice!");
+              return;
+          }
+          Console.WriteLine($"Rate of Interest is: {roi}%");
+          Console.Write("Enter Amount: ");
+          double amt = Convert.ToDouble(Console.ReadLine());
+
+          Console.Write("Enter Duration in Years: ");
+          int duration = Convert.ToInt32(Console.ReadLine());
+
+          double interestAmt = (amt * duration * roi) / 100;
+          Console.WriteLine($"Interest Amount: {interestAmt}");
+          double finalAmt = amt + interestAmt;
+
+          Console.WriteLine($"Final Amount: {finalAmt}");
+          double emiAmt = finalAmt / (duration * 12);
+          Console.WriteLine($"EMI Amount: {emiAmt}");
+        }
+        else
+        {
+          Console.WriteLine("Sorry! Your CBIL score is very low. Your application is rejected!");
+        }
+      }
+      else
+      {
+        Console.WriteLine("Sorry! You are not eligible for this loan.");
+      }
+
+    }
+
     public static void Main(string[] args)
     {
       Console.WriteLine("\n********************\nClass Work 12-12-2025\n********************\n");
@@ -329,6 +391,7 @@
       // IsEligibleForLoan();
       // IsEligibleForDrivingLicence();
       ManaHotel();
+      // HomeLoanProcessor();
     }
   }
 }
