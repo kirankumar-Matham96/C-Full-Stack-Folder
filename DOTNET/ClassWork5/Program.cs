@@ -400,6 +400,29 @@
     }
   }
 
+  /* w.a.p to read a value, then print factorial */
+  public static void PrintFactorial()
+  {
+    Console.Write("Enter a number: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int fact = 1;    
+
+    for (int i = 1; i <= n; i++)
+    {
+	fact *= i;
+    }
+      Console.Write($"Factorial: {facti}");
+  }
+
+  /* w.a.p to read a number and print multiplication table of that number */
+  public static void MultiplicationTable(){
+    Console.Write("Enter a number: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    for(int i = 1; i <= 10; i++)
+    {
+      Console.WriteLine($"{n} * {i} = {n*i}");
+    }
+  }
 
 
   public static void Main(string[] args)
@@ -414,6 +437,7 @@
     // PrintProductOfNNumbers();
     // Print5DivisiblesOfNNumbers();
     // PrintNOddEvenNumbers();
-    PrintNumbers();
+    // PrintNumbers();
+    PrintFactorial();
   }
 }
