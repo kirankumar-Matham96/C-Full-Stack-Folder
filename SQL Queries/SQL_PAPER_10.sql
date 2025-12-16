@@ -52,7 +52,9 @@ INSERT INTO Items VALUES
 ('I2', 'Chicket Biryani', 250.0, 'p1'),
 ('I3', 'Panneer 65', 220.0, 'p3'),
 ('I4', 'Apollo Fish', 320.0, 'p3'),
-('I5', 'Gobhi Manchuria', 220.0, 'p3');
+('I5', 'Gobhi Manchuria', 220.0, 'p3'),
+('I6', 'Chicken Kabab', 200.0, 'p2'),
+('I7', 'Thangdi Kabab', 350.0, 'p2');
 
 /* Creating Orders Table */
 CREATE TABLE Orders(
@@ -68,7 +70,9 @@ INSERT INTO Orders VALUES
 ('o3', 102, 'I5'),
 ('o4', 103, 'I2'),
 ('o5', 104, 'I4'),
-('o6', 104, 'I5');
+('o6', 104, 'I5'),
+('o7', 101, 'I6'),
+('o8', 101, 'I7');
 
 /* Displaying all Products */
 SELECT * FROM Products;
@@ -100,12 +104,28 @@ SELECT * FROM Customers WHERE YEAR(dob) = 1992;
 /* Query to display Orders placed by Vishnu */
 SELECT i.*, c.custName FROM Customers c INNER JOIN Orders o ON c.custId = o.custId INNER JOIN Items i ON i.itemId = o.itemId WHERE c.custName = 'Vishnu';
 
-/* Query to display total bill amount of Vishnu */
+/* Query to display total bill amount of Vishnu (used inner joins) */
+SELECT SUM(i.cost) AS 'Vishnu Total Cost'
+FROM Items i INNER JOIN Orders o ON i.itemId = o.itemId
+			 INNER JOIN Customers c ON o.custId = c.custId
+WHERE c.custName = 'Vishnu';
 
+/* Query to display orderid, custId, custName, cost of all orders (used Equi Join) */
+SELECT o.orderId, c.custId, c.custName, i.cost
+FROM Items i, Orders o, Customers c
+WHERE i.itemId = o.itemId AND o.custId = c.custId;
 
-/* Query to display orderid, custId, custName, cot of all orders */
 /* Query to display all kebabs info */
-/* Query to update the cost of item with id 'I2' */
-/* Query to delete 103 record form customer table */
-/* Query to display all orders of Venkat */
+SELECT p.pid, p.pname, i.itemId, i.Cost, o.orderId, c.custId, c.custName
+FROM Products p, Items i, Orders o, Customers c
+WHERE p.pid = i.pid AND i.itemId = o.itemId AND o.custId = c.custId AND p.pname = 'Kebabs';
 
+/* Query to update the cost of item with id 'I2' */
+UPDATE Items SET Cost = 350 WHERE itemId = 'I2';
+
+/* Query to delete 103 record form customer table */
+DELETE FROM Customers WHERE custId = 103;
+
+/* Query to display all orders of Venkat */
+SELECT  c.custName AS Customer, i.itemName AS Item, i.Cost FROM Items i, Orders o, Customers c
+WHERE i.itemId = o.itemId AND o.custId = c.custId AND c.custName = 'Venkat';
