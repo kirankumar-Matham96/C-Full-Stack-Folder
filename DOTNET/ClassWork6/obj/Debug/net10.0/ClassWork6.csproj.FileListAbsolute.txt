@@ -1,0 +1,15 @@
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\bin\Debug\net10.0\ClassWork6.exe
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\bin\Debug\net10.0\ClassWork6.deps.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\bin\Debug\net10.0\ClassWork6.runtimeconfig.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\bin\Debug\net10.0\ClassWork6.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\bin\Debug\net10.0\ClassWork6.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\ClassWork6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\ClassWork6.AssemblyInfoInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\ClassWork6.AssemblyInfo.cs
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\ClassWork6.csproj.CoreCompileInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\ClassWork6.sourcelink.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\ClassWork6.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\refint\ClassWork6.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\ClassWork6.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\ClassWork6.genruntimeconfig.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\ClassWork6\obj\Debug\net10.0\ref\ClassWork6.dll

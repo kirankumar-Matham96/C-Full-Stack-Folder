@@ -405,22 +405,23 @@
   {
     Console.Write("Enter a number: ");
     int n = Convert.ToInt32(Console.ReadLine());
-    int fact = 1;    
+    int fact = 1;
 
     for (int i = 1; i <= n; i++)
     {
-	fact *= i;
+      fact *= i;
     }
-      Console.Write($"Factorial: {facti}");
+    Console.Write($"Factorial: {fact}");
   }
 
   /* w.a.p to read a number and print multiplication table of that number */
-  public static void MultiplicationTable(){
+  public static void MultiplicationTable()
+  {
     Console.Write("Enter a number: ");
     int n = Convert.ToInt32(Console.ReadLine());
-    for(int i = 1; i <= 10; i++)
+    for (int i = 1; i <= 10; i++)
     {
-      Console.WriteLine($"{n} * {i} = {n*i}");
+      Console.WriteLine($"{n} * {i} = {n * i}");
     }
   }
 

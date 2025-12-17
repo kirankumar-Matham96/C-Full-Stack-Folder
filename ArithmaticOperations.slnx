@@ -4,6 +4,7 @@
     <Project Path="DOTNET/ClassWork3/ClassWork3.csproj" />
     <Project Path="DOTNET/ClassWork4/ClassWork4.csproj" />
     <Project Path="DOTNET/ClassWork5/ClassWork5.csproj" />
+    <Project Path="DOTNET/ClassWork6/ClassWork6.csproj" />
     <Project Path="DOTNET/ManualPrograms/ManualPrograms.csproj" />
   </Folder>
   <Project Path="ArithmaticOperations/ArithmaticOperations.csproj" />
