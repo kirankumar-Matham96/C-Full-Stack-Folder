@@ -15,10 +15,13 @@ namespace ManualProgramms
             // RelationalOperators.RunTests();
 
             // Logical Operators
-            LogicalOperators.RunTests();
+            // LogicalOperators.RunTests();
 
             // Scanner clause
             // ConsoleReadLine.RunTests();
+
+            // Forloops
+            ForLoops.RunTests();
 
         }
     }
