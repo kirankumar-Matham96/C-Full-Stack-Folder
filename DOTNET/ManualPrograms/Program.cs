@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using ManualPrograms;
 
 namespace ManualProgramms
 {
@@ -24,7 +25,10 @@ namespace ManualProgramms
             // ForLoops.RunTests();
 
             // While lopps
-            WhileLoops.RunTests();
+            // WhileLoops.RunTests();
+
+            // Range based question
+            RangeBasedQuestions.RunTests();
 
         }
     }
