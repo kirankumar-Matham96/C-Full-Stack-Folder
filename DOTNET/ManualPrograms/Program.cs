@@ -21,7 +21,10 @@ namespace ManualProgramms
             // ConsoleReadLine.RunTests();
 
             // Forloops
-            ForLoops.RunTests();
+            // ForLoops.RunTests();
+
+            // While lopps
+            WhileLoops.RunTests();
 
         }
     }
