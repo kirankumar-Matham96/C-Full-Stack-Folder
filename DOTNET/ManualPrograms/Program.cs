@@ -28,7 +28,10 @@ namespace ManualProgramms
             // WhileLoops.RunTests();
 
             // Range based question
-            RangeBasedQuestions.RunTests();
+            // RangeBasedQuestions.RunTests();
+
+            // Interview Questions
+            InterviewQuestions.RunTests();
 
         }
     }
