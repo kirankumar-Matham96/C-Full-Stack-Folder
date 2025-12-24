@@ -684,6 +684,16 @@ namespace Patterns
             }
         }
 
+        // Reverse Swasthic
+        public static void SpecialPattern1(int numberOfLines)
+        {
+        }
+
+        public static void SpecialPattern2(int numberOfLines)
+        {
+
+        }
+
         public static void RunTests(int n)
         {
             // Triangles.PrintTriangleSequence1(n);
@@ -723,7 +733,7 @@ namespace Patterns
             // Triangles.PrintTriangleShape11(n);
             // Triangles.PrintTriangleShape12(n);
             // Triangles.PrintTriangleShape13(n);
-            Triangles.PrintTriangleShape14(n);
+            // Triangles.PrintTriangleShape14(n);
 
             // Triangles.PrintAlphabetPattern1(n);
             // System.Console.WriteLine();
@@ -738,6 +748,9 @@ namespace Patterns
             // Triangles.PrintAlphabetPattern6(n);
             // System.Console.WriteLine();
             // Triangles.PrintAlphabetPattern7(n);
+
+            Triangles.SpecialPattern1(n);
+            // Triangles.SpecialPattern2(n);
         }
 
     }
