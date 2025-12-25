@@ -1,0 +1,15 @@
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\bin\Debug\net10.0\PersonalPractice.exe
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\bin\Debug\net10.0\PersonalPractice.deps.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\bin\Debug\net10.0\PersonalPractice.runtimeconfig.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\bin\Debug\net10.0\PersonalPractice.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\bin\Debug\net10.0\PersonalPractice.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\PersonalPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\PersonalPractice.AssemblyInfoInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\PersonalPractice.AssemblyInfo.cs
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\PersonalPractice.csproj.CoreCompileInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\PersonalPractice.sourcelink.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\PersonalPractice.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\refint\PersonalPractice.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\PersonalPractice.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\PersonalPractice.genruntimeconfig.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\PersonalPractice\obj\Debug\net10.0\ref\PersonalPractice.dll
