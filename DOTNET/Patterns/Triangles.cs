@@ -685,13 +685,30 @@ namespace Patterns
         }
 
         // Reverse Swasthic
-        public static void SpecialPattern1(int numberOfLines)
+        public static void SpecialPattern1(int numberOfLines = 5)
         {
+            for (var r = 1; r <= numberOfLines * 2 - 1; r++)
+            {
+                for (var c = 1; c <= numberOfLines * 2 - 1; c++)
+                {
+                    if ((r == 1 && c >= 1 && c <= numberOfLines) || (r == numberOfLines * 2 - 1 && c >= numberOfLines && c <= numberOfLines * 2 - 1) || (c == 1 && r >= numberOfLines && r <= numberOfLines * 2 - 1) || (c == numberOfLines * 2 - 1 && r >= 1 && r <= numberOfLines) || (r == numberOfLines) || (c == numberOfLines)) Console.Write("* ");
+                    else Console.Write("  ");
+                }
+                Console.WriteLine();
+            }
         }
 
         public static void SpecialPattern2(int numberOfLines)
         {
-
+            for (var i = 1; i <= numberOfLines * 2 + 1; i++)
+            {
+                for (var j = 1; j <= numberOfLines * 2 + 1; j++)
+                {
+                    if (i == numberOfLines - 2 || i == numberOfLines * 2 - 1) Console.Write("* ");
+                    else Console.Write("# ");
+                }
+                Console.WriteLine();
+            }
         }
 
         public static void RunTests(int n)
@@ -726,7 +743,7 @@ namespace Patterns
             // Triangles.PrintTriangleShape4(n);
             // Triangles.PrintTriangleShape5(n);
             // Triangles.PrintTriangleShape6(n);
-            // Triangles.PrintTriangleShape7(n);
+            // Trian43gles.PrintTriangleShape7(n);
             // Triangles.PrintTriangleShape8(n);
             // Triangles.PrintTriangleShape9(n);
             // Triangles.PrintTriangleShape10(n);
@@ -749,8 +766,8 @@ namespace Patterns
             // System.Console.WriteLine();
             // Triangles.PrintAlphabetPattern7(n);
 
-            Triangles.SpecialPattern1(n);
-            // Triangles.SpecialPattern2(n);
+            // Triangles.SpecialPattern1(n);
+            Triangles.SpecialPattern2(n);
         }
 
     }
