@@ -72,10 +72,10 @@
   {
     Console.WriteLine("Welcome to My Hotel!");
 
-    double iddliCost = 35.00;
-    double vadaCost = 40.00;
-    double dosaCost = 40.00;
-    double puriCost = 45.00;
+    double iddliCost = 50.00;
+    double vadaCost = 60.00;
+    double dosaCost = 60.00;
+    double puriCost = 75.00;
     double vegBiryaniCost = 250.00;
     double chapathiWithVegCurryCost = 150.00;
     double eggMasalaCost = 100.00;
@@ -88,7 +88,7 @@
     double chicken65Cost = 150.00;
     double panneer65Cost = 100.00;
     double panneerTickaCost = 100.00;
-    double cricpyMushroomCost = 130.00;
+    double crispyMushroomCost = 130.00;
     double gulabJamunCost = 120.00;
     double appricotDelightCost = 250.00;
     double seviyaanKheerCost = 200.00;
@@ -97,10 +97,17 @@
     double kulfiCost = 80.00;
     double totalCost = 0;
     string orders = "";
-    int discount = 20;
+    const int DISCOUNT = 20;
     double discountAmt = 0;
+    const double CGST = 2.5;
+    const double SGST = 2.5;
+    double CGSTAmt = 0;
+    double SGSTAmt = 0;
+    int tip = 0;
+    const int SMILY_AMT = 5;
+    const int INSURANCE = 2;
     char isOrdering;
-    double finalBill;
+    double finalBill = 0;
 
     do
     {
@@ -164,37 +171,37 @@
           switch (nonVegOrder)
           {
             case 1:
-              Console.WriteLine("Your Order is: Iddli");
+              Console.WriteLine("Your Order is: Egg Masala");
               Console.WriteLine($"Order Cost: {eggMasalaCost}");
               orders += $"Egg Masala\t\t    --- {eggMasalaCost}\n";
               totalCost += eggMasalaCost;
               break;
             case 2:
-              Console.WriteLine("Your Order is: Vada");
+              Console.WriteLine("Your Order is: Chicken Thanduri");
               Console.WriteLine($"Order Cost: {chickenThanduriCost}");
               orders += $"Chicken Thanduri\t    --- {chickenThanduriCost}\n";
               totalCost += chickenThanduriCost;
               break;
             case 3:
-              Console.WriteLine("Your Order is: Dosa");
+              Console.WriteLine("Your Order is: Whole Roast Chicken");
               Console.WriteLine($"Order Cost: {wholeRoastChickenCost}");
               orders += $"Whole Roast Chicken\t    --- {wholeRoastChickenCost}\n";
               totalCost += wholeRoastChickenCost;
               break;
             case 4:
-              Console.WriteLine("Your Order is: Puri");
+              Console.WriteLine("Your Order is: Chicken Biryani");
               Console.WriteLine($"Order Cost: {chickenBiryaniCost}");
               orders += $"Chicken Biryani\t\t    --- {chickenBiryaniCost}\n";
               totalCost += chickenBiryaniCost;
               break;
             case 5:
-              Console.WriteLine("Your Order is: Veg Biryani");
+              Console.WriteLine("Your Order is: Rabbit Biryani");
               Console.WriteLine($"Order Cost: {rabbitBiryaniCost}");
               orders += $"Rabbit Biryani\t\t    --- {rabbitBiryaniCost}\n";
               totalCost += rabbitBiryaniCost;
               break;
             case 6:
-              Console.WriteLine("Your Order is: Chapathi with Veg Curry");
+              Console.WriteLine("Your Order is: Chapathi with Chicken Curry");
               Console.WriteLine($"Order Cost: {chapathiWithChickenCurryCost}");
               orders += $"Chapathi with Chicken Curry --- {chapathiWithChickenCurryCost}\n";
               totalCost += chapathiWithChickenCurryCost;
@@ -205,40 +212,40 @@
           }
           break;
         case 3:
-          Console.WriteLine($"\nStarters Menu:\n\t1. Crispy Corn\t---\t{crispyCornCost}\n\t2. Chicket 65\t---\t{chicken65Cost}\n\t3. Panneer 65\t---\t{panneer65Cost}\n\t4. Panneer Tikka\t---\t{panneerTickaCost}\n\t5. Crispy Mashroom\t---\t{cricpyMushroomCost}");
+          Console.WriteLine($"\nStarters Menu:\n\t1. Crispy Corn\t---\t{crispyCornCost}\n\t2. Chicken 65\t---\t{chicken65Cost}\n\t3. Panneer 65\t---\t{panneer65Cost}\n\t4. Panneer Tikka\t---\t{panneerTickaCost}\n\t5. Crispy Mashroom\t---\t{crispyMushroomCost}");
           Console.Write("\nPlease select your order: ");
           int startersOrder = Convert.ToInt32(Console.ReadLine());
           switch (startersOrder)
           {
             case 1:
-              Console.WriteLine("Your Order is: Iddli");
+              Console.WriteLine("Your Order is: Crispy Corn");
               Console.WriteLine($"Order Cost: {crispyCornCost}");
               orders += $"Crispy Corn\t\t   ---\t{crispyCornCost}\n";
               totalCost += crispyCornCost;
               break;
             case 2:
-              Console.WriteLine("Your Order is: Vada");
+              Console.WriteLine("Your Order is: Chicken 65");
               Console.WriteLine($"Order Cost: {chicken65Cost}");
               orders += $"Chicken65\t\t   ---\t{chicken65Cost}\n";
               totalCost += chicken65Cost;
               break;
             case 3:
-              Console.WriteLine("Your Order is: Dosa");
+              Console.WriteLine("Your Order is: Panneer 65");
               Console.WriteLine($"Order Cost: {panneer65Cost}");
               orders += $"Panneer65\t\t   ---\t{panneer65Cost}\n";
               totalCost += panneer65Cost;
               break;
             case 4:
-              Console.WriteLine("Your Order is: Puri");
+              Console.WriteLine("Your Order is: Panneer Tikka");
               Console.WriteLine($"Order Cost: {panneerTickaCost}");
               orders += $"Panneer Ticka\t\t   ---\t{panneerTickaCost}\n";
               totalCost += panneerTickaCost;
               break;
             case 5:
-              Console.WriteLine("Your Order is: Veg Biryani");
-              Console.WriteLine($"Order Cost: {cricpyMushroomCost}");
-              orders += $"Cricpy Mushroom\t\t   ---\t{cricpyMushroomCost}\n";
-              totalCost += cricpyMushroomCost;
+              Console.WriteLine("Your Order is: Crispy Mushroom");
+              Console.WriteLine($"Order Cost: {crispyMushroomCost}");
+              orders += $"Cricpy Mushroom\t\t   ---\t{crispyMushroomCost}\n";
+              totalCost += crispyMushroomCost;
               break;
             default:
               Console.WriteLine("Invalid option! Try again...");
@@ -252,37 +259,37 @@
           switch (dessertOrder)
           {
             case 1:
-              Console.WriteLine("Your Order is: Iddli");
+              Console.WriteLine("Your Order is: Gulab Jamun");
               Console.WriteLine($"Order Cost: {gulabJamunCost}");
               orders += $"Gulab Jamun\t\t   ---\t{gulabJamunCost}\n";
               totalCost += gulabJamunCost;
               break;
             case 2:
-              Console.WriteLine("Your Order is: Vada");
+              Console.WriteLine("Your Order is: Appricot Delight");
               Console.WriteLine($"Order Cost: {appricotDelightCost}");
-              orders += $"Appricot Delight\t\t   ---\t{appricotDelightCost}\n";
+              orders += $"Appricot Delight\t  ---\t{appricotDelightCost}\n";
               totalCost += appricotDelightCost;
               break;
             case 3:
-              Console.WriteLine("Your Order is: Dosa");
+              Console.WriteLine("Your Order is: Seviyaan Kheer");
               Console.WriteLine($"Order Cost: {seviyaanKheerCost}");
               orders += $"Seviyaan Kheer\t\t   ---\t{seviyaanKheerCost}\n";
               totalCost += seviyaanKheerCost;
               break;
             case 4:
-              Console.WriteLine("Your Order is: Puri");
+              Console.WriteLine("Your Order is: Rasmalai");
               Console.WriteLine($"Order Cost: {rasmalaiCost}");
               orders += $"Rasmalai\t\t   ---\t{rasmalaiCost}\n";
               totalCost += rasmalaiCost;
               break;
             case 5:
-              Console.WriteLine("Your Order is: Veg Biryani");
+              Console.WriteLine("Your Order is: Gajar Ka Halwa");
               Console.WriteLine($"Order Cost: {gajarKaHalwaCost}");
               orders += $"Gajar Ka Halwa\t\t   ---\t{gajarKaHalwaCost}\n";
               totalCost += gajarKaHalwaCost;
               break;
             case 6:
-              Console.WriteLine("Your Order is: Chapathi with Veg Curry");
+              Console.WriteLine("Your Order is: Kulfi");
               Console.WriteLine($"Order Cost: {kulfiCost}");
               orders += $"Kulfi\t\t   ---\t{kulfiCost}\n";
               totalCost += kulfiCost;
@@ -301,10 +308,22 @@
       isOrdering = Convert.ToChar(Console.ReadLine().ToLower());
     } while (isOrdering == 'y');
 
-    if (totalCost >= 1000) discountAmt = totalCost * discount / 100;
-    finalBill = totalCost - discountAmt;
+    // gst + smily amt + insurance calculation
+    CGSTAmt = totalCost * CGST / 100;
+    SGSTAmt = totalCost * SGST / 100;
+
+
+    // tip calculation
+    Console.Write("Do you want to tip the bearer? Enter the tip amount in INR: ");
+    tip = Convert.ToInt32(Console.ReadLine());
+
+    finalBill += totalCost + CGSTAmt + SGSTAmt + SMILY_AMT + INSURANCE;
+
+    if (finalBill >= 1000) discountAmt = finalBill * DISCOUNT / 100;
+    finalBill = finalBill - discountAmt;
+    finalBill += tip;
     Console.WriteLine($"\nYour orders: \n{orders}");
-    Console.WriteLine($"Total Bill: {totalCost}\nDiscount Amount: {discountAmt}\nYour final bill: {finalBill}");
+    Console.WriteLine($"Total Bill: {totalCost}/-\nCGST: {CGSTAmt}/-\nSGST: {SGSTAmt}/-\nSmily Amount: {SMILY_AMT}/-\nInsurance: {INSURANCE}/-\nDiscount Amount: {discountAmt}/-\nYour final bill: {finalBill}/-");
     Console.WriteLine("Thank you for visiting our hotel! Please visit again!");
   }
 
@@ -430,7 +449,7 @@
   {
     Console.WriteLine("******************* This is class 5 tasks *******************");
     // ManaHoteWithlSwitchCase();
-    // ManaHoteWithlSubMenu();
+    ManaHoteWithlSubMenu();
 
     // PrintNNumbers();
     // PrintNNumbersInReverse();
@@ -439,6 +458,6 @@
     // Print5DivisiblesOfNNumbers();
     // PrintNOddEvenNumbers();
     // PrintNumbers();
-    PrintFactorial();
+    // PrintFactorial();
   }
 }

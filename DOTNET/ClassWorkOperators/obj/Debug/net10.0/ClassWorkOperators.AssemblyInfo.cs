@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClassWorkOperators")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+823766c56590ccb601453c97ca9647e73863b6f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d7b4b777939d5b1fbfd42200880552e4d8e0e0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClassWorkOperators")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClassWorkOperators")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
