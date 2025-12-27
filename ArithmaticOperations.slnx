@@ -6,6 +6,7 @@
     <Project Path="DOTNET/ClassWork5/ClassWork5.csproj" />
     <Project Path="DOTNET/ClassWork6/ClassWork6.csproj" />
     <Project Path="DOTNET/ManualPrograms/ManualPrograms.csproj" />
+    <Project Path="DOTNET/PersonalPractice/PersonalPractice.csproj" />
   </Folder>
   <Project Path="ArithmaticOperations/ArithmaticOperations.csproj" />
   <Project Path="BankingApp/BankingApp.csproj" />
