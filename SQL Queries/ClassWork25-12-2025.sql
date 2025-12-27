@@ -1,7 +1,17 @@
-/* Triggers */
-/*
+/* Triggers:
+	
 	1. Triggers are some kind of special stored procidures or programs that will be executed automatically when some event(insert, update, delete) occurrs.
 	2. We use triggers when we want some event to happen automatically in certain conditions.
+	
+		Syntax:
+
+			```
+			CREATE TRIGGER <TRIGGER_NAME> ON <TABLE_NAME>
+			AFTER INSERT/UPDATE/DELETE
+			AS BEGIN
+				// SQL STATEMENTS
+			END;
+			```
 */
 
 CREATE DATABASE CLASSWORK_SQL_25_12_2025;
