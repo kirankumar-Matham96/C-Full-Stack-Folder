@@ -31,7 +31,10 @@ namespace ManualProgramms
             // RangeBasedQuestions.RunTests();
 
             // Interview Questions
-            InterviewQuestions.RunTests();
+            // InterviewQuestions.RunTests();
+
+            // Arrays
+            ArraysClass.RunTests();
 
         }
     }
