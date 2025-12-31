@@ -1,0 +1,130 @@
+1. Entities:
+	i. Weak Entities
+	ii. Strong Entities
+	
+2. Fields:
+	i. 
+	ii. 
+	iii. Composition
+	iv. Primary key
+	v. Foreign key
+	vi. 
+	vii. Derived
+	viii. 
+
+3. Data Types:
+	i. DECIMAL TYPE:
+		-> INT
+		-> FLOAT
+		-> DECIMAL
+		-> MONEY
+	
+	ii. STRING TYPE:
+		-> CHAR
+		-> VARCHAR
+		-> NVARCHAR
+		
+	iii. BOOLEAN TYPE
+		-> 
+		
+	iv. DATE-TIME TYPE:
+		-> DATE
+		-> DATETIME
+		-> TIME
+	
+4. Contraints:
+	i. PRIMARY KEY
+ 	ii. FOREIGN KEY
+	iii. NOT NULL
+	iv. UNIQUE
+	v. CHECK
+	vi. DEFAULT
+	
+5. Statements Clauses:
+	i. WHERE
+	ii. HAVING
+	iii. ORDER BY
+	iv. GROUP BY
+	
+6. Joins:
+	i. INNER
+	ii. OUTER:
+		-> LEFT OUTER 
+		-> RIGHT OUTER
+		-> FULL OUTER JOIN
+		
+	iii. CROSS
+	iv. EQUI
+	v. NO-EQUI
+	
+7. Sub-queries:
+	
+8. Relational Set Operators:
+	i. UNION ALL
+	ii. UNION
+	iii. INTERSECT
+	iv. EXCEPT
+	v. 
+	
+9. Index:
+	
+	Syntax:
+		
+		```
+		CREATE INDEX <INDEX_NAME> ON <TABLE_NAME>(<COLUMN_NAME>);
+		```
+	
+10. Stored Procedures:
+	
+	Syntax:
+		
+		```
+		CREATE PROCEDURE <PROCEDURE_NAME> 
+		AS BEGIN
+			// SQL STATEMENTS
+		END;
+		```
+		
+11. Triggers:
+	
+	Syntax:
+	
+		```
+		CREATE TRIGGER <TRIGGER_NAME> ON <TABLE_NAME>
+		AFTER INSERT/UPDATE/DELETE
+		AS BEGIN
+			// SQL STATEMENTS
+		END;
+		```
+
+12. Cursors:
+	
+	Syntax:
+	
+		```
+		DECLARE <CURSOR_NAME> CURSOR STATIC
+		FOR
+		SELECT * FROM <TABLE_NAME>
+		```
+
+13. Views:
+	
+	Syntax:
+	
+		```
+		CREATE VIEW <VIEW_NAME> AS SELECT * FROM <TABLE_NAME>
+		```
+
+14. Pre-defined Functions:
+
+15. User-defined Functions:
+
+	Syntax:
+	
+		```
+		CREATE FUNCTION <FUNCTION_NAME> RETURNS <DATA_TYPE>
+		AS BIGIN
+			// SQL STATEMENTS
+			RETURN(<RESULT>)
+		END;
+		```

@@ -259,11 +259,11 @@ SELECT UPPER(sname) AS 'Student''s names in upper case' FROM Student;
 --Display First characters of student's names
 SELECT LEFT(sname, 1) AS 'First character of Student''s name' FROM Student;
 
---Display second to 3rd characters of student's names
-SELECT SUBSTRING(sname,2,4) AS 'Student''s name from 2nd char to 3rd char' FROM Student;
-
 --Display last characters of student's names
 SELECT RIGHT(sname,1) AS 'Studnet''s name last character' FROM Student;
+
+--Display second to 3rd characters of student's names
+SELECT SUBSTRING(sname,2,4) AS 'Student''s name from 2nd char to 3rd char' FROM Student;
 
 --Display student's names with 'std-<studentId>' as suffix
 SELECT CONCAT(sname,'-',sid) FROM Student;
