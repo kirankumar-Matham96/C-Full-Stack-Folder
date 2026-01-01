@@ -540,17 +540,202 @@ namespace ManualPrograms
     }
 
     //  48. Program to display pair of elements whose sum is 10 (contains duplicates in array): `int[] arr = {6, 3, 9, 1, 2, 8, 4, 5, 7, 6, 2, 9, 1, 4};`
-    //  49. Program to find the common elements from 2 arrays: `int[] a1 = {1, 2, 5, 5, 8, 9, 5, 7, 10}; int[] a2 = {3, 6, 15, 6, 5, 4, 7, 2, 1};`
-    //  50. Program to find the duplicates in the array: `int[] arr = {1, 2, 5, 5, 8, 9, 2, 5, 7, 1, 10, 1, 2};`
-    //  51. Program to arrange even numbers to left side and odd numbers to right side of Array: `int[] arr = {7, 2, 9, 8, 4, 1, 2, 6, 5};`
-    //  52. Program to check 2 arrays are equal or not: `int[] a1 = {3, 4, 5, 6, 7}; int[] a2 = {3, 4, 5, 6, 7};`
-    //  53. Program to find the missing number in the given array: `int[] arr = {2, 3, 4, 5, 7, 8, 9};`
-    //  54. Program to find the largest difference of Array elements: `int[] arr = {5, 7, 3, 8, 6, 9, 4};`
-    //  55. Program to find the index difference between smallest and largest elements: `int[] arr = {5, 7, 3, 8, 6, 9, 4};`
-    //  56. Program to check array contains only positive numbers or not: `int[] arr = {5, 7, 3, 8, 6, -4, 4};`
-    //  57. Program to Print leader elements in the array (All elements to its right must be smaller to Leader element): `int arr[] = {10, 9, 14, 23, 15, 0, 9};`
-    //  58. Program to find the largest difference pair in the sequence from the given sorted Array: `int[] arr = {5, 7, 13, 15, 16, 19, 34};` o/p: Largest difference pair: {19, 34}
+    public static void DispalyPairWhoseSumIs10WithDuplicates()
+    {
+      int[] arr = { 6, 3, 9, 1, 2, 8, 4, 5, 7, 6, 2, 9, 1, 4 };
 
+      for (int i = 0; i < arr.Length; i++)
+      {
+        for (int j = i; j < arr.Length; j++)
+        {
+          if (arr[i] + arr[j] == 10) Console.Write($"({arr[i]},{arr[j]}) ");
+        }
+      }
+    }
+
+    //  49. Program to find the common elements from 2 arrays: `int[] a1 = {1, 2, 5, 5, 8, 9, 5, 7, 10}; int[] a2 = {3, 6, 15, 6, 5, 4, 7, 2, 1};`
+    public static void DisplayCommonElements()
+    {
+      int[] a1 = { 1, 2, 5, 5, 8, 9, 5, 7, 10 };
+      int[] a2 = { 3, 6, 15, 6, 5, 4, 7, 2, 1 };
+
+      for (int i = 0; i < a1.Length; i++)
+      {
+        for (int j = 0; j < a2.Length; j++)
+        {
+          if (a1[i] == a2[j]) Console.Write($"{a1[i]} ");
+        }
+      }
+    }
+
+    //  50. Program to find the duplicates in the array: `int[] arr = {1, 2, 5, 5, 8, 9, 2, 5, 7, 1, 10, 1, 2};`
+    public static void FindDuplicatesInArray()
+    {
+      int[] arr = { 1, 2, 5, 5, 8, 9, 2, 5, 7, 1, 10, 1, 2 };
+      Console.WriteLine("Duplicate elements in the array:");
+
+      for (int i = 0; i < arr.Length; i++)
+      {
+        for (int j = i + 1; j < arr.Length; j++)
+        {
+          if (arr[i] == arr[j]) Console.Write($"{arr[i]} ");
+        }
+      }
+    }
+
+    //  51. Program to arrange even numbers to left side and odd numbers to right side of Array: `int[] arr = {7, 2, 9, 8, 4, 1, 2, 6, 5};`
+    public static void ArrangeEvenOdd()
+    {
+      int[] arr = { 7, 2, 9, 8, 4, 1, 2, 6, 5 };
+      int[] result = new int[arr.Length];
+      int evenIndex = 0;
+      int oddIndex = arr.Length - 1;
+
+      for (int i = 0; i < arr.Length; i++)
+      {
+        if (arr[i] % 2 == 0)
+        {
+          result[evenIndex++] = arr[i];
+        }
+        else
+        {
+          result[oddIndex--] = arr[i];
+        }
+      }
+
+      Console.WriteLine("Array after arranging even numbers to left and odd numbers to right:");
+      foreach (var i in result) Console.Write($"{i} ");
+    }
+
+    //  52. Program to check 2 arrays are equal or not: `int[] a1 = {3, 4, 5, 6, 7}; int[] a2 = {3, 4, 5, 6, 7};`
+    public static void CheckArraysEqual()
+    {
+      int[] a1 = { 3, 4, 5, 6, 7 };
+      int[] a2 = { 3, 4, 5, 6, 7 };
+
+      if (a1.Length != a2.Length)
+      {
+        Console.WriteLine("Arrays are not equal.");
+        return;
+      }
+
+      for (int i = 0; i < a1.Length; i++)
+      {
+        if (a1[i] != a2[i])
+        {
+          Console.WriteLine("Arrays are not equal.");
+          return;
+        }
+      }
+      Console.WriteLine("Arrays are equal.");
+    }
+
+    //  53. Program to find the missing number in the given array: `int[] arr = {2, 3, 4, 5, 7, 8, 9};`
+    public static void FindMissingNumber()
+    {
+      int[] arr = { 2, 3, 4, 5, 7, 8, 9 };
+      int n = arr.Length + 1; // Since one number is missing
+      int expectedSum = n * (n + 1) / 2;
+      int actualSum = 0;
+
+      for (int i = 0; i < arr.Length; i++)
+      {
+        actualSum += arr[i];
+      }
+
+      int missingNumber = expectedSum - actualSum;
+      Console.WriteLine($"Missing number in the array is: {missingNumber}");
+    }
+
+    //  54. Program to find the largest difference of Array elements: `int[] arr = {5, 7, 3, 8, 6, 9, 4};`
+    public static void FindLargestDifference()
+    {
+      int[] arr = { 5, 7, 3, 8, 6, 9, 4 };
+      int largest = int.MinValue;
+      int smallest = int.MaxValue;
+
+      for (int i = 0; i < arr.Length; i++)
+      {
+        if (arr[i] > largest) largest = arr[i];
+        if (arr[i] < smallest) smallest = arr[i];
+      }
+
+      int difference = largest - smallest;
+      Console.WriteLine($"Largest difference between elements in the array is: {difference}");
+    }
+
+    //  55. Program to find the index difference between smallest and largest elements: `int[] arr = {5, 7, 3, 8, 6, 9, 4};`
+    public static void FindIndexDifference()
+    {
+      int[] arr = { 5, 7, 3, 8, 6, 9, 4 };
+      int largestIndex = 0;
+      int smallestIndex = 0;
+      int largest = int.MinValue;
+      int smallest = int.MaxValue;
+
+      for (int i = 0; i < arr.Length; i++)
+      {
+        if (arr[i] > largest)
+        {
+          largest = arr[i];
+          largestIndex = i;
+        }
+        if (arr[i] < smallest)
+        {
+          smallest = arr[i];
+          smallestIndex = i;
+        }
+      }
+
+      int indexDifference = Math.Abs(largestIndex - smallestIndex);
+      Console.WriteLine($"Index difference between smallest and largest elements is: {indexDifference}");
+    }
+
+    //  56. Program to check array contains only positive numbers or not: `int[] arr = {5, 7, 3, 8, 6, -4, 4};`
+    public static void CheckArrayContainsOnlyPositiveNumbers()
+    {
+      int[] arr = { 5, 7, 3, 8, 6, -4, 4 };
+      foreach (var num in arr)
+      {
+        if (num < 0)
+        {
+          Console.WriteLine("Array contains negative numbers.");
+          return;
+        }
+      }
+      Console.WriteLine("Array contains only positive numbers.");
+    }
+
+    //  57. Program to Print leader elements in the array (All elements to its right must be smaller to Leader element): `int arr[] = {10, 9, 14, 23, 15, 0, 9};`
+    public static void PrintLeaderElements()
+    {
+      int[] arr = { 10, 9, 14, 23, 15, 0, 9 };
+      Console.WriteLine("Leader elements in the array:");
+
+      for (int i = 0; i < arr.Length; i++)
+      {
+        bool isLeader = true;
+        for (int j = i + 1; j < arr.Length; j++)
+        {
+          if (arr[j] >= arr[i])
+          {
+            isLeader = false;
+            break;
+          }
+        }
+        if (isLeader) Console.Write($"{arr[i]} ");
+      }
+    }
+
+    //  58. Program to find the largest difference pair in the sequence from the given sorted Array: `int[] arr = {5, 7, 13, 15, 16, 19, 34};` o/p: Largest difference pair: {19, 34}
+    public static void FindLargestDifferencePairInSortedArray()
+    {
+      int[] arr = { 5, 7, 13, 15, 16, 19, 34 };
+      int smallest = arr[0];
+      int largest = arr[arr.Length - 1];
+
+      Console.WriteLine($"Largest difference pair: {{{smallest}, {largest}}}");
+    }
 
     /* ### Two Dimensional Array Programs */
 
