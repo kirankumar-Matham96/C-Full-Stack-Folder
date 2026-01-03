@@ -1,5 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 using ManualPrograms;
+using Microsoft.VisualBasic;
 
 namespace ManualProgramms
 {
@@ -34,8 +35,10 @@ namespace ManualProgramms
             // InterviewQuestions.RunTests();
 
             // Arrays
-            ArraysClass.RunTests();
+            // ArraysClass.RunTests();
 
+            // Strings
+            Strings.RunTests();
         }
     }
 }
