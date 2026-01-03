@@ -1,8 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using ManualPrograms;
-using Microsoft.VisualBasic;
-
-namespace ManualProgramms
+﻿namespace ManualProgramms
 {
     class Program
     {

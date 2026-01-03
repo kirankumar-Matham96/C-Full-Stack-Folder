@@ -1,7 +1,3 @@
-// using System.Exception;
-
-using System.Threading.Channels;
-
 namespace ManualProgramms
 {
   public class Strings : Exception
@@ -281,156 +277,260 @@ namespace ManualProgramms
     // 26. Program to find the sum of digits in the given String:
     public static void GetSumOfDigitsInString()
     {
-      // string s = "Coding@365";
+      string s = "Coding@365";
+      int sum = 0;
+
+      foreach (var ch in s)
+      {
+        if (char.IsDigit(ch)) sum += ch - '0';
+      }
+
+      Console.WriteLine($"\nSum of digits in string: {sum}");
     }
 
     // 27. Display the ASCII values of characters in the given String:
     public static void DisplayASCIIValuesOfEachCharInString()
     {
-      // string s = "Coding";
-
+      string s = "Coding";
+      foreach (var ch in s) Console.Write($"{(int)ch} ");
     }
 
     // 28. Program to convert upper case string to lower case string:
     public static void ConvertUpperCaseStringToLowerCaseString()
     {
-      // string s = "CoDinG@365";
-      // String res = "";
+      string s = "CoDinG@365";
+      string res = s.ToLower();
+      Console.WriteLine(res);
     }
 
     // 29. Program to display highest digit in the given String:
     public static void DisplayHighestDigitInString()
     {
-      // string s = "coding@365";
+      string s = "coding@365";
+      int highestDigit = 0;
+
+      foreach (var i in s)
+      {
+        if (char.IsDigit(i) && highestDigit < (i - '0')) highestDigit = (i - '0');
+      }
+      Console.WriteLine($"Highest Digit in the give string: {highestDigit}");
     }
-    /*
+
+    /* ### String Array Programs */
+
+    // 30. Program to find the length of String array
+    public static void DisplayLengthOfTheStringArray()
+    {
+      string[] arr = { "java", "asp", "servlets", "ado.net", "springBoot" };
+      Console.WriteLine(arr.Length);
+    }
+
+    // 31. Program to display Strings from Array:
+    public static void DisplayStringsFromAnArray()
+    {
+      string[] arr = { "java", "asp", "servlets", "ado.net", "springBoot" };
+      foreach (var i in arr) Console.WriteLine(i);
+    }
+
+    // 32. Program to display the length of each String in the array:
+    public static void DisplayLengthsOfEachStringInArray()
+    {
+      string[] arr = { "java", "asp", "servlets", "ado.net", "springBoot" };
+      foreach (var i in arr) System.Console.WriteLine($"i: {i.Length}");
+    }
+
+    // 33. Program to display First and Last characters of each string in the array:
+    public static void DispalyFirstAndLastCharsOfEachStringInArr()
+    {
+      string[] arr = { "java", "asp", "servlets", "ado.net", "springBoot" };
+      foreach (var i in arr) Console.Write($"First Char: {i[0]}, Last Char: {i[i.Length - 1]}\n");
+    }
+
+    // 34. Program to display String array in reverse order:
+    public static void DisplayStringArrInReverse()
+    {
+      string[] arr = { "java", "asp", "servlets", "ado.net", "springBoot" };
+
+      for (var i = arr.Length - 1; i >= 0; i--)
+      {
+        Console.Write($"\n{arr[i]}");
+      }
+    }
+
+    // 35. Program to display each String in reverse order from Array:
+    public static void DisplayEachStringInReverseOrderInArr()
+    {
+      string[] arr = { "java", "asp", "servlets", "ado.net", "springBoot" };
+
+      foreach (var i in arr)
+      {
+        string rev = "";
+        for (int j = i.Length - 1; j >= 0; j--)
+        {
+          rev += i[j];
+        }
+        Console.WriteLine($"{i}: {rev}");
+      }
+
+    }
+
+    /* ### Advanced String Programs */
+
+    // 36. Program to Split the String into Words:
+    public static void SpitTheStrinIntoWords()
+    {
+      string s = "This is simple english sentence";
+      string[] words = s.Split(" ");
+      foreach (var word in words) Console.WriteLine(word);
+    }
+
+    // 37. Program to count number of words in the given string without split() method:
+    public static void DisplayCountOfWordsInAStringWithoutSplitMethod()
+    {
+      string s = " This is simple english sentence   ";
+      s = s.Trim();
+      int spaces = 0;
+
+      foreach (var i in s) if (i == ' ') spaces++;
+      Console.WriteLine($"Number of words in the given sentence are: {spaces + 1}");
+    }
 
 
-                  ---
-
-                  ### String Array Programs
-
-                  30. Program to find the length of String array:
-
-                  ```
-                  String[] arr = {"java", "asp", "servlets", "ado.net", "springBoot"};
-                  ```
-
-                  31. Program to display Strings from Array:
-
-                  ```
-                  String[] arr = {"java", "asp", "servlets", "ado.net", "springBoot"};
-                  ```
-
-                  32. Program to display the length of each String in the array:
-
-                  ```
-                  String[] arr = {"java", "asp", "servlets", "ado.net", "springBoot"};
-                  ```
-
-                  33. Program to display First and Last characters of each string in the array:
-
-                  ```
-                  String[] arr = {"java", "asp", "servlets", "ado.net", "springBoot"};
-                  ```
-
-                  34. Program to display String array in reverse order:
-
-                  ```
-                  String[] arr = {"java", "asp", "servlets", "ado.net", "springBoot"};
-                  ```
-
-                  35. Program to display each String in reverse order from Array:
-
-                  ```
-                  String[] arr = {"java", "asp", "servlets", "ado.net", "springBoot"};
-                  ```
-
-                  ---
-
-                  ### Advanced String Programs
-
-                  36. Program to Split the String into Words:
-
-                  ```
-                  string s = "This is simple english sentence";
-                  ```
-
-                  37. Program to count number of words in the given string without split() method:
-
-                  ```
-                  string s = "This is simple english sentence";
-                  ```
-
-                  38. Program to check two strings are Anagrams or not:
-                  We can say if two strings are an anagram of each other if they contain the same characters but at different orders.
-                  For example, army & mary
-
-                  ```
-                  string s1 = "army";
-                  string s2 = "mary";
-                  ```
-
-                  39. Program to display longest word in the given String:
-
-                  ```
-                  string s = "This is the Longest Sentence in English";
-                  ```
-
-                  40. Program to remove duplicates in the String:
-
-                  ```
-                  string str = "aaabbababaaacccbabdcccddddbac";
-                  String res = "";
-                  ```
-
-                  41. Program to remove spaces in String:
-
-                  ```
-                  string s = "This is a String";
-                  ```
-
-                  42. Program to remove multiple spaces in the given string:
-
-                  ```
-                  string s = "This   is   a   String";
-                  ```
-
-                  43. Program to Print characters specified by the number of times:
-
-                  ```
-                  Input: abc3e2f4
-                  Expected output: abccceeffff
-                  ```
-
-                  44. Program to swap the side-by-side characters in the given string:
-
-                  ```
-                  string s1 = "abcde";
-                  string s2 = "";
-                  ```
-
-                  45. Program to display the character count in the given string:
-
-                  ```
-                  Input: aaabbbacccddacdd
-                  Output: a-5, b-3, c-5, d-4
-                  ```
-
-                  ---
-
-                  If you want, I can also:
-
-                  * Convert these into Java / C# programs
-                  * Put them into a Word / PDF / text file
-                  * Group them topic-wise for interview prep
-
-                  Just tell me 👍
+    /* 38. Program to check two strings are Anagrams or not:
+     *   ->  We can say if two strings are an anagram of each other if they contain the same characters but at different orders.
+     *   -> For example, army & mary
+    */
+    public static void CheckIfTwoStringsAreAnagrams()
+    {
+      string s1 = "army";
+      string s2 = "mary";
 
 
-        */
+    }
 
+    // 39. Program to display longest word in the given String:
+    public static void DisplayLongestWordInString()
+    {
+      string s = "This is the Longest Sentence in English";
+      string[] arr = s.Split(" ");
+      int length = 0; string longestWord = "";
 
+      foreach (var i in arr)
+      {
+        if (length < i.Length) { length = i.Length; longestWord = i; }
+      }
+      Console.WriteLine($"Longest word is: {longestWord} and it's length is: {length}");
+    }
+
+    // 40. Program to remove duplicates in the String:
+    public static void RemoveDuplicateCharsFromAString()
+    {
+      string str = "aaabbababaaacccbabdcccddddbac";
+      string res = "";
+
+      foreach (var i in str) if (!res.Contains(i)) res += i;
+      Console.WriteLine(res);
+    }
+
+    // 41. Program to remove spaces in String:
+    public static void RemoveSpacesInTheString()
+    {
+      string s = "This is a String";
+      string res = "";
+
+      foreach (var i in s) if (i != ' ') res += i;
+      Console.WriteLine(res);
+    }
+
+    // 42*. Program to remove multiple spaces in the given string:
+    public static void RemoveMultipleSpacesInTheString()
+    {
+      string s = "This   is   a   String";
+      string res = "";
+
+      for (var i = 0; i < s.Length - 1; i++)
+      {
+        if (s[i] != ' ')
+        {
+          res += s[i];
+          if (s[i + 1] == ' ')
+          {
+            res += ' ';
+          }
+        }
+      }
+      res += s[s.Length - 1];
+
+      Console.WriteLine(res);
+    }
+
+    /* 43*. Program to Print characters specified by the number of times: 
+    *   -> Input: abc3e2f4
+    *   -> Output: abccceeffff
+    */
+
+    public static void DisplayCharactersForSepcificTimesInAString()
+    {
+      Console.Write("Enter a string: ");
+      string str = Console.ReadLine();
+      string res = "";
+      for (var i = 0; i < str.Length; i++)
+      {
+        if (char.IsLetter(str[i]))
+        {
+          res += str[i];
+        }
+        else if (char.IsDigit(str[i]))
+        {
+          int count = str[i] - '0';
+          char ch = str[i - 1];
+
+          for (int j = 1; j < count; j++)
+          {
+            res += ch;
+          }
+        }
+      }
+      Console.WriteLine(res);
+    }
+
+    // 44*. Program to swap the side-by-side characters in the given string:
+    public static void SwapTheSideBySideCharactersInAString()
+    {
+      string s1 = "abcde";
+      string s2 = "";
+      for (var i = 0; i < s1.Length - 1; i += 2)
+      {
+        s2 += s1[i + 1];
+        s2 += s1[i];
+      }
+      if (s1.Length % 2 != 0) s2 += s1[s1.Length - 1];
+      Console.WriteLine(s2);
+    }
+
+    // 45*. Program to display the character count in the given string:
+    // Input: aaabbbacccddacdd
+    // Output: a-5, b-3, c-5, d-4
+    public static void DisplayCharacterCountInAString()
+    {
+      string s = "aaabbbacccddacdd";
+      string res = "";
+      int[] count = new int[256];
+
+      for (var i = 0; i < s.Length; i++)
+      {
+        count[s[i]]++;
+      }
+
+      for (var i = 0; i < 256; i++)
+      {
+        if (count[i] > 0)
+        {
+          res += $"{(char)i}-{count[i]}, ";
+        }
+      }
+      Console.WriteLine(res);
+    }
 
     public static void RunTests()
     {
@@ -460,7 +560,32 @@ namespace ManualProgramms
       // CheckIfTwoStringsAreEqual();
       // GetRevereseString();
       // CountAlphabetsDigitsSymbolsInString();
-      IsPalindromeString();
+      // IsPalindromeString();
+      // GetSumOfDigitsInString(); // correct answer
+      // DisplayASCIIValuesOfEachCharInString();
+      // ConvertUpperCaseStringToLowerCaseString();
+      // DisplayHighestDigitInString();
+
+      /* String Arrays */
+      // DisplayLengthOfTheStringArray();
+      // DisplayStringsFromAnArray();
+      // DisplayLengthsOfEachStringInArray();
+      // DispalyFirstAndLastCharsOfEachStringInArr();
+      // DisplayStringArrInReverse();
+      // DisplayEachStringInReverseOrderInArr();
+
+      /**/
+      // SpitTheStrinIntoWords();
+      // DisplayCountOfWordsInAStringWithoutSplitMethod();
+      // CheckIfTwoStringsAreAnagrams(); // Need logic
+      // DisplayLongestWordInString();
+      // RemoveDuplicateCharsFromAString();
+      // RemoveSpacesInTheString();
+      // RemoveMultipleSpacesInTheString();
+      // DisplayCharactersForSepcificTimesInAString();
+      // SwapTheSideBySideCharactersInAString();
+      DisplayCharacterCountInAString();
     }
   }
 }
+
