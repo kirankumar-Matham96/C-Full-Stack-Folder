@@ -405,6 +405,12 @@ namespace ManualProgramms
       string s1 = "army";
       string s2 = "mary";
 
+      foreach (var i in s1)
+      {
+        if (s2.Contains(i)) continue;
+        else { Console.WriteLine("Not anagrams"); return; }
+      }
+      Console.WriteLine("Anagrams");
 
     }
 
@@ -577,7 +583,7 @@ namespace ManualProgramms
       /**/
       // SpitTheStrinIntoWords();
       // DisplayCountOfWordsInAStringWithoutSplitMethod();
-      // CheckIfTwoStringsAreAnagrams(); // Need logic
+      // CheckIfTwoStringsAreAnagrams();
       // DisplayLongestWordInString();
       // RemoveDuplicateCharsFromAString();
       // RemoveSpacesInTheString();
