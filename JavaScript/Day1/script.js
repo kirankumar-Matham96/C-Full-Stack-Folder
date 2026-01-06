@@ -1,1 +1,1 @@
-window.alert("JavaScript by Ratan Sir!");
+// window.alert("JavaScript by Ratan Sir!");
