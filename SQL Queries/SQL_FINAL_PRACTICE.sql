@@ -383,122 +383,156 @@ CREATE INDEX idx_all_auditLogs ON AuditLogs(action, timestamp);
 /* Creating Stored Procedures - starts */
 
 --Department: id, name, location(room number), headDoctorId
-	--Inserting Data
-	CREATE PROCEDURE sp_insert_department(@id INT, @name VARCHAR(150), @roomNumber INT, @headDoctor VARCHAR(255))
-	AS BEGIN
-		INSERT INTO Department VALUES (@id, @name, @roomNumber, @headDoctor);
-	END;
+--Inserting Data
+CREATE PROCEDURE sp_insert_department(@id INT, @name VARCHAR(150), @roomNumber INT, @headDoctor VARCHAR(255))
+AS BEGIN
+	INSERT INTO Department VALUES (@id, @name, @roomNumber, @headDoctor);
+END;
 
-	--Reading all Data
-	CREATE PROCEDURE sp_readAll_department
-	AS BEGIN
-		SELECT * FROM Department;
-	END;
+--Reading all Data
+CREATE PROCEDURE sp_readAll_department
+AS BEGIN
+	SELECT * FROM Department;
+END;
 
-	--Updating Data (NOTE: COALESCE function returns first non-null value. If the user did not provide any value or null, it will keep the origina data as is)
-	CREATE PROCEDURE sp_update_department(@id INT, @name VARCHAR(150), @roomNumber INT, @headDoctor VARCHAR(255))
-	AS BEGIN
-		UPDATE Department SET
-		name = COALESCE(@name,name),
-		roomNo = COALESCE(@roomNumber,roomNo),
-		headDoctor = COALESCE(@headDoctor, headDoctor)
-		WHERE id = @id;
-	END;
+--Updating Data (NOTE: COALESCE function returns first non-null value. If the user did not provide any value or null, it will keep the origina data as is)
+CREATE PROCEDURE sp_update_department(@id INT, @name VARCHAR(150), @roomNumber INT, @headDoctor VARCHAR(255))
+AS BEGIN
+	UPDATE Department SET
+	name = COALESCE(@name,name),
+	roomNo = COALESCE(@roomNumber,roomNo),
+	headDoctor = COALESCE(@headDoctor, headDoctor)
+	WHERE id = @id;
+END;
 
-	--Deleting Data
-	CREATE PROCEDURE sp_delete_department(@id INT)
-	AS BEGIN
-		DELETE FROM Department WHERE id = @id;
-	END;
+--Deleting Data
+CREATE PROCEDURE sp_delete_department(@id INT)
+AS BEGIN
+	DELETE FROM Department WHERE id = @id;
+END;
 
-	--Dropping Table
-	CREATE PROCEDURE sp_drop_department
-	AS BEGIN
-		DROP TABLE Department;
-	END;
+--Truncate Table
+TRUNCATE TABLE Department
+
+--Dropping Table
+CREATE PROCEDURE sp_drop_department
+AS BEGIN
+	DROP TABLE Department;
+END;
 
 --HealthIssue: id, name
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+CREATE PROCEDURE sp_insert_healthissue(@id INT, @name VARCHAR(255))
+AS BEGIN
+	INSERT INTO HealthIssue VALUES(@id, @name);
+END;
+
+--updating data
+CREATE PROCEDURE sp_update_healthissue(@id INT, @name VARCHAR(255))
+AS BEGIN
+	UPDATE HealthIssue SET name = @name WHERE id = @id;
+END;
+
+--reading data
+CREATE PROCEDURE sp_read_healthissue
+AS BEGIN
+	SELECT * FROM HealthIssue;
+END;
+
+--deleting data
+CREATE PROCEDURE sp_delete_healthissue(@id INT)
+AS BEGIN
+	DELETE FROM HealthIssue WHERE id = @id;
+END;
+
+--dropping table
+CREATE PROCEDURE sp_drop_healthissue
+AS BEGIN
+	DROP TABLE HealthIssue;
+END;
+
+--truncate table
+CREATE PROCEDURE sp_truncate_healthissue
+AS BEGIN
+	TRUNCATE TABLE HealthIssue;
+END;
 
 --Doctor: id, name, gender, dob, qualification, designation, phoneNumber, email, address, joiningDate, status
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
+
 --DoctorSpecialisation: doctorId, healthIssueId
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --Patient: id, name, gender, dob, bloodGroup, healthIssueId, deptId, doctorId, phoneNumber, email, address, emergencyContact
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --Nurse: id, name,  gender, dob, deptId, phoneNumber, email, address
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --Staff: id, name, role, deptId, designation, gender, dob, phoneNumber, email, address, joiningDate, shift 
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --Test: id, name, cost
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --Surgery: id, name, theatorCost, equipmentCost, surgianFee, anesthecianFee
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --Appointment: id, patientId, doctorId, deptId, appointmentDate, appointmentType(opd/ipd/emergency),status, visitingFee
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --Admission: id, patientId, deptId, roomId, admissionDate, dischargeDate, status
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --Room: id, type, chargePerDay, availability
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --TestsConducted: patientTestId, patientId, testId, doctorId, testDate, result, cost
-	--Inserting data
-	--updating data
-	--reading data
-	--deleting data
-	--dropping table
+--Inserting data
+--updating data
+--reading data
+--deleting data
+--dropping table
 
 --SurgeriesPerformed: surgeryId, patientId, surgeonId, surgeryDate, totalCost, status
 	--Inserting data
@@ -681,6 +715,7 @@ CREATE VIEW view_staff AS SELECT id, name, role, deptId, gender, shift FROM Staf
 CREATE VIEW view_test AS SELECT * FROM Test;
 
 --Surgery: id, name, theatorCost, equipmentCost, surgianFee, anesthecianFee
+CREATE VIEW view_surgery AS SELECT * FROM Surgery;
 
 --Appointment: id, patientId, doctorId, deptId, appointmentDate, appointmentType(opd/ipd/emergency),status, visitingFee
 
@@ -725,6 +760,8 @@ DECLARE cursor_department CURSOR STATIC FOR SELECT * FROM view_department;
 DECLARE cursor_healthIssue CURSOR STATIC FOR SELECT * FROM view_healthIssue;
 
 --Doctor: id, name, gender, dob, qualification, designation, phoneNumber, email, address, joiningDate, status
+DECLARE cr_doctor CURSOR STATIC FOR SELECT * FROM view_doctor;
+
 --DoctorSpecialisation: doctorId, healthIssueId
 --Patient: id, name, gender, dob, bloodGroup, healthIssueId, deptId, doctorId, phoneNumber, email, address, emergencyContact
 --Nurse: id, name,  gender, dob, deptId, phoneNumber, email, address
@@ -753,24 +790,4 @@ DECLARE cursor_healthIssue CURSOR STATIC FOR SELECT * FROM view_healthIssue;
 /* Creating Functions - starts */
 
 /* Creating Functions - ends */
-
-
---EXEC sp_configure 'show advanced options', 1;
---RECONFIGURE;
-
---EXEC sp_configure 'Ad Hoc Distributed Queries', 1;
---RECONFIGURE;
-
-
-
---BULK INSERT Department
---FROM 'C:\Users\matha\OneDrive\Desktop\Sathya Tech\SQL Queries\DepartmentData.csv'
---WITH
---(
---	FIRSTROW = 2,
---	FIELDTERMINATOR = ',',
---	ROWTERMINATOR = '\n',
---	FORMAT = 'CSV',
---	TABLOCK
---)
 
