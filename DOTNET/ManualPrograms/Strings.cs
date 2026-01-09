@@ -538,6 +538,97 @@ namespace ManualProgramms
       Console.WriteLine(res);
     }
 
+    // 1Q: Take a string input, then print all available vowels in that string 
+    public static void PrintAllVowelsAvailableInAString()
+    {
+      Console.Write("Enter a string: ");
+      string str = Console.ReadLine().ToLower();
+
+      foreach (var i in str)
+      {
+        if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u') Console.Write($"{i} ");
+      }
+    }
+
+    // 2Q: Take a string input, then print all available vowels in that string without duplicates 
+    public static void PrintAllVowelsAvailableInAStringWithoutDuplicates()
+    {
+      Console.Write("Enter a string: ");
+      string str = Console.ReadLine().ToLower();
+      char[] vowels = new char[str.Length];
+      int idx = 0;
+
+      foreach (var i in str)
+      {
+        switch (i)
+        {
+          case 'a':
+            if (!vowels.Contains('a'))
+            {
+              vowels[idx] = 'a';
+              idx++;
+            }
+            break;
+          case 'e':
+            if (!vowels.Contains('e'))
+            {
+              vowels[idx] = 'e';
+              idx++;
+            }
+            break;
+          case 'i':
+            if (!vowels.Contains('i'))
+            {
+              vowels[idx] = 'i';
+              idx++;
+            }
+            break;
+          case 'o':
+            if (!vowels.Contains('o'))
+            {
+              vowels[idx] = 'o';
+              idx++;
+            }
+            break;
+          case 'u':
+            if (!vowels.Contains('u'))
+            {
+              vowels[idx] = 'u';
+              idx++;
+            }
+            break;
+        }
+      }
+      foreach (var ch in vowels) Console.Write($"{ch} ");
+    }
+
+    // 3Q: Get the students hall ticket numbers of a given college
+    public static void GetHallTicketsOfAllStudentsBelongsToGivenCollege()
+    {
+      string[] hts = { "112221001", "115622053", "112221022", "185621050", "112221029", "115622023", "116522001" };
+
+      Console.Write("Enter the college code: ");
+      string code = Console.ReadLine();
+      int count = 0;
+      foreach (var ht in hts) if (ht.StartsWith(code)) { Console.WriteLine(ht); count++; }
+
+      if (count == 0) Console.WriteLine($"Sorry! No halltickets are avialable from the collese with code: {code}");
+    }
+
+    // 4Q: From the emails list, get the names of employees thet belongs to given company
+    public static void GetEmployeesNamesOfGivenCompany()
+    {
+      string[] emails = { "venkat@ibm.com", "vishnu@tcs.com", "sarma@ibm.com", "sai@ibm.com" };
+
+      Console.Write("Enter the company name: ");
+      string company = Console.ReadLine();
+      int count = 0;
+
+      foreach (var email in emails) if (email.Contains(company)) { Console.WriteLine($"{email.Split('@')[0]}"); count++; }
+      if(count==0) Console.WriteLine("Sorry! No employees found!");
+
+    }
+
     public static void RunTests()
     {
       /* Character programs */
@@ -590,7 +681,13 @@ namespace ManualProgramms
       // RemoveMultipleSpacesInTheString();
       // DisplayCharactersForSepcificTimesInAString();
       // SwapTheSideBySideCharactersInAString();
-      DisplayCharacterCountInAString();
+      // DisplayCharacterCountInAString();
+
+      /* HW */
+      // PrintAllVowelsAvailableInAString();
+      // PrintAllVowelsAvailableInAStringWithoutDuplicates();
+      // GetHallTicketsOfAllStudentsBelongsToGivenCollege();
+      GetEmployeesNamesOfGivenCompany();
     }
   }
 }

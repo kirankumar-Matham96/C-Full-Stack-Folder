@@ -14,23 +14,8 @@
       >Second Number: <input type="number" name="num2" id="num2" class="input"
     /></label>
     <button class="btn">Check</button>
-    <script>
-      const btnEl = document.querySelector(".btn");
-      btnEl.addEventListener("click", () => {
-        const num1El = document.querySelector("#num1");
-        const num2El = document.querySelector("#num2");
-
-        const num1 = parseInt(num1El.value);
-        const num2 = parseInt(num2El.value);
-
-        if (num1 > num2) {
-          alert(`${num1} is the biggest number`);
-        } else if (num1 == num2) {
-          alert(`Both First and Second numbers are equal`);
-        } else {
-          alert(`${num2} is the biggest number`);
-        }
-      });
+    <script src="script.js">
+      
     </script>
   </body>
 </html>

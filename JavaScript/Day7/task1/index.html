@@ -10,17 +10,6 @@
       Enter your age: <input type="number" id="age" class="input" />
     </label>
     <button type="button" id="btn" class="btn">Check Eligibility</button>
-    <script>
-      const ageEl = document.getElementById("age");
-      const btnEl = document.getElementById("btn");
-
-      btnEl.addEventListener("click", () => {
-        if (ageEl.value >= 18) {
-          alert("You are eligible for voting");
-        } else {
-          alert("You are not aligible for voting");
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

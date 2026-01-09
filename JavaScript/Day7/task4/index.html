@@ -18,28 +18,8 @@
     <p>If the age is between 20 and 59, it displays: "You are an adult"</p>
     <p>If the age is 60 or above, it displays: "You are a senior citizen"</p>
 
-    <script>
-      const btnEl = document.getElementById("btn");
-
-      let message;
-
-      btnEl.addEventListener("click", () => {
-        const age = parseInt(document.getElementById("age").value);
-        switch (true) {
-          case age >= 0 && age <= 12:
-            message = "You are a child";
-            break;
-          case age >= 13 && age <= 19:
-            message = "You are a teenager";
-            break;
-          case age >= 20 && age <= 59:
-            message = "You are an adult";
-            break;
-          case age >= 60:
-            message = "You are a senior citizen";
-        }
-        alert(message);
-      });
+    <script src="script.js">
+      
     </script>
   </body>
 </html>

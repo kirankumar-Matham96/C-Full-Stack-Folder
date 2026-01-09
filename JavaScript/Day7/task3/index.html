@@ -9,17 +9,8 @@
     <h1>Even or Odd Checker</h1>
     <label for="num">Enter a number<input type="number" name="num" class="input" id="num"></label>
     <button class="btn">Check Even or Odd</button>
-    <script>
-        const btnEl = document.querySelector(".btn");
-        btnEl.addEventListener("click", () => {
-            const num = parseInt(document.querySelector("#num").value);
-
-            if(num%2 == 0){
-                alert(`The number ${num} is EVEN`);
-            }else{
-                alert(`The number ${num} is ODD`);
-            }
-        });
+    <script src="script.js">
+        
     </script>
 </body>
 </html>
