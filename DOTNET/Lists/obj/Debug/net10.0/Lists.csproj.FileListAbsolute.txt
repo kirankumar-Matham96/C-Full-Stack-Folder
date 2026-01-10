@@ -1,0 +1,15 @@
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\bin\Debug\net10.0\Lists.exe
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\bin\Debug\net10.0\Lists.deps.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\bin\Debug\net10.0\Lists.runtimeconfig.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\bin\Debug\net10.0\Lists.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\bin\Debug\net10.0\Lists.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\Lists.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\Lists.AssemblyInfoInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\Lists.AssemblyInfo.cs
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\Lists.csproj.CoreCompileInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\Lists.sourcelink.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\Lists.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\refint\Lists.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\Lists.pdb
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\Lists.genruntimeconfig.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\Lists\obj\Debug\net10.0\ref\Lists.dll

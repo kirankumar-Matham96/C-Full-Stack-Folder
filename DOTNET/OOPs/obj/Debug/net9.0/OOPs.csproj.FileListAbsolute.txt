@@ -13,3 +13,11 @@ C:\Users\matha\OneDrive\Desktop\Sathya Tech\OOPs\obj\Debug\net9.0\OOPs.pdb
 C:\Users\matha\OneDrive\Desktop\Sathya Tech\OOPs\obj\Debug\net9.0\OOPs.genruntimeconfig.cache
 C:\Users\matha\OneDrive\Desktop\Sathya Tech\OOPs\obj\Debug\net9.0\ref\OOPs.dll
 C:\Users\matha\OneDrive\Desktop\Sathya Tech\OOPs\obj\Debug\net9.0\OOPs.sourcelink.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\OOPs\obj\Debug\net9.0\OOPs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\OOPs\obj\Debug\net9.0\OOPs.AssemblyInfoInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\OOPs\obj\Debug\net9.0\OOPs.AssemblyInfo.cs
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\OOPs\obj\Debug\net9.0\OOPs.csproj.CoreCompileInputs.cache
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\OOPs\obj\Debug\net9.0\OOPs.sourcelink.json
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\OOPs\obj\Debug\net9.0\OOPs.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\OOPs\obj\Debug\net9.0\refint\OOPs.dll
+C:\Users\matha\OneDrive\Desktop\Sathya Tech\DOTNET\OOPs\obj\Debug\net9.0\OOPs.pdb

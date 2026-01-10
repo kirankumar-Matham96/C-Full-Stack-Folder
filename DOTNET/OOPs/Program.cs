@@ -22,9 +22,9 @@ namespace OOPs
             /**
                 Required class instantiations
             */
-            PracticeMethods pm = new PracticeMethods();
-            Person p = new Person(18, 85, 50, 75, 40);
-            Employee e = new Employee(1, "employee-1", 400000, "h.no: 8-7/A-12, near police station, some village, some district, some state, 50000052.", "Software Engineer");
+            // PracticeMethods pm = new PracticeMethods();
+            // Person p = new Person(18, 85, 50, 75, 40);
+            // Employee e = new Employee(1, "employee-1", 400000, "h.no: 8-7/A-12, near police station, some village, some district, some state, 50000052.", "Software Engineer");
 
             // question: 25 (Employee Class)
             // Console.WriteLine("Output for question: 25\n###################\n");
@@ -108,12 +108,12 @@ namespace OOPs
 
             /* setters and getters */
             // getting min age to donate blood
-            Console.WriteLine(p.GetMinAge());
+            // Console.WriteLine(p.GetMinAge());
             // setting min age to donate blood
-            p.SetMinAge(21);
-            Console.WriteLine(p.GetMinAge());
+            // p.SetMinAge(21);
+            // Console.WriteLine(p.GetMinAge());
             // getting max age of student (static variable)
-            Console.WriteLine(Student.GetMaxAge());
+            // Console.WriteLine(Student.GetMaxAge());
         }
     }
 }
