@@ -7,7 +7,52 @@
 </head>
 <body>
     <h1>JavaScropt Day 6</h1>
-    <script src="./script.js">
+
+    <!-- Task1 - starts -->
+    <h2>Login Form</h2>
+    
+    <form>
+        <label>Username: <input type="text" id="username"></label>
+        <label>Password: <input type="password" id="password"></label>
+        <button type="button" onclick="loginCheck()">Login</button>
+    </form>
+    <!-- Task1 - ends -->
+
+    <!-- Task2 - starts -->
+    <h2>Product Bill Calculator</h2>
+    <form>
+        <label>Product Id: <input type="text" name="id" id="id"></label>
+        <label>Product Name: <input type="text" name="name" id="name"></label>
+        <label>Price: <input type="number" name="price" id="price"></label>
+        <label>Quantity: <input type="number" name="qty" id="qty"></label>
+        <button type="button" onclick="billCalculator()">Calculate Bill</button>
+    </form>
+
+    <h3 id="total"></h3>
+    <h3 id="discAmt"></h3>
+    <h3 id="netAmt"></h3>
+    <!-- Task2 - ends -->
+    
+    <!-- Task3 - starts -->
+     <h2>Adding 2 numbers</h2>
+     <form>
+        <label>Number1: <input type="number" name="num1" id="num1"></label>
+        <label>Number2: <input type="number" name="num2" id="num2"></label>
+        <label>Result: <input type="number" name="result" id="result"></label>
+        <button type="button" onclick="calculateSum()">Add</button>
+     </form>
+    <!-- Task3 - ends -->
+    
+    <!-- Task4 - starts -->
+     <h2>Wish me</h2>
+     <!-- <button type="button" onclick="wishMe()">Wish Me</button> -->
+     <button type="button" ondblclick="wishMe()">Wish Me</button>
+     <h1 id="wishMessage"></h1>
+    <!-- Task4 - ends -->
+
+    
+    <script src="classScript.js"></script>
+    <!-- <script src="./script.js"> -->
 
     </script>
 </body>
