@@ -18,7 +18,7 @@ namespace Lists
       {
         Console.Write("(To stop entering, press 'c')\nEnter a value: ");
 
-        var input = Console.ReadLine().ToLower();
+        var input = Console.ReadLine()?.ToLower();
 
         if (input[0] == 'c') break;
 
