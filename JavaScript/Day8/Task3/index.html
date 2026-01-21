@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-8 Task-3</title>
+  </head>
+  <body>
+    <h1>Loan EMI Calculator...</h1>
+
+    <form>
+      <label>Loan Amount: <input type="number" id="loan" /> </label>
+      <label>Interest Rate(% per anum): <input type="number" id="rate" /> </label>
+      <label>Tenure (years): <input type="number" id="tenure" /> </label>
+      <button onclick="calculateMonthlyEmi()">Convert</button>
+      <label>Monthly EMI: <input type="number" id="emi" readonly /> </label>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

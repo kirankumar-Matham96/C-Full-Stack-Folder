@@ -7,81 +7,17 @@
   </head>
   <body>
     <form>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        class="input"
-        value=""
-        placeholder="Enter your name"
-        autocomplete="off"
-        oninput="takeName(value)"
-      />
-      <input
-        type="email"
-        name="email"
-        id="email"
-        class="input"
-        value=""
-        placeholder="Enter your email"
-        autocomplete="off"
-        oninput="takeEmail(value)"
-      />
-      <input
-        type="password"
-        name="password"
-        id="password"
-        class="input"
-        placeholder="Enter your password"
-        autocomplete="off"
-        value=""
-        oninput="takePass(value)"
-      />
-      <input
-        type="tel"
-        name="mobile"
-        id="mobile"
-        class="input"
-        placeholder="Enter your mobile number"
-        autocomplete="off"
-        value=""
-        oninput="takeMobile(value)"
-      />
-      <button type="button" class="btn" id="btn" onclick="printData()">
-        Submit
-      </button>
+      <label>Name: <input type="text" name="name" id="name" class="input" value="" placeholder="Enter your name" autocomplete="off" /></label>
+      <label>Email: <input type="email" name="email" id="email" class="input" value="" placeholder="Enter your email" autocomplete="off" /></label>
+      <label>Password: <input type="password" name="password" id="password" class="input" placeholder="Enter your password" autocomplete="off" /></label>
+      <label>Mobile: <input type="tel" name="mobile" id="mobile" class="input" placeholder="Enter your mobile number" autocomplete="off" /></label>
+      <button type="button" class="btn" id="btn" onclick="printData()">Submit</button>
     </form>
-    <script>
-      /**
-       * Need to revise and use alternative methods for DOM operations
-       */
 
-      const formData = {
-        name: "",
-        email: "",
-        password: "",
-        mobile: "",
-      };
-
-      const takeName = (e) => {
-        formData.name = e;
-      };
-
-      const takeEmail = (e) => {
-        formData.email = e;
-      };
-
-      const takePass = (e) => {
-        formData.password = e;
-      };
-
-      const takeMobile = (e) => {
-        formData.mobile = e;
-      };
-
-      const printData = () => {
-        console.log(formData);
-      };
-    </script>
+    <h1>Details:</h1>
+    <p id="nameVal"></p>
+    <p id="emailVal"></p>
+    <p id="mobileNo"></p>
+    <script src="script.js"></script>
   </body>
 </html>
