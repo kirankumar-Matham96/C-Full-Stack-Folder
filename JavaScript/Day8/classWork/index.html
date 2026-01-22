@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Aritmatic calculations</title>
+  </head>
+  <body>
+    <form>
+      <label>Enter first number: </label>
+      <input type="number" name="num1" id="num1" /><br /><br />
+      <label>Enter second number: </label>
+      <input type="number" name="num2" id="num2" /><br /><br />
+      <label>Result: </label>
+      <input type="number" name="res" id="res" readonly /><br /><br />
+      <button type="button" id="add" onclick="calculate(this.id)">Add</button
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" id="sub" onclick="calculate(this.id)">
+        Subtract</button
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" id="mul" onclick="calculate(this.id)">
+        Product</button
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" id="div" onclick="calculate(this.id)">
+        Division</button
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" id="mod" onclick="calculate(this.id)">Mod</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
