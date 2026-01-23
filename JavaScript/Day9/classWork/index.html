@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventhandling onsubmit</title>
+  </head>
+  <body>
+    <h1>Form Validations</h1>
+
+    <form onsubmit="return validateForm();" action="ProductLogic" method="get">
+      <label>Product Id: </label>
+      <input type="text" id="pid" /> <span id="idErr"></span> <br /><br />
+      <label>Product Name: </label>
+      <input type="text" id="name" /> <span id="nameErr"></span> <br /><br />
+      <label>Product Brand: </label>
+      <input type="text" id="brand" /> <span id="bErr"></span> <br /><br />
+      <label>Product Quantity: </label>
+      <input type="text" id="qty" /> <span id="qtyErr"></span> <br /><br />
+      <label>Product Price: </label>
+      <input type="text" id="price" /> <span id="pErr"></span> <br /><br />
+      <label>Mfg Date: </label>
+      <input type="date" id="mDate" /> <span id="mErr"></span> <br /><br />
+      <label>Exp Date: </label>
+      <input type="date" id="eDate" /> <span id="eErr"></span> <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
