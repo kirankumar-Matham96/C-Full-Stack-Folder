@@ -3,14 +3,13 @@
 	ii. Strong Entities
 	
 2. Fields:
-	i. 
-	ii. 
+	i. Single Valued
+	ii. Multi Valued
 	iii. Composition
 	iv. Primary key
 	v. Foreign key
-	vi. 
+	vi. Stored
 	vii. Derived
-	viii. 
 
 3. Data Types:
 	i. DECIMAL TYPE:
@@ -25,7 +24,7 @@
 		-> NVARCHAR
 		
 	iii. BOOLEAN TYPE
-		-> 
+		-> BOOL
 		
 	iv. DATE-TIME TYPE:
 		-> DATE
@@ -64,7 +63,6 @@
 	ii. UNION
 	iii. INTERSECT
 	iv. EXCEPT
-	v. 
 	
 9. Index:
 	
