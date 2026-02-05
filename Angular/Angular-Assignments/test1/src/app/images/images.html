@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row gy-4">
-    @for (imageData of images; track imageData.id) {
-      <div class="col-4 d-flex justify-content-center align-items-center">
+    @for (imageData of images(); track imageData.id) {
+      <div
+        class="col-4 d-flex justify-content-center align-items-center"
+      >
         <app-image [image]="imageData"></app-image>
       </div>
     }

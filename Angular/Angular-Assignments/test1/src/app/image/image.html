@@ -1,1 +1,2 @@
-<img [src]="image()?.imageUrl" [alt]="image()?.id" class="img-fluid contain-img" />
+<img [ngSrc]="image()?.imageUrl ?? ''" [alt]="image()?.id ?? ''" width="400" height="200" />
+<!-- class="img-fluid contain-img" -->
