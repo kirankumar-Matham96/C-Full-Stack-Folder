@@ -1,0 +1,32 @@
+
+Installation steps
+
+1) install node js     version - v20.20.0
+2) install type script    
+       D:\> npm install -g typescript@5.9.0
+3) install vs code editor
+4) install angular CLI  ( command line interface )
+D:\>npm install -g @angular/cli@20
+or
+D:\>npm install -g @angular/cli@20.3.14
+
+Create Angular application
+
+D:\>mkdir Angular
+D:\>cd Angular
+D:\Angular>ng new WebApp1
+
+Goto VS Code :
+File -> open folder -> select d:\angular\WebApp1
+
+click on - Terminal -> new terminal 
+d:\angular\webapp1> ng serve
+
+type this url or address in browser:
+
+http://localhost:4200 
+
+
+
+
+

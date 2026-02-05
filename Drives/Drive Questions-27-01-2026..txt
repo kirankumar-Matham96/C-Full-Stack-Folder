@@ -1,0 +1,107 @@
+DOTNET DRIVE IN THE INSTITUTE:
+
+1Q: What is the difference between a class and a struct in C#, and how do they differ in memory allocation?
+
+2Q: What are value type and reference type in C#, and how do they behave in memory?
+A: Value Types:
+    -> The value type variables are primitive types.
+    -> They store the actual value in the memory location.
+   
+   Reference Type:
+    -> Non reference types are Strings and Objects like arrays, lists...
+    -> They store the object reference instead of the actual value.
+
+3Q: Explain Polymorphism in C# using inheritance and interfaces with an example.
+A: Polymorphism:
+    -> Polymorphism came from Greek words: POLY means many, and MORPH means forms.
+    -> It simply means many forms.
+    -> There are 2 types of polymorphism: 
+            
+            i. Compile Time Polymorphism
+              Ex: Method Overloading
+                -> Multiple methods with the same name but with different parameters (number of parameters OR type of parameters OR order of parameters)
+                -> The method will gets called based on the parameters that we pass.
+                -> The method which will be called is decided at the compile time only.
+
+            ii. Run Time Polymorphism
+              Ex: Method Overriding
+                -> Multiple methods with the same name and same parameters with inheritance.
+                -> The overridden method will gets called in runtime.
+    -> Ex:
+
+          class Animal{
+            private string sound;
+            
+            public Animal(string sound){
+              this.sound = sound;
+            }
+
+            public string getSound(){
+              return this.sound;
+            }
+
+            public string getFood(){
+              return "Non-veg";
+            }
+
+            public string getFood(string food){
+              return food;
+            }
+
+          }
+
+          class Cat: Animal {
+            private string food;
+
+            public Cat(string sound, string food):base(sound){
+              this.food = food;
+            }
+
+            public void getFood(){
+              return this.food;
+            }
+          }
+
+          class Dog: Animal {
+            private string food;
+
+            public Cat(string sound, string food):base(sound){
+              this.food = food;
+            }
+
+            public void getFood(){
+              return this.food;
+            }
+          }
+
+          public Program(){
+            Animal cat = new Cat("Mew", "Fish");
+            Animal dog = new Dog("Woof", "Bone");
+
+            Console.WriteLine($"Cat says: {cat.getSound()}...");
+            Console.WriteLine($"Cat eats: {cat.getFood()}...");
+            Console.WriteLine($"Dog says: {dog.getSound()}...");
+            Console.WriteLine($"Dog eats: {dog.getFood()}...");
+          }
+
+4Q: What is a delegate in C#, and how is it different from an event? When would you use each?
+
+5Q: What is the role of async and await in C#, and how do they enable asynchronous programming?
+
+6Q: What is the difference between == and Equals() in C#, especially with reference types?
+
+7Q: What are the differences between INNER JOIN, LEFT JOIN and RIGHT JOIN in SQL?
+A: INNER JOIN:
+      -> It will join 2 or more tables and gives the matching values
+   RIGHT JOIN:
+      -> It is used to join two tables and gives the all values from the RIGHT table irrespective of the matching. It is also known as RIGHT OUTER JOIN.
+  LEFT JOIN:
+      -> It is also known as the LEFT OUTER JOIN. It is used to get the all values from the LEFT table irrespective of the condition.
+
+8Q: What is the purpose of an index in SQL, and how do index improve query performance? What are some downsides of using them?
+A: INDEX is used to make the queries fetch the data faster. By adding an index to an column value which is frequently queried, the SQL can easily find the data using the index. But using too many indexes, the SQL querying may get slower.
+
+9Q: What is the difference between DELETE, TRUNCATE, and DROP commands in SQL? Explain their use cases and impacts?
+A: DELETE: Used to delete one or more columns in a table.
+   TRUNCATE: Used to delete all the rows at a time.
+   DROP: Used to Delete the entire table.

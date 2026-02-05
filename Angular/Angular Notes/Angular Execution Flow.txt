@@ -1,0 +1,13 @@
+
+Angular Application Flow ( in version 20) :-
+1. "main.ts" it is the entry point for the application.
+
+2. Angular AOT (Ahead-Of-Time) complier compiles templates and TypeScript into
+   optimized JavaScript before the browser runs the app,
+   improving startup speed and performance.
+
+3. Bootstrapping is done. Bootstrapping means Angular application is started.
+
+4. When the web page is displayed in browser it means Initial DOM ( Document object model)  is created.
+
+5. In Angular 20, a DOM updated when the data changes. When Data changes, then partial DOM updates.

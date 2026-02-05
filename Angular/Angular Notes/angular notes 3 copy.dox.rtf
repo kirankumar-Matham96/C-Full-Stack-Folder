@@ -1,0 +1,349 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset1 Cambria Math;}{\f3\fnil\fcharset1 Segoe UI Symbol;}{\f4\fnil\fcharset1 Segoe UI Symbol;}{\f5\fnil\fcharset0 Cambria Math;}{\f6\fnil Cambria Math;}{\f7\fnil\fcharset1 Segoe UI Emoji;}}
+{\colortbl ;\red0\green176\blue80;}
+{\*\listtable 
+{\list\listhybrid
+{\listlevel\levelnfc0\leveljc0\levelstartat1{\leveltext\'02\'00.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc0\leveljc0\levelstartat1{\leveltext\'02\'01.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc4\leveljc0\levelstartat1{\leveltext\'02\'02.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc3\leveljc0\levelstartat1{\leveltext\'02\'03.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc2\leveljc0\levelstartat1{\leveltext\'02\'04.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc1\leveljc0\levelstartat1{\leveltext\'02\'05.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc0\leveljc0\levelstartat1{\leveltext\'02\'06.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc4\leveljc0\levelstartat1{\leveltext\'02\'07.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc0\leveljc1\levelstartat1{\leveltext\'02\'08.;}{\levelnumbers\'01;}\jclisttab\tx0}\listid1 }}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont2\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs48\lang9 TypeScript\par
+
+\pard\sa200\sl276\slmult1\fs32 Introduction:\b0\fs24\par
+
+\pard 
+{\listtext\f0 1.\tab}\ls1\fi-360\li720\sa200\sl276\slmult1 TypeScript is a strongly typed programming language that builds on JavaScript.\par
+{\listtext\f0 2.\tab}It uses compile-time type checking.\par
+{\listtext\f0 3.\tab}JavaScript code is generated from TypeScript.\par
+{\listtext\f0 4.\tab}As a result, TypeScript can be used anywhere JavaScript is used, including:\par
+{\listtext\f0 5.\tab}\tab Frontend\par
+
+\pard 
+{\listtext\f0 1.\tab}\ls1\ilvl8\fi-360\li720\sa200\sl276\slmult1\tab Backend\par
+
+\pard\sa200\sl276\slmult1\par
+\b\fs32 Nature of TypeScript\b0\fs24\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 TypeScript is an object-oriented programming language.\par
+{\pntext\f0 2.\tab}It is a case-sensitive language.\par
+
+\pard\sa200\sl276\slmult1\b\fs32 TypeScript Compiler\b0\fs24\par
+\tab TypeScript has an official compiler.\par
+\tab It can be installed using npm.\par
+\tab In Angular:\par
+\tab\tab The Ahead-of-Time (AOT) compiler converts Angular HTML (forms) \tab\tab and TypeScript code into efficient JavaScript.\par
+\b\fs32 TypeScript \f1\endash  Simple Data Types\b0\fs24\par
+\b\fs28 Primitive Types\b0\fs24\par
+\f0\lang2057\tab\f1\lang9 TypeScript supports several simple (primitive) data types.\par
+\f0\lang2057\tab\f1\lang9 Main Primitive Types (JavaScript & TypeScript)\par
+\f0\lang2057\tab\f1\lang9 There are three main primitives:\par
+\f0\lang2057\tab\tab\b\f1\lang9 boolean\b0\f0\lang2057 : \f1\lang9 Represents true or false values\par
+\f0\lang2057\tab\tab\b\f1\lang9 number\b0\f0\lang2057 : \f1\lang9 Represents whole numbers and floating-point values\par
+\f0\lang2057\tab\tab\b\f1\lang9 string\b0\f0\lang2057 : \f1\lang9 Represents text values\par
+\f0\lang2057\tab\f1\lang9 Additional Primitive Types (Later Versions)\f0\lang2057 :\f1\lang9\par
+\f0\lang2057\tab\tab\b\f1\lang9 bigint\f0\lang2057 : \b0\f1\lang9 Used for very large numbers\f0\lang2057 . \f1\lang9 Supports larger positive and \f0\lang2057\tab\tab\tab\tab\f1\lang9 negative values than the number type\par
+\f0\lang2057\tab\tab\b\f1\lang9 symbol\b0\f0\lang2057 : \f1\lang9 Used to create a globally unique identifier\f0\lang2057 . \f1\lang9 Symbols are\f0\lang2057  \tab\tab\tab\tab   \f1\lang9 Unique\f0\lang2057 , \f1\lang9 Immutable\f0\lang2057 .\f1\lang9\par
+\f0\lang2057\tab\tab\tab\f1\lang9 Uses of symbol\f0\lang2057 :\par
+\tab\tab\tab\tab\f1\lang9 Creating property keys for objects\par
+\f0\lang2057\tab\tab\tab\tab\f1\lang9 Creating private properties or methods in classes\f0\par
+\b TypeScript \f1\endash  Variable Declaration & Syntax\f0\lang2057 :\b0\f1\lang9\par
+Syntax\f0\lang2057 :\f1\lang9\par
+\f0\lang2057\tab\cf1\b\f1\lang9 <variable> : <datatype> = value\cf0\b0\par
+Example\par
+\f0\lang2057\tab\f1\lang9 let a: number = 10;\par
+\f0\lang2057\par
+\f1\lang9 Example Program (app.ts)\par
+\f0\lang2057\tab\f1\lang9 let a = 10;\par
+\f0\lang2057\tab\f1\lang9 console.log(a);\par
+\f0\lang2057\tab\f1\lang9 console.log(typeof(a));\par
+\f0\lang2057\tab\f1\lang9 var s = "hyderabad";\par
+\f0\lang2057\tab\f1\lang9 console.log(s);\par
+\f0\lang2057\tab\f1\lang9 console.log(typeof(s));\par
+\f0\lang2057\tab\f1\lang9 const b = 45.66;\par
+\f0\lang2057\tab\f1\lang9 console.log(b);\par
+\f0\lang2057\tab\f1\lang9 console.log(typeof(b));\par
+\f0\lang2057\tab\f1\lang9 let c = true;\par
+\f0\lang2057\tab\f1\lang9 console.log(c);\par
+\f0\lang2057\tab\f1\lang9 console.log(typeof(c));\par
+\par
+Explanation of Output\par
+a \f2\u8594?\f1  \f0 number\par
+s \f2\u8594?\f1  \f0 string\par
+b \f2\u8594?\f1  \f0 number\par
+c \f2\u8594?\f1  \f0 boolean\par
+The typeof() operator is used to check the data type of a variable at runtime.\par
+\par
+\b Variable Declarations in TypeScript / JavaScript\b0\par
+\b var\b0 : Declares variables with function scope or global scope\par
+Allows:\par
+\tab Re-declaration\par
+\tab Re-assignment\par
+\tab Not recommended in modern TypeScript due to scope issues\par
+\par
+Example\par
+\tab var x = 10;\par
+\tab var x = 20; // allowed\par
+\tab\par
+\b let\b0 : Declares variables with block scope\par
+Allows:\par
+\tab Re-assignment\par
+\tab Does not allow re-declaration in the same block\par
+\par
+Example\par
+\tab let y = 10;\par
+\tab y = 20;   // allowed\par
+\tab // let y = 30; \f3\u10060?\f1  \f0 not allowed\par
+\par
+\b const\b0 : Declares block-scoped constants\par
+Allows\par
+\tab Does not allow re-assignment after initial assignment\par
+\tab Value must be assigned at declaration time\par
+\par
+Example\par
+\tab const z = 50;\par
+\tab // z = 60; \f3\u10060?\f1  \f0 not allowed\par
+\tab Comparison Summary (Exam-Friendly)\par
+\par
+Keyword\tab         Scope\tab\tab Re-declaration\tab\tab Re-assignment\par
+ var\tab      \tab Function / Global\tab      \f3\u9989?\f1  \f0 Yes\tab\tab      \f3\u9989?\f1  \f0 Yes\par
+ let\tab\tab          Block\tab\tab      \f3\u10060?\f1  \f0 No\tab\tab      \f3\u9989?\f1  \f0 Yes\par
+ const\tab\tab          Block\tab\tab      \f3\u10060?\f1  \f0 No\tab\tab      \f3\u10060?\f1  \f0 No\par
+\par
+\f4\u-10179?\u-9000?\f1  \f0 Tip for Exams\par
+Prefer let and const and Avoid var\par
+Use const when the value should not change\par
+\par
+\b TypeScript\f5  \f2\endash\f6  \f0 Example\f5  \f0 2\f5  (\f0 Typed\f5  \f0 Variables\f5 )\b0\f0\par
+Example\f5  \f0 Code\par
+let\f5  \f0 a\f5 : \f0 number\f5  = \f0 10\f5 ;\f0\par
+console\f5 .\f0 log\f5 (\f0 "a\f5  \f0 value\f5 :\f0 "\f5  + \f0 a\f5 );\f0\par
+\par
+var\f5  \f0 s\f5 : \f0 string\f5  = \f0 "hyderabad"\f5 ;\f0\par
+console\f5 .\f0 log\f5 (\f0 "s\f5  \f0 value\f5 :\f0 "\f5  + \f0 s\f5 );\f0\par
+const\f5  \f0 b\f5 : \f0 number\f5  = \f0 45\f5 .\f0 66\f5 ;\f0\par
+console\f5 .\f0 log\f5 (\f0 "b\f5  \f0 value\f5 :\f0 "\f5  + \f0 b\f5 );\f0\par
+let\f5  \f0 c\f5 : \f0 boolean\f5  = \f0 true\f5 ;\f0\par
+console\f5 .\f0 log\f5 (\f0 "c\f5  \f0 value\f5 :\f0 "\f5  + \f0 c\f5 );\f0\par
+\par
+Explanation\par
+Variables\f5  \f0 are\f5  \f0 declared\f5  \f0 with\f5  \f0 explicit\f5  \f0 data\f5  \f0 types\par
+Values\f5  \f0 are\f5  \f0 printed\f5  \f0 using\f5  \f0 console\f5 .\f0 log\f5 ()\f0\par
+String\f5  \f0 concatenation\f5  (+) \f0 is\f5  \f0 used\f5  \f0 to\f5  \f0 display\f5  \f0 labels\f5  \f0 with\f5  \f0 values\par
+Note\f5 : \f0 Viewing\f5  \f0 Output\f5  \f0 in\f5  \f0 Browser\par
+\par
+To\f5  \f0 open\f5  \f0 the\f5  \f0 console\f5  \f0 in\f5  \f0 Google\f5  \f0 Chrome\f5 :\f0\par
+Click\f5  \f0 on\f5  \f0 Three\f5  \f0 dots\f5  (\f2\u8942?\f5 )\f0\par
+Go\f5  \f0 to\f5  \f0 Tools\f5  \f2\u8594?\f6  \f0 More\f5  \f0 Tools\par
+Select\f5  \f0 Developer\f5  \f0 Tools\par
+Open\f5  \f0 the\f5  \f0 Console\f5  \f0 tab\par
+\par
+\b Special\f5  \f0 Types\f5  \f0 in\f5  \f0 TypeScript\b0\par
+\tab\b any\b0\f5  \f0 Type:\par
+\tab\tab any\f5  \f0 is\f5  \f0 a\f5  \f0 special\f5  \f0 type\f5  \f0 that disables\f5  \f0 type\f5  \f0 checking.\par
+\tab\tab Allows\f5  \f0 assigning\f5  \f0 values\f5  \f0 of\f5  \f0 any\f5  \f0 data\f5  \f0 type.\par
+\tab\tab Use\f5  \f0 with\f5  \f0 caution\f5 , \f0 as\f5  \f0 it\f5  \f0 removes\f5  \f0 TypeScript\f1\rquote\f0 s\f5  \f0 safety\f5  \f0 benefits\par
+\par
+Example\f5  \f0 3\f5 : \f0 any\f5  \f0 Type\par
+let\f5  \f0 a\f5 : \f0 any\f5 ;\f0\par
+a\f5  = \f0 10\f5 ;\f0\par
+console\f5 .\f0 log\f5 (\f0 a\f5 );\f0\par
+a\f5  = \f0 "hyd"\f5 ;\f0\par
+console\f5 .\f0 log\f5 (\f0 a\f5 );\f0\par
+a\f5  = \f0 56\f5 .\f0 77\f5 ;\f0\par
+console\f5 .\f0 log\f5 (\f0 a\f5 );\f0\par
+\par
+Explanation\par
+The\f5  \f0 same\f5  \f0 variable\f5  \f0 holds\f5  \f0 Number, String, Decimal\f5  \f0 value. No\f5  \f0 type\f5  \f0 error\f5  \f0 occurs\f5  \f0 because\f5  \f0 the\f5  \f0 variable\f5  \f0 is\f5  \f0 declared\f5  \f0 as\f5  \f0 any.\par
+\par
+\b Math\f5  \f0 Functions\f5  \f0 Example\b0\par
+Example\f5  \f0 4\f5 : \f0 Math\f5 .\f0 round\f5 ()\f0\par
+console\f5 .\f0 log\f5 (\f0 Math\f5 .\f0 round\f5 (\f0 45\f5 .\f0 67\f5 ));\f0\par
+Output\par
+46\par
+\par
+Explanation\par
+Math\f5 .\f0 round\f5 () \f0 rounds\f5  \f0 a\f5  \f0 number\f5  \f0 to\f5  \f0 the\f5  \f0 nearest\f5  \f0 integer\par
+Values\f5  \f2\u8805?\f6  \f5 .\f0 5\f5  \f0 are\f5  \f0 rounded\f5  \f0 up\par
+Values\f5  < .\f0 5\f5  \f0 are\f5  \f0 rounded\f5  \f0 down\par
+\par
+Exam\f5  \f0 Tips\f5  \f4\u-10179?\u-9012?\f0\par
+Prefer\f5  \f0 specific\f5  \f0 types\f5  (\f0 number\f5 , \f0 string\f5 , \f0 boolean\f5 )\f0\par
+Avoid\f5  \f0 any\f5  \f0 unless\f5  \f0 absolutely\f5  \f0 necessary\par
+Math\f5 .\f0 round\f5 () \f0 returns\f5  \f0 a\f5  \f0 number\par
+\lang9\par
+\b TypeScript \f1\endash  Example 5 (Type Safety vs any)\b0\par
+Example 5: Type Error Case\par
+let a = true;\par
+a = "hyd";\par
+Math.round(a);\par
+Error\par
+Type 'string' is not assignable to type 'boolean'\par
+\par
+Explanation\par
+Variable a is initially assigned a boolean value\par
+TypeScript infers the type of a as boolean\par
+Assigning a string ("hyd") to a causes a compile-time error\par
+This demonstrates TypeScript\rquote s strict type checking\par
+\par
+Example Using any Type\par
+let a: any = true;\par
+a = "hyd";\par
+console.log(Math.round(a));\par
+Output\par
+NaN\par
+\par
+Explanation\par
+a is declared as type any, so:\par
+Assigning a string does not cause a compile-time error\par
+Math.round() expects a number\par
+Since "hyd" is not numeric, the result is:\par
+\par
+\b NaN \b0 (Not a Number)\par
+Key Concepts Highlighted (Exam Important)\par
+\par
+\b Type Inference\b0\par
+TypeScript automatically determines the type of a variable based on its initial value\par
+\par
+\b Type Safety\b0\par
+TypeScript prevents assigning incompatible types\par
+Errors are caught at compile time, not runtime\par
+\par
+\b any Type \endash  Warning \f7\u9888?\u-497?\b0\f0\par
+Disables type checking\par
+Can lead to runtime errors\par
+Should be avoided unless absolutely necessary\par
+\par
+Exam Tips \f4\u-10179?\u-9012?\f0\par
+TypeScript enforces strong typing\par
+Using any removes compile-time safety\par
+Math.round() works only with numbers\par
+Invalid numeric operations result in NaN\par
+\par
+\b Functions in TypeScript\b0\par
+What is a Function?\par
+A function is used to execute a set of statements as a single block.\par
+Functions help in code reusability.\par
+A function:\par
+\tab Can have a return type\par
+\tab Can return a value\par
+\tab Can be called any number of times\par
+\par
+Example 1: Creating a Function Without Arguments\par
+Function Definition\par
+\tab function fun1() \{\par
+  \tab\tab console.log("Sathya Technologies");\par
+\tab\}\par
+Function Call\par
+\tab fun1();\par
+\par
+Explanation\par
+function fun1() defines a function named fun1\par
+No arguments (parameters) are passed\par
+console.log() prints the message\par
+Calling fun1() executes the function body\par
+\par
+Exam Tips \f4\u-10179?\u-9012?\f0\par
+Functions improve maintainability and reusability\par
+A function can be:\par
+\tab With arguments\par
+\tab Without arguments\par
+\tab A function must be called to execute its code\par
+\par
+\b Functions in TypeScript \f1\endash  Return Type\b0\par
+Example 2: Function Without Arguments and With Return Type\par
+Function Definition\par
+function fun1(): void \{\par
+  console.log("Sathya Technologies");\par
+\}\par
+Function Call\par
+fun1();\par
+\par
+Explanation\par
+(): void specifies the return type of the function\par
+\par
+\b void means\b0 :\par
+\f0\lang2057\tab\f1\lang9 The function does not return any value\par
+\f0\lang2057\tab\f1\lang9 The function\f0\lang2057  t\f1\lang9 akes no arguments\par
+\f0\lang2057\tab\f1\lang9 Only performs an action (console.log)\par
+\par
+\b Key Points\b0  (Exam Important)\par
+Every function in TypeScript can have a return type\par
+void is used when\f0\lang2057  n\f1\lang9 o value is returned\par
+If a return type is not specified\f0\lang2057  \f1\lang9 TypeScript infers it automatically\par
+\par
+Exam Tips \f4\u-10179?\u-9012?\f0\par
+\tab Use void for functions that:\par
+\tab Print output\par
+\tab Perform actions\par
+\tab Always specify return types for better readability and safety\par
+\par
+\b Ex: 3  Creating function with 2 arguments\b0\par
+function sum(a:number, b:number):number \{\par
+\tab return a+b;\par
+\}\par
+\par
+\b Ex: 4 Optional parameters\par
+\b0 function add(a:number, b:number, c?:number)\{\par
+\tab return a+b+(c||0);\par
+\}\par
+\par
+Here, the \cf1\b ?\cf0\b0  makes the argument c as optional. If c value is passed, it will be added to the result. If not 0 will be added.\par
+\par
+\b Ex: 5 Defauls Parameters\par
+\b0\par
+function add(a:number=5, b:number=6)\{\par
+\tab return a+b;\par
+\}\par
+\par
+\b Ex: 6 Anonymouse function\par
+\par
+\b0 let s = function(a:number, b:nuber)\{\par
+\tab return a+b;\par
+\}\par
+s(2,3);\par
+This is an anonymouse function. Arrow functions also considered anonymouse functions.\par
+\par
+\b Callback functions:\par
+\tab\b0 A function that is used as an argument for another function or returned by another function is called as Callback Function. It will be executed when the main function is executed.\par
+\par
+Ex: \par
+\tab function average(arr:number[], \tab cb)\{\par
+\tab\tab let sum = arr.reduce((total, num) => total+num, 0);\par
+\tab\tab return cb(sum, arr.length);\par
+\tab\}\tab\par
+\tab average([1,2,3,4,5,6,7,8,9,10], (total,length):number => total/length);\par
+\par
+\b Class and Object:\par
+\tab Class:\par
+\tab\tab\b0 Class is a template or prototype or bluprint which is used to create a new \tab user defined datatype. Class contains variables and methods. Variables are used to \tab store the values and methods used to perfome operations.\par
+\tab\b Object:\par
+\tab\tab\b0 Object is created using a class. It is called as class variable or instance \tab variable or instance copy of the class. It contains the memory address or location of \tab the class. Object is itself a class because, it referes to a class.\par
+\b Access Modifiers:\par
+\tab\b0 There ar 3 access modifiers in TypeScript:\par
+\tab\b i. Public:\par
+\tab\tab\b0 The variables and methods with public access modifier will be \tab\tab\tab accessed by any class and anyhere. They are open to use and modify \tab\tab as we wish.\b\par
+\tab ii. Private:\par
+\tab\tab\b0 The variables and methods with private will be accessed with in the \tab\tab same class only. Out side this class these values are not accessible.\b\par
+\tab iii. Protected:\par
+\tab\tab\b0 The variables with protected will be accessed in the same class as well \tab\tab as the class which is inherited this class.\par
+\fs22\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\b\par
+}
+ 
