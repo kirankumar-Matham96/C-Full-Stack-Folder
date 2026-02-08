@@ -2,7 +2,7 @@
   <h1 class="text-center mt-5 mb-3">App Component</h1>
 
   <form class="py-3 d-flex justify-content-center">
-    <input type="url" name="imageUrl" id="imageUrl" class="input" [(ngModel)]="newImage"/>
+    <input type="url" name="imageUrl" id="imageUrl" class="input" [(ngModel)]="newImage" />
     <button type="button" class="btn btn-primary ms-2" (click)="addImageToList()">Add Image</button>
   </form>
 
@@ -11,5 +11,8 @@
   <div>
     <app-images [images]="images"></app-images>
   </div>
+  <app-counter></app-counter>
+  <app-usd-to-inr></app-usd-to-inr>
+  <app-date-and-time></app-date-and-time>
   <router-outlet />
 </main>

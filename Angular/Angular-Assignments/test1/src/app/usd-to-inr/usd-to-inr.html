@@ -1,0 +1,7 @@
+<h2>USD To INR Converter...</h2>
+<br />
+<label for="usd" class="mx-3 rounded-2 outline-0 fs-2">
+  USD:
+  <input id="usd" type="number" placeholder="USD" [(ngModel)]="usdValue" (input)="onUsdChange()" />
+</label>
+<p class="m-3 fs-2">INR: {{ inrValue | currency: 'INR' : 'symbol' }}</p>
