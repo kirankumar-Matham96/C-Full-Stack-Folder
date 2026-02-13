@@ -14,6 +14,6 @@ export class Counter {
   }
 
   decreaseCount() {
-    this.count--;
+    this.count -= this.count == 0 ? 0 : 1;
   }
 }

@@ -1,18 +1,4 @@
 <main class="container pb-5">
-  <h1 class="text-center mt-5 mb-3">App Component</h1>
-
-  <form class="py-3 d-flex justify-content-center">
-    <input type="url" name="imageUrl" id="imageUrl" class="input" [(ngModel)]="newImage" />
-    <button type="button" class="btn btn-primary ms-2" (click)="addImageToList()">Add Image</button>
-  </form>
-
-  <h2 class="text-center">Images</h2>
-  <br />
-  <div>
-    <app-images [images]="images"></app-images>
-  </div>
-  <app-counter></app-counter>
-  <app-usd-to-inr></app-usd-to-inr>
-  <app-date-and-time></app-date-and-time>
+  <app-header></app-header>
   <router-outlet />
 </main>
