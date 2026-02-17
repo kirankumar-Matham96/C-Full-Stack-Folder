@@ -1,0 +1,34 @@
+<main class="main container mt-5">
+  <h1>{{ fileName }}</h1>
+  <img [src]="imageUrl" alt="Angular Logo" width="250" height="250" />
+  <button (click)="btnClick()" class="btn btn-primary ms-5">Change Image</button>
+  <input
+    id="some-text"
+    type="text"
+    [(ngModel)]="someText"
+    class="form-control w-25 ms-5 mt-3"
+    placeholder="Try angular/react developer"
+  />
+  <div [ngClass]="[bgColor, 'd-flex align-items-center m-5 p-3 w-100']">
+    <p class="m-5 fs-5 text-light fs-3">{{ someText }}</p>
+    @if (showReact) {
+      <img [src]="reactImage" alt="React Logo" [className]="getImgClass()" />
+      <ul class="list-unstyled d-flex flex-column p-5">
+        @for (utility of reactUtilities; track utility) {
+          <li class="fs-5 text-light">{{ utility }}</li>
+        }
+      </ul>
+    } @else if (showAngular) {
+      <img [src]="angularImage" alt="Angular Logo" [className]="getImgClass()" />
+      <ul class="list-unstyled d-flex flex-column p-5">
+        @for (utility of angularUtilities; track utility) {
+          <li class="fs-5 text-light">{{ utility }}</li>
+        }
+      </ul>
+    } @else {
+      <p class="m-5 fs-6 text-light fs-3">
+        Please enter either "angular" or "react" to see the content.
+      </p>
+    }
+  </div>
+</main>
