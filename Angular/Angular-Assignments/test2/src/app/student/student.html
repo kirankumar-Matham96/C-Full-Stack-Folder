@@ -1,0 +1,9 @@
+<h1>Student Details</h1>
+<p>ID: {{ id }}</p>
+<p>Name: {{ name }}</p>
+<p>
+  Marks:<br />
+  @for (mark of marks; track mark) {
+    <span>{{ mark }}</span> &nbsp;
+  }
+</p>
