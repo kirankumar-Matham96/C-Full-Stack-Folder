@@ -1,22 +1,4 @@
 <main class="main">
-  <button (click)="getDate()">Get Date</button>
-  @if (isClicked) {
-    <h2>{{ date | date: 'yyyy-MM-dd' }}</h2>
-  }
-
-  <h4>Name: {{ person.name | uppercase }}</h4>
-  <h4>Courde: {{ person.enrolledIn | titlecase }}</h4>
-  <h4>Institute: {{ person.institute | lowercase }}</h4>
-
-  <h4>Price in USD: {{ price | currency: 'USD' : 'symbol' }}</h4>
-  <h4>Price in INR: {{ price | currency: 'INR' : 'symbol' }}</h4>
-
-  <h4>Person Details: {{ person | json }}</h4>
-  <h4>Average Marks: {{ averageMarks | number: '3.2-3' }}</h4>
-  @for (num of arr | slice: 4 : 5; track num) {
-    <h4>Slice of Numbers: {{ num }}</h4>
-  }
-  <h4>Percentage: {{ percentage | percent: '4.2-2' }}</h4>
-  <h4></h4>
+  <app-header></app-header>
 </main>
 <router-outlet />
