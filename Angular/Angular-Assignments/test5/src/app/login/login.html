@@ -1,0 +1,36 @@
+<div class="container">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="input-group w-50">
+      <span class="input-group-text" id="visible-addon">Username</span>
+      <input
+        #username
+        type="text"
+        class="form-control"
+        placeholder="Username"
+        aria-label="Username"
+        aria-describedby="visible-addon"
+        formControlName="username"
+      />
+    </div>
+    <div class="input-group w-50 mt-2">
+      <span class="input-group-text" id="visible-addon">Password&nbsp;</span>
+      <input
+        #password
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        aria-label="Password"
+        aria-describedby="visible-addon"
+        formControlName="password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3" [disabled]="loginForm.invalid">
+      Sign In
+    </button>
+  </form>
+  @if (isLoginSuccess === true) {
+    <h4 class="text-success">Login Success!</h4>
+  } @else if (isLoginSuccess === false) {
+    <h4 class="text-danger">Login Failed! Username or Password is incorrect...</h4>
+  }
+</div>
