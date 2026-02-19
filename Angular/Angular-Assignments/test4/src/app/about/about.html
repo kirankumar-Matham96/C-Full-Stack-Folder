@@ -1,1 +1,108 @@
-<p>about works!</p>
+<!-- about.component.html -->
+<section class="container py-5">
+  <!-- Hero -->
+  <div class="row text-center mb-5">
+    <div class="col">
+      <h1 class="display-4 fw-bold">About Us</h1>
+      <p class="lead text-muted">
+        We're on a mission to make shopping simple, reliable, and enjoyable.
+      </p>
+    </div>
+  </div>
+
+  <!-- Our Story -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <img src="assets/images/our-story.jpg" alt="Our Story" class="img-fluid rounded shadow" />
+    </div>
+    <div class="col-md-6 mt-4 mt-md-0">
+      <h2 class="fw-bold">Our Story</h2>
+      <p class="text-muted">
+        Founded in 2020, we started with a simple idea — everyone deserves access to quality
+        products at fair prices. From a small garage operation to a full-scale e-commerce platform,
+        our journey has been fueled by our customers and a passionate team.
+      </p>
+      <p class="text-muted">
+        Today, we serve thousands of happy customers across the country and continue to grow every
+        day.
+      </p>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="row text-center bg-light rounded py-4 mb-5">
+    <div class="col-md-4 mb-3 mb-md-0">
+      <h3 class="fw-bold text-primary">10,000+</h3>
+      <p class="text-muted mb-0">Happy Customers</p>
+    </div>
+    <div class="col-md-4 mb-3 mb-md-0">
+      <h3 class="fw-bold text-primary">500+</h3>
+      <p class="text-muted mb-0">Products</p>
+    </div>
+    <div class="col-md-4">
+      <h3 class="fw-bold text-primary">50+</h3>
+      <p class="text-muted mb-0">Team Members</p>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <div class="row text-center mb-5">
+    <div class="col-12 mb-4">
+      <h2 class="fw-bold">Our Values</h2>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 border-0 shadow-sm p-3">
+        <div class="card-body">
+          <div class="fs-1 mb-2">🤝</div>
+          <h5 class="fw-bold">Trust</h5>
+          <p class="text-muted">We build lasting relationships through transparency and honesty.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 border-0 shadow-sm p-3">
+        <div class="card-body">
+          <div class="fs-1 mb-2">⚡</div>
+          <h5 class="fw-bold">Speed</h5>
+          <p class="text-muted">Fast delivery and responsive support, always.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 border-0 shadow-sm p-3">
+        <div class="card-body">
+          <div class="fs-1 mb-2">🌱</div>
+          <h5 class="fw-bold">Sustainability</h5>
+          <p class="text-muted">Committed to eco-friendly packaging and responsible sourcing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team -->
+  <div class="row text-center mb-5">
+    <div class="col-12 mb-4">
+      <h2 class="fw-bold">Meet the Team</h2>
+    </div>
+    <div class="col-md-4 mb-3">
+      @for (member of teamMembers; track member) {
+        <div class="card border-0 shadow-sm">
+          <img [src]="member.photo" [alt]="member.name" class="card-img-top rounded-top user-image" />
+          <div class="card-body">
+            <h5 class="fw-bold mb-0">{{ member.name }}</h5>
+            <p class="text-muted small">{{ member.role }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="row text-center">
+    <div class="col">
+      <h4 class="fw-bold">Ready to start shopping?</h4>
+      <p class="text-muted">Join thousands of satisfied customers today.</p>
+      <a routerLink="/shop" class="btn btn-primary btn-lg px-5">Shop Now</a>
+    </div>
+  </div>
+</section>

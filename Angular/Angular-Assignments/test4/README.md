@@ -61,9 +61,10 @@ For more information on using the Angular CLI, including detailed command refere
 ### Lab Exercises:
 
 #### Lab Exercise - 4
+
 1. Use Pipes - done
-2. Use routing with at least 5 components
-3. Send data from parent to child component
-4. Send data from child to parent component
-5. Create a service
-6. Use dependency Injection with loosely couple environment
+2. Use routing with at least 5 components - done
+3. Send data from parent to child component - done
+4. Send data from child to parent component - done
+5. Create a service - done
+6. Use dependency Injection with loosely couple environment - done

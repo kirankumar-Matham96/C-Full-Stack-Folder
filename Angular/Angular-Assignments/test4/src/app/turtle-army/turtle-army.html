@@ -1,1 +1,13 @@
-<p>turtle-army works!</p>
+<div class="container">
+  <app-add-turtle-btn
+    (addTurtleEvent)="addTurtle($event)"
+    [btnText]="'Add Turtle Soldier'"
+  ></app-add-turtle-btn>
+  <div class="d-flex flex-wrap gap-4">
+    @for (turtle of turtles; track turtle) {
+      <div class="turtle-shell d-flex justify-content-center align-items-center">
+        <span class="fs-1">{{ turtle }}</span>
+      </div>
+    }
+  </div>
+</div>
