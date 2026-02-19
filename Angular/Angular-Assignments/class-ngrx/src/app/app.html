@@ -1,0 +1,75 @@
+<main class="main container">
+  <!-- template reference variable: #productName -->
+  <label for="name" class="form-label">
+    Product Name:
+    <input
+      type="text"
+      id="name"
+      class="form-control input"
+      #productName
+      placeholder="Enter Product Name..."
+    />
+  </label>
+
+  <button (click)="updateProductName(productName)" class="btn btn-primary">Update</button>
+  <p class="fs-4">Product Name: {{ testService.product().name }}</p>
+
+  <div class="form-group d-flex flex-column gap-2 align-items-start my-5">
+    <label for="prodName2">
+      <input
+        type="text"
+        id="prodName2"
+        class="form-control input"
+        #prodName2
+        placeholder="Enter Name..."
+      />
+    </label>
+    <button (click)="updateProductName2(prodName2)" class="btn btn-primary">Update Name</button>
+
+    <label for="price">
+      <input
+        type="text"
+        id="price"
+        class="form-control input"
+        #price
+        placeholder="Enter Price..."
+      />
+    </label>
+    <button (click)="updateProductPrice(price)" class="btn btn-primary">Update Price</button>
+
+    <label for="quantity">
+      <input
+        type="text"
+        id="quantity"
+        class="form-control input"
+        #quantity
+        placeholder="Enter Quantity..."
+      />
+    </label>
+    <button (click)="updateProductQuantity(quantity)" class="btn btn-primary">
+      Update Quantity
+    </button>
+  </div>
+
+  <p class="fs-4">
+    Product Name: <span class="fw-bold">{{ signal2.productName().name }}</span>
+  </p>
+  <p class="fs-4">
+    Product Price: <span class="fw-bold">{{ signal2.productPrice().price }}</span>
+  </p>
+  <p class="fs-4">
+    Product Quantity: <span class="fw-bold">{{ signal2.productQuantity().quantity }}</span>
+  </p>
+
+  <app-other-component></app-other-component>
+
+  <div>
+    <h2>Data Fetching</h2>
+    <button (click)="getUserDataFromService()">Get User Data</button>
+    <!-- <h1>{{ userData.dob.date }}</h1> -->
+  </div>
+  @if (userData != null && userData != undefined) {
+    <app-users [userData]="userData"></app-users>
+  }
+</main>
+<router-outlet></router-outlet>
