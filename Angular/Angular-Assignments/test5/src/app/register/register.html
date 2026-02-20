@@ -1,1 +1,59 @@
-<p>register works!</p>
+<div class="container p-5">
+  <h1 class="my-3">Registration Form</h1>
+  <form
+    class="border border-1 border-secondary2 rounded-2 p-3"
+    [formGroup]="registerForm"
+    (ngSubmit)="addUser()"
+  >
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Firstname</span>
+      <input
+        formControlName="fname"
+        type="text"
+        class="form-control"
+        placeholder="First name"
+        aria-label="fname"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Lastname</span>
+      <input
+        formControlName="lname"
+        type="text"
+        class="form-control"
+        placeholder="Last name"
+        aria-label="lname"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Email</span>
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        placeholder="Email"
+        aria-label="email"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Password</span>
+      <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        aria-label="password"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    @if (isSubmitted && registerForm.invalid) {
+      <span class="text-danger fs-4">Invalid Form Data!</span>
+    }
+    <button class="btn btn-primary" type="submit" [disabled]="this.registerForm.invalid">
+      Register
+    </button>
+  </form>
+</div>

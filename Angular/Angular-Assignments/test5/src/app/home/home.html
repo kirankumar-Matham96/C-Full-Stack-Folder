@@ -1,0 +1,26 @@
+<div class="container my-5">
+  <h1 class="mb-5">Lab Test Exercises - 5</h1>
+  <form action="" [formGroup]="commentsBox" (ngSubmit)="addComment()">
+    <div class="form-floating">
+      <textarea
+        formControlName="comment"
+        class="form-control"
+        placeholder="Leave a comment here"
+        id="floatingTextarea"
+      ></textarea>
+      <label for="floatingTextarea">Comments</label>
+    </div>
+    <button class="btn btn-primary mt-3" type="submit">Send <i class="bi bi-send"></i></button>
+  </form>
+
+  <h2 class="mt-5">Comments</h2>
+  <ul class="list-group list-unstyled mt-3">
+    @for (comment of comments; track comment) {
+      <li
+        class="list-item py-2 fs-4 fw-semibold border border-1 boredr-secondary rounded-3 mb-2 ps-3"
+      >
+        {{ comment }}
+      </li>
+    }
+  </ul>
+</div>

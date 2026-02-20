@@ -62,7 +62,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 #### Lab Exercise - 5
 
-1. Create and use Reactive form with label textbox and button
-2. Use built-in validations
-3. Use Bootstrap for styling
+1. Create and use Reactive form with label textbox and button - done
+2. Use built-in validations - done
+3. Use Bootstrap for styling - done
 4. Use custom validations
