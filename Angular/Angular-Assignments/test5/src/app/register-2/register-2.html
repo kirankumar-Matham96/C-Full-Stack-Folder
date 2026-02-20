@@ -1,0 +1,75 @@
+<div class="container my-5">
+  <h1 class="my-3">Registration Form 1</h1>
+  <form [formGroup]="register1">
+    <div class="container">
+      <div class="row mt-2">
+        <div class="col-1">username</div>
+        <div class="col-4">
+          <input type="text" formControlName="uname" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-1">password</div>
+        <div class="col-4">
+          <input type="password" formControlName="password" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-1">city</div>
+        <div class="col-4">
+          <select formControlName="city" id="cname">
+            <option>Hyderabad</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-1">Gender</div>
+        <div class="col-4">
+          <input type="radio" formControlName="gender" value="Male" /> Male
+          <input type="radio" formControlName="gender" value="Female" /> Female
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-1">Hobbies</div>
+        <div class="col-4">
+          <input type="checkbox" formControlName="chat" /> Chat
+          <input type="checkbox" formControlName="movies" /> Movies
+          <input type="checkbox" formControlName="sports" /> Sports
+        </div>
+      </div>
+      <button class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+
+  <div class="container m-3 p-3">
+    {{ register1.value | json }}
+  </div>
+
+  <h1 class="my-3">Registration Form 2</h1>
+  <form [formGroup]="register2">
+    username:
+    <input type="text" class="form-control w-50 m-3" formControlName="uname" />
+    <div *ngIf="register2.get('uname')?.touched && register2.get('uname')?.hasError('required')" class="text-danger">
+      *Username Required
+    </div>
+    <div *ngIf="register2.get('uname')?.touched && register2.get('uname')?.hasError('minlength')" class="text-danger">
+      *Username name minimum 8 characters
+    </div>
+    Email:
+    <input type="text" class="form-control w-50 m-3" formControlName="email" />
+    <div *ngIf="register2.get('email')?.touched && register2.get('email')?.hasError('required')" class="text-danger">
+      *email Required
+    </div>
+    <div *ngIf="register2.get('email')?.touched && register2.get('email')?.hasError('email')" class="text-danger">
+      *Invalid email ID
+    </div>
+    <button class="btn btn-primary">Login</button>
+  </form>
+
+  <div class="container m-3 p-3">
+    {{ register2.value | json }}
+  </div>
+
+</div>
