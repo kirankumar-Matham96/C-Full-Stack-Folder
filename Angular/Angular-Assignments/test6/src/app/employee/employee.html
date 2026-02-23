@@ -1,0 +1,12 @@
+<div>
+  <h1>Employee Information</h1>
+  @for (employee of empData; track employee.id) {
+    <div class="border border-1 border-gray p-3 m-3 rounded-5 bg-dark text-light">
+      <p>ID: {{ employee.id }}</p>
+      <p>Name: {{ employee.name }}</p>
+      <p>Email: {{ employee.email }}</p>
+      <p>Salary: {{ employee.salary }}</p>
+      <p>Department: {{ employee.department }}</p>
+    </div>
+  }
+</div>
