@@ -1,0 +1,113 @@
+<div class="container d-flex flex-column align-items-center">
+  <h1 class="my-2 mb-4">Employee Registration Form</h1>
+  <form
+    [formGroup]="employeeRegistrationForm"
+    class="p-3 d-flex flex-column gap-3 w-50 border border-1 border-secondary-2"
+  >
+    <div class="input-group d-flex justify-content-center d-flex justify-content-center">
+      <label for="id" class="form-label"
+        >Id:
+        <input
+          type="number"
+          id="id"
+          placeholder="enter employee id"
+          class="form-control"
+          name="id"
+          formControlName="id"
+        />
+      </label>
+      @if (
+        employeeRegistrationForm.get('id')?.touched &&
+        employeeRegistrationForm.get('id')?.hasError('required')
+      ) {
+        <span class="text-danger">Id is requied*</span>
+      }
+    </div>
+    <div class="input-group d-flex justify-content-center">
+      <label for="name" class="form-label"
+        >Name:
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          formControlName="name"
+          placeholder="enter employee name"
+          name="name"
+        />
+      </label>
+      @if (
+        employeeRegistrationForm.get('name')?.touched &&
+        employeeRegistrationForm.get('name')?.hasError('required')
+      ) {
+        <span class="text-danger">Name is requied*</span>
+      } @else if (
+        employeeRegistrationForm.get('name')?.touched &&
+        employeeRegistrationForm.get('name')?.hasError('maxlength')
+      ) {
+        <span class="text-danger">Name should be min of 3 characters*</span>
+      }
+    </div>
+    <div class="input-group d-flex justify-content-center">
+      <label for="email" class="form-label"
+        >Email:
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          formControlName="email"
+          placeholder="enter employee email"
+          name="email"
+        />
+      </label>
+      @if (
+        employeeRegistrationForm.get('email')?.touched &&
+        employeeRegistrationForm.get('email')?.hasError('required')
+      ) {
+        <span class="text-danger">Email is requied*</span>
+      } @else if (
+        employeeRegistrationForm.get('email')?.touched &&
+        employeeRegistrationForm.get('email')?.hasError('email')
+      ) {
+        <span class="text-danger">Email should be valid*</span>
+      }
+    </div>
+    <div class="input-group d-flex justify-content-center">
+      <label for="salary" class="form-label"
+        >Salary:
+        <input type="number" class="form-control" id="salary" placeholder="enter employee salary" formControlName="salary"/>
+      </label>
+      @if (
+        employeeRegistrationForm.get('salary')?.touched &&
+        employeeRegistrationForm.get('salary')?.hasError('required')
+      ) {
+        <span class="text-danger">Salary is requied*</span>
+      } @else if (
+        employeeRegistrationForm.get('salary')?.touched &&
+        employeeRegistrationForm.get('salary')?.hasError('min')
+      ) {
+        <span class="text-danger">Salary should be min of 20,000.00*</span>
+      }
+    </div>
+    <div class="input-group d-flex justify-content-center">
+      <label for="dept" class="form-label"
+        >Department:
+        <input
+          type="text"
+          class="form-control"
+          id="dept"
+          formControlName="department"
+          placeholder="enter employee department"
+        />
+      </label>
+      @if (
+        employeeRegistrationForm.get('department')?.touched &&
+        employeeRegistrationForm.get('department')?.hasError('required')
+      ) {
+        <span class="text-danger">Department is requied*</span>
+      }
+    </div>
+    <button type="button" class="btn btn-primary align-self-center" (click)="addNewEmployee()">
+      Register
+    </button>
+  </form>
+</div>
