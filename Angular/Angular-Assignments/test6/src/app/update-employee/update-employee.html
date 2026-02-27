@@ -1,7 +1,7 @@
 <div class="container d-flex flex-column align-items-center">
-  <h1 class="my-2 mb-4">Employee Registration Form</h1>
+  <h1 class="my-2 mb-4">Employee Updation Form</h1>
   <form
-    [formGroup]="employeeRegistrationForm"
+    [formGroup]="employeeUpdateForm"
     class="p-3 d-flex flex-column gap-3 w-50 border border-secondary-2"
   >
     <div class="input-group d-flex justify-content-center d-flex justify-content-center">
@@ -17,8 +17,7 @@
         />
       </label>
       @if (
-        employeeRegistrationForm.get('id')?.touched &&
-        employeeRegistrationForm.get('id')?.hasError('required')
+        employeeUpdateForm.get('id')?.touched && employeeUpdateForm.get('id')?.hasError('required')
       ) {
         <span class="text-danger">Id is requied*</span>
       }
@@ -36,13 +35,13 @@
         />
       </label>
       @if (
-        employeeRegistrationForm.get('name')?.touched &&
-        employeeRegistrationForm.get('name')?.hasError('required')
+        employeeUpdateForm.get('name')?.touched &&
+        employeeUpdateForm.get('name')?.hasError('required')
       ) {
         <span class="text-danger">Name is requied*</span>
       } @else if (
-        employeeRegistrationForm.get('name')?.touched &&
-        employeeRegistrationForm.get('name')?.hasError('maxlength')
+        employeeUpdateForm.get('name')?.touched &&
+        employeeUpdateForm.get('name')?.hasError('maxlength')
       ) {
         <span class="text-danger">Name should be min of 3 characters*</span>
       }
@@ -60,13 +59,13 @@
         />
       </label>
       @if (
-        employeeRegistrationForm.get('email')?.touched &&
-        employeeRegistrationForm.get('email')?.hasError('required')
+        employeeUpdateForm.get('email')?.touched &&
+        employeeUpdateForm.get('email')?.hasError('required')
       ) {
         <span class="text-danger">Email is requied*</span>
       } @else if (
-        employeeRegistrationForm.get('email')?.touched &&
-        employeeRegistrationForm.get('email')?.hasError('email')
+        employeeUpdateForm.get('email')?.touched &&
+        employeeUpdateForm.get('email')?.hasError('email')
       ) {
         <span class="text-danger">Email should be valid*</span>
       }
@@ -83,13 +82,13 @@
         />
       </label>
       @if (
-        employeeRegistrationForm.get('salary')?.touched &&
-        employeeRegistrationForm.get('salary')?.hasError('required')
+        employeeUpdateForm.get('salary')?.touched &&
+        employeeUpdateForm.get('salary')?.hasError('required')
       ) {
         <span class="text-danger">Salary is requied*</span>
       } @else if (
-        employeeRegistrationForm.get('salary')?.touched &&
-        employeeRegistrationForm.get('salary')?.hasError('min')
+        employeeUpdateForm.get('salary')?.touched &&
+        employeeUpdateForm.get('salary')?.hasError('min')
       ) {
         <span class="text-danger">Salary should be min of 20,000.00*</span>
       }
@@ -106,13 +105,13 @@
         />
       </label>
       @if (
-        employeeRegistrationForm.get('department')?.touched &&
-        employeeRegistrationForm.get('department')?.hasError('required')
+        employeeUpdateForm.get('department')?.touched &&
+        employeeUpdateForm.get('department')?.hasError('required')
       ) {
         <span class="text-danger">Department is requied*</span>
       }
     </div>
-    <button type="button" class="btn btn-primary align-self-center" (click)="addNewEmployee()">
+    <button type="button" class="btn btn-primary align-self-center" (click)="updateEmployee()">
       Register
     </button>
   </form>

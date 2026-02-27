@@ -1,0 +1,10 @@
+<div>
+  <h1>Remove an Employee</h1>
+  <form (submit)="removeEmplyee()" [formGroup]="deleteFormGroup">
+    <label for="id">
+      Enter the Employee Id:
+      <input type="number" class="form-control" formControlName="id" />
+    </label>
+    <button class="btn btn-danger">Remove Employee</button>
+  </form>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee-service';
+
 @Component({
   selector: 'app-employee',
   imports: [],
@@ -21,7 +22,6 @@ export class Employee implements OnInit {
     this.empService.getEmployees().subscribe({
       next: (data) => {
         this.empData = data;
-        console.log({ empData: this.empData });
       },
       error: (error) => console.error(error),
     });

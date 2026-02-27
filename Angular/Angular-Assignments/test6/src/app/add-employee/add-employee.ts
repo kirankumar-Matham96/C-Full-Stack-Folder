@@ -27,18 +27,14 @@ export class AddEmployee {
       validators: [Validators.required, Validators.min(20000)],
     }),
     department: new FormControl<string>('', { nonNullable: true, validators: Validators.required }),
+    profileImgUrl: new FormControl(''),
   });
 
-  addNewEmployee(): void {
-    console.log(`employeeRegistrationForm.value: ${this.employeeRegistrationForm.getRawValue()}`);
-    console.log(`Is the form invalid: ${this.employeeRegistrationForm.invalid}`);
+  addNewEmployee() {
     if (this.employeeRegistrationForm.invalid) return;
-    console.log('Form is valid');
     const employeeData: Employee = this.employeeRegistrationForm.getRawValue();
 
-    this.employeeService
-      .addEmployee(employeeData)
-      .subscribe(() => console.log('Form Submitted...'));
+    this.employeeService.addEmployee(employeeData).subscribe(() => alert('Form Submitted...'));
     this.employeeRegistrationForm.reset();
   }
 }
