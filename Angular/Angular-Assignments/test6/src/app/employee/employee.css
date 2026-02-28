@@ -1,4 +1,18 @@
-.image-stles {
-  width: 250px;
-  height: 250px;
+.employee-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border-radius: 15px;
+}
+
+.employee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.employee-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 3px solid #0d6efd;
 }

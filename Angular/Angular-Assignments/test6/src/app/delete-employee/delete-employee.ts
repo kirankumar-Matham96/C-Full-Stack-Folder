@@ -5,6 +5,7 @@ import { EmployeeService } from '../employee-service';
 @Component({
   selector: 'app-delete-employee',
   imports: [ReactiveFormsModule],
+  standalone: true,
   templateUrl: './delete-employee.html',
   styleUrl: './delete-employee.css',
 })
@@ -16,9 +17,6 @@ export class DeleteEmployee {
   });
 
   removeEmplyee() {
-    console.log('invalid form? : ', this.deleteFormGroup.invalid);
-    console.log('id: ', this.deleteFormGroup.get('id')?.value);
-
     if (this.deleteFormGroup.invalid) {
       alert('Please Enter the employee ID');
       return;

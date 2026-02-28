@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee-service';
-
+import { Employee as IEmployee } from '../employee';
 @Component({
   selector: 'app-employee',
   imports: [],
@@ -8,13 +8,7 @@ import { EmployeeService } from '../employee-service';
   styleUrl: './employee.css',
 })
 export class Employee implements OnInit {
-  public id: any[] = [];
-  public name: any[] = [];
-  public salary: any[] = [];
-  public email: any[] = [];
-  public department: any[] = [];
-
-  public empData: any = []; // not type safe
+  public empData: IEmployee[] = [];
 
   constructor(private empService: EmployeeService) {}
 

@@ -1,21 +1,41 @@
-<div>
-  <h1>Employee Information</h1>
-  @for (employee of empData; track employee.id) {
-    <div class="border border-gray p-3 m-3 rounded-5 bg-dark text-light d-flex">
-      <div class="">
-        <p>ID: {{ employee.id }}</p>
-        <p>Name: {{ employee.name }}</p>
-        <p>Email: {{ employee.email }}</p>
-        <p>Salary: {{ employee.salary }}</p>
-        <p>Department: {{ employee.department }}</p>
+<div class="container py-5">
+  <h1 class="text-center mb-5 fw-bold">Employee Information</h1>
+
+  <div class="row g-4">
+    @for (employee of empData; track employee.id) {
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-lg border-0 employee-card" (click)="updateEmployeeRedirect()">
+          <div class="row g-0 align-items-center">
+            <!-- Image Section -->
+            <div class="col-4 text-center p-3">
+              <img
+                [src]="`https://randomuser.me/api/portraits/women/${employee.id - 1000}.jpg`"
+                alt="employee"
+                class="img-fluid rounded-circle employee-img"
+              />
+            </div>
+
+            <!-- Info Section -->
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-3">
+                  {{ employee.name }}
+                </h5>
+
+                <p class="mb-1"><strong>ID:</strong> {{ employee.id }}</p>
+
+                <p class="mb-1 text-muted">
+                  {{ employee.email }}
+                </p>
+
+                <p class="mb-1"><strong>Department:</strong> {{ employee.department }}</p>
+
+                <p class="mb-0 text-success fw-semibold">${{ employee.salary }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="image-stles">
-        <img
-        [src]="`https://randomuser.me/api/portraits/women/${employee.id - 1000}.jpg`"
-        alt="women-employee"
-        class="w-100"
-        />
-      </div>
-    </div>
-  }
+    }
+  </div>
 </div>

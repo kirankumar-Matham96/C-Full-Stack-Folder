@@ -5,6 +5,7 @@ import { EmployeeService } from '../employee-service';
 @Component({
   selector: 'app-update-employee',
   imports: [ReactiveFormsModule],
+  standalone: true,
   templateUrl: './update-employee.html',
   styleUrl: './update-employee.css',
 })

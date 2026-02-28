@@ -1,14 +1,35 @@
 import { Routes } from '@angular/router';
-import { Employee } from './employee/employee';
-import { AddEmployee } from './add-employee/add-employee';
-import { UpdateEmployee } from './update-employee/update-employee';
-import { DeleteEmployee } from './delete-employee/delete-employee';
-import { Notfound } from './notfound/notfound';
 
 export const routes: Routes = [
-  { path: '', component: Employee },
-  { path: 'add-employee', component: AddEmployee },
-  { path: 'update-employee', component: UpdateEmployee },
-  { path: 'delete-employee', component: DeleteEmployee },
-  { path: '**', component: Notfound },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./employee/employee.routes').then((component) => component.EMPLOEE_ROUTES),
+  },
+  {
+    path: 'add-employee',
+    loadChildren: () =>
+      import('./add-employee/add-emploee.routes').then(
+        (component) => component.ADD_EMPLOYEE_ROUTES,
+      ),
+  },
+  {
+    path: 'update-employee',
+    loadChildren: () =>
+      import('./update-employee/update-employee.routes').then(
+        (component) => component.UPDATE_EMPLOYEE_ROUTES,
+      ),
+  },
+  {
+    path: 'delete-employee',
+    loadChildren: () =>
+      import('./delete-employee/delete-emploee.routes').then(
+        (component) => component.DELETE_EMPLOEE_ROUTES,
+      ),
+  },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./notfound/notfound.routes').then((component) => component.NOTFOUND_ROUTES),
+  },
 ];
