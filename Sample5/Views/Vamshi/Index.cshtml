@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .even {
+        color: red;
+    }
+
+    .odd {
+        color: green;
+    }
+</style>
+
+@*<h2>Vamshi Index</h2>*@
+<h2>Using Razor Statements</h2>
+
+@for (var i = 1; i < 10; i++)
+{
+    if (i % 2 == 0)
+    {
+        <span class="even"> @i </span>
+    }
+    else
+    {
+        <span class="odd"> @i </span>
+    }
+}
+
+@* Create a list and display in the page *@
+@{
+    List<string> list = new List<string>();
+
+    list.Add("Kiran");
+    list.Add("Vamshi");
+    list.Add("Praneeth");
+    list.Add("Keshav");
+
+    <ul>
+        @foreach (var item in list)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+
+@* Static data @: *@
+@for (int i = 0; i <= 5; i++)
+{
+    @: Hello <br />
+}
+<br />
+
+@{
+    int a = 10, b = 20;
+    int c = a + b;
+}
+<p>Sum of @a and @b is: @c</p>
+
+@* statements @a++ or @++a *@
+
+@{
+    int num = 10;
+}
+
+<p>Pre-incremented number: @(num++)</p> @* Here () is mandatory to execute the expression*@
+<p>Post-incremented number: @(++num)</p>
+
+@{
+    bool isTrue = true;
+}
+
+@if (isTrue)
+{ 
+    <p>This statement is visible onl when isTrue value is true.</p>
+}

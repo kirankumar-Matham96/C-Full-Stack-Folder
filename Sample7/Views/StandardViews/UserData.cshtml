@@ -1,0 +1,21 @@
+﻿<h1>Sign In</h1>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.Label("Email")</td>
+            <td>@Html.TextBox("email")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Password")</td>
+            <td>@Html.Password("pwd")</td>
+        </tr>
+        <tr>
+            <td><button tpe="submit">Sign In</button></td>
+        </tr>
+        <tr>
+            <td>@Html.ActionLink("Sign Up", "/Registration")</td>
+        </tr>
+    </table>
+}

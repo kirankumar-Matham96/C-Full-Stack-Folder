@@ -1,0 +1,32 @@
+﻿<h1>Registration Form</h1>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.Label("First Name: ")</td>
+            <td>@Html.TextBox("fname")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Last Name: ")</td>
+            <td>@Html.TextBox("lname")</td>
+        </tr>
+        
+        <tr>
+            <td>@Html.Label("Phone No: ")</td>
+            <td>@Html.TextBox("phone")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Email: ")</td>
+            <td>@Html.TextBox("email")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Password: ")</td>
+            <td>@Html.Password("pwd")</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Sign Up" /></td>
+        </tr>
+
+    </table>
+}

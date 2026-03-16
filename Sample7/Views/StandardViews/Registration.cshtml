@@ -1,0 +1,74 @@
+﻿<h1>Registration Form</h1>
+
+@using (Html.BeginForm()) {
+    <table>
+        <tr>
+            <td>@Html.Label("UserName")</td>
+            <td>@Html.TextBox("uname")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Email")</td>
+            <td>@Html.TextBox("email")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Password")</td>
+            <td>@Html.Password("pwd")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Confirm Password")</td>
+            <td>@Html.Password("cpwd")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Gender")</td>
+            <td>
+                @Html.RadioButton("gender1", "male") Male
+                @Html.RadioButton("gender1", "female") Female
+                @Html.RadioButton("gender1", "others") Others
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Skilles")</td>
+            <td>
+                @Html.CheckBox("java") Java
+                @Html.CheckBox(".net") .Net
+                @Html.CheckBox("python") Python
+                @Html.CheckBox("javascript") JavaScript
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.Label("City")</td>
+            <td>
+                @Html.DropDownList("city", new List<SelectListItem>()
+                {
+                   new SelectListItem() {Text="-- Select --", Value="", Selected=true, Disabled=true},
+                   new SelectListItem() {Text="Hyderabad", Value="hyd"},
+                   new SelectListItem() {Text="Secunderabad", Value="sec"},
+                   new SelectListItem() {Text="Vijaawada",  Value="vjwd"},
+                   new SelectListItem() {Text="Vishakhapatnam", Value="vspm"},
+                   new SelectListItem() {Text="Pune", Value="pune"},
+                   new SelectListItem() {Text="Banglore", Value="bgl"},
+                   new SelectListItem() {Text="Vikarabad", Value="vkb"}
+                })
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Job Locations: ")</td>
+            <td>
+                @Html.ListBox("jobLocations", new List<SelectListItem>()
+           {
+               new SelectListItem(){ Text="-- Select --", Value="", Selected=true, Disabled=true},
+               new SelectListItem(){ Text="Hderabad", Value="hyd"},
+               new SelectListItem(){ Text="Pune", Value="pune"},
+               new SelectListItem(){ Text="Banglore", Value="bgl"},
+               new SelectListItem(){ Text="Chennai", Value="cni"}
+           })
+            </td>
+        </tr>
+        <tr>
+           <td><input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+    @Html.ActionLink("Sign In", "/UserData");
+}
+
+

@@ -1,0 +1,50 @@
+﻿
+<style>
+    .even {
+        color: green;
+        margin: 0 10px;
+    }
+
+    .odd {
+        color: red;
+        margin: 0 10px;
+    }
+</style>
+
+
+<h2>PrintNumbers</h2>
+
+@for (int i = 1; i <= 10; i++)
+{
+    if (i % 2 == 0)
+    {
+        <span class="even">@i</span>
+    }
+    else
+    {
+        <span class="odd">@i</span>
+    }
+}
+
+
+@{
+    string name = "Kiran";
+    int age = 30;
+
+    @name
+}
+
+<h1>Name: @name</h1>
+<p>Age: @age</p>
+
+
+@for( int i = 0; i < 10; i++ ){ 
+        @:Kiran
+    } 
+
+@{ 
+    int num = 10;
+}
+
+@(num++)
+@(++num)

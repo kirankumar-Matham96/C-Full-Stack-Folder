@@ -1,0 +1,11 @@
+﻿@model List<Sample6.Models.Product>
+
+<h2>DisplayProduct</h2>
+
+@foreach(var prod in Model)
+{
+    <p>Id: @prod.Id</p>
+    <p>Name: @prod.Name</p>
+    <p>Price: @prod.Price</p>
+    <p>Qt: @prod.Quantity</p>
+}
