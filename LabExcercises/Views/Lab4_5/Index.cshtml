@@ -1,0 +1,45 @@
+﻿@model LabExcercises.Models.Lab4_5
+
+<h1>Course Registration</h1>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(course => course.CustomerName)
+        @Html.EditorFor(course => course.CustomerName)
+        @Html.ValidationMessageFor(course => course.CustomerName)
+    </div>
+
+    <div>
+        @Html.LabelFor(course => course.Course)
+        @*@foreach (var course in ViewBag.courses)
+        {
+            <label>
+                <input type="checkbox" value="@course" name="Course" /> @course.ToUpper()
+            </label>
+        }*@
+
+        @for (int i = 0; i < ViewBag.courses.Count; i++)
+        {
+            <label>
+                <input type="checkbox" name="Course[@i]" value="@ViewBag.courses[i]" />
+                @ViewBag.courses[i].ToUpper()
+            </label>
+        }
+        @Html.ValidationMessageFor(course => course.Course)
+    </div>
+
+
+    <div>
+        @Html.LabelFor(course => course.Track)
+        @Html.RadioButtonFor(course => course.Track, "normal") Normal Track
+        @Html.RadioButtonFor(course => course.Track, "fast") Fast Track (50/-)
+        @Html.RadioButtonFor(course => course.Track, "super") Super Fast Track (100/-)
+        @Html.ValidationMessageFor(course => course.Track)
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+
+}

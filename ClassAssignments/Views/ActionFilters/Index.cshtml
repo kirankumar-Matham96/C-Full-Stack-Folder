@@ -1,0 +1,50 @@
+﻿@model ClassAssignments.Models.Student
+
+<h1>Student Registration Form</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(std => std.Id)
+        @Html.EditorFor(std => std.Id)
+        @Html.ValidationMessageFor(std => std.Id)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Name)
+        @Html.EditorFor(std => std.Name)
+        @Html.ValidationMessageFor(std => std.Name)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Email)
+        @Html.EditorFor(std => std.Email)
+        @Html.ValidationMessageFor(std => std.Email)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Password)
+        @Html.PasswordFor(std => std.Password)
+        @Html.ValidationMessageFor(std => std.Password)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.ConfirmPassword)
+        @Html.PasswordFor(std => std.ConfirmPassword)
+        @Html.ValidationMessageFor(std => std.ConfirmPassword)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Maths)
+        @Html.EditorFor(std => std.Maths)
+        @Html.ValidationMessageFor(std => std.Maths)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Physics)
+        @Html.EditorFor(std => std.Physics)
+        @Html.ValidationMessageFor(std => std.Physics)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Chemistry)
+        @Html.EditorFor(std => std.Chemistry)
+        @Html.ValidationMessageFor(std => std.Chemistry)
+    </div>
+    <div>
+        <button type="submit">Register</button>
+    </div>
+}

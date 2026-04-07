@@ -1,0 +1,42 @@
+﻿@model LabExcercises.Models.Lab4_4
+
+<h1>User Registration</h1>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(user => user.Username)
+        @Html.EditorFor(user => user.Username)
+        @Html.ValidationMessageFor(user => user.Username)
+    </div>
+
+    <div>
+        @Html.LabelFor(user => user.Password)
+        @Html.PasswordFor(user => user.Password)
+        @Html.ValidationMessageFor(user => user.Password)
+    </div>
+
+    <div>
+        @Html.LabelFor(user => user.ConfirmPassword)
+        @Html.PasswordFor(user => user.ConfirmPassword)
+        @Html.ValidationMessageFor(user => user.ConfirmPassword)
+    </div>
+
+    <div>
+        @Html.LabelFor(user => user.Age)
+        @Html.EditorFor(user => user.Age)
+        @Html.ValidationMessageFor(user => user.Age)
+    </div>
+
+    <div>
+        @Html.LabelFor(user => user.PhoneNumber)
+        @Html.EditorFor(user => user.PhoneNumber)
+        @Html.ValidationMessageFor(user => user.PhoneNumber)
+    </div>
+
+    <div>
+        <button type="submit">Register</button>
+    </div>
+
+}

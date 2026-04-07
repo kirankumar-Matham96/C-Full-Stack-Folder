@@ -1,0 +1,35 @@
+﻿@model LabExcercises.Models.Numbers
+
+<style>
+    button {
+        margin: 0 1rem;
+    }
+</style>
+
+<h2>Lab - 3.4: Index</h2>
+
+@using (Html.BeginForm()) { 
+
+<div>
+    @Html.LabelFor(nums => nums.Num1)
+    @Html.EditorFor(nums => nums.Num1)
+    @Html.ValidationMessageFor(nums => nums.Num1)
+</div>
+
+<div>
+    @Html.LabelFor(nums => nums.Num2)
+    @Html.EditorFor(nums => nums.Num2)
+    @Html.ValidationMessageFor(nums => nums.Num2)
+</div>
+
+<div>
+    <h4>Result: @ViewBag.result</h4>
+</div>
+
+<div>
+    <button type="submit" name="btn" value="add">Add</button>
+    <button type="submit" name="btn" value="sub">Sub</button>
+    <button type="submit" name="btn" value="mul">Mul</button>
+    <button type="submit" name="btn" value="div">Div</button>
+</div>
+}

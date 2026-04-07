@@ -1,0 +1,32 @@
+﻿@model LabExcercises.Models.Lab3_1
+
+<h1>Lab - 3.1: Index</h1>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(user => user.Firstname)
+        @Html.EditorFor(user => user.Firstname)
+        @Html.ValidationMessageFor(user => user.Firstname)
+    </div>
+
+    <div>
+        @Html.LabelFor(user => user.Lastname)
+        @Html.EditorFor(user => user.Lastname)
+        @Html.ValidationMessageFor(user => user.Lastname)
+    </div>
+
+    <div>
+        @if (TempData["fullname"] != null)
+        {
+            <h3>Welcome @TempData["fullname"]</h3>
+        }
+    </div>
+
+    <button type="submit">Click me!...</button>
+
+}
+
+
+

@@ -1,0 +1,39 @@
+﻿@model ClassAssignments.Models.Calculator
+
+<h1>Calculator</h1>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>@Html.Label("Enter First Number: ")</th>
+            <td>@Html.EditorFor(num => num.First)</td>
+        </tr>
+        <tr>
+            <th>@Html.Label("Enter Second Number: ")</th>
+            <td>@Html.EditorFor(num => num.Second)</td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" value="add" name="btn">Add</button>
+            </td>
+            <td>
+                <button type="submit" value="sub" name="btn">Sub</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" value="mul" name="btn">Mul</button>
+            </td>
+            <td>
+                <button type="submit" value="div" name="btn">Div</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Result")
+                @Html.DisplayFor(res => res.Result)
+            </td>
+        </tr>
+    </table>
+}

@@ -1,0 +1,35 @@
+﻿@model Sample8.Models.Product
+
+
+<h1>Add Product Form</h1>
+
+@using (Html.BeginForm())
+            {
+
+<table>
+    <tr>
+        <td>@Html.LabelFor(product => product.Id)</td>
+        <td>@Html.EditorFor(product => product.Id)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(product => product.Title)</td>
+        <td>@Html.EditorFor(product => product.Title)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(product => product.Category)</td>
+        <td>@Html.EditorFor(product => product.Category)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(product => product.Price)</td>
+        <td>@Html.EditorFor(product => product.Price)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(product => product.Rating)</td>
+        <td>@Html.EditorFor(product => product.Rating)</td>
+    </tr>
+    <tr>
+        <td><button type="submit">Save</button></td>
+    </tr>
+</table>
+
+            }

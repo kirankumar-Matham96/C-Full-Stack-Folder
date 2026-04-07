@@ -1,0 +1,31 @@
+﻿@model Keshav.Models.Keshavaaaaa
+
+<h1>Rediection</h1>
+
+@using (Html.BeginForm())
+{
+    <spn>Session ID: @Session.SessionID</spn>
+    <div>
+        @Html.LabelFor(model => model.Id)
+        @Html.EditorFor(model => model.Id)
+        @Html.ValidationMessageFor(model => model.Id)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Age)
+        @Html.EditorFor(model => model.Age)
+        @Html.ValidationMessageFor(model => model.Age)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Location)
+        @Html.EditorFor(model => model.Location)
+        @Html.ValidationMessageFor(model => model.Location)
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+}

@@ -1,0 +1,63 @@
+﻿@model Sample9.Models.User
+
+<h1>User Registration Form</h1>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.LabelFor(user => user.Username)</td>
+            <td>@Html.EditorFor(user => user.Username)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(user => user.Email)</td>
+            <td>@Html.EditorFor(user => user.Email)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(user => user.Password)</td>
+            <td>@Html.PasswordFor(user => user.Password)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(user => user.CPassword)</td>
+            <td>@Html.PasswordFor(user => user.CPassword)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(user => user.Gender)</td>
+            <td>
+                @Html.RadioButtonFor(user => user.Gender, "Male") Male
+                @Html.RadioButtonFor(user => user.Gender, "Female") Female
+                @Html.RadioButtonFor(user => user.Gender, "Others") Others
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Hobbies")</td>
+            <td>
+                @Html.CheckBoxFor(user => user.Anime, false) Anime
+                @Html.CheckBoxFor(user => user.Gaming, false) Gaming
+                @Html.CheckBoxFor(user => user.Movies, false) Movies
+                @Html.CheckBoxFor(user => user.Travel, false) Travel
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(user => user.City)</td>
+            <td>@Html.DropDownListFor(user => user.City, 
+                    new List<SelectListItem>()
+                    {
+                        new SelectListItem() { Text="-- Select --", Value="", Selected=true, Disabled=true},
+                        new SelectListItem() { Text="Hyderabad", Value="hyd"},
+                        new SelectListItem() { Text="Banglore", Value="bglr"},
+                        new SelectListItem() { Text="Delhi", Value="del"},
+                        new SelectListItem() { Text="Pune", Value="pune"},
+                        new SelectListItem() { Text="Mumbai", Value="mbi"},
+                        new SelectListItem() { Text="Kolkata", Value="kkt"}
+                    })
+            </td>
+        </tr>
+        <tr>
+            <td><button type="submit">Save</button></td>
+        </tr>
+
+    </table>
+
+
+}

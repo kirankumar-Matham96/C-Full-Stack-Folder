@@ -1,0 +1,31 @@
+﻿<h1>TempData with peek: Used Annotations</h1>
+
+@if (TempData.ContainsKey("id"))
+{
+    <h3>ID: @TempData.Peek("id")</h3>
+}
+
+@if (TempData.ContainsKey("title"))
+{
+    <h3>Title: @TempData.Peek("title")</h3>
+}
+
+@if (TempData.ContainsKey("dor"))
+{
+    <h3>Date of Release: @TempData.Peek("dor")</h3>
+}
+
+@if (TempData.ContainsKey("genre"))
+{
+    <h3>Genre: @TempData.Peek("genre")</h3>
+}
+
+@if (TempData.ContainsKey("price"))
+{
+    <h3>Price: @TempData.Peek("price")</h3>
+}
+
+@if (TempData.ContainsKey("rating"))
+{
+    <h3>Rating: @TempData.Peek("rating")</h3>
+}

@@ -1,0 +1,40 @@
+﻿@model LabExcercises.Models.Lab3_3
+
+<h2>Lab - 3.3: Index</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(prod => prod.ItemNum)
+        @Html.EditorFor(prod => prod.ItemNum)
+        @Html.ValidationMessageFor(prod => prod.ItemNum)
+    </div>
+
+    <div>
+        @Html.LabelFor(prod => prod.Name)
+        @Html.EditorFor(prod => prod.Name)
+        @Html.ValidationMessageFor(prod => prod.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(prod => prod.Cost)
+        @Html.EditorFor(prod => prod.Cost)
+        @Html.ValidationMessageFor(prod => prod.Cost)
+    </div>
+
+    <div>
+        @Html.LabelFor(prod => prod.Qty)
+        @Html.EditorFor(prod => prod.Qty)
+        @Html.ValidationMessageFor(prod => prod.Qty)
+    </div>
+
+    <div>
+        <h3>Total Bill: @ViewBag.totalBill</h3>
+    </div>
+
+    <div>
+        <button type="submit">Calculate Total Bill</button>
+    </div>
+}
+

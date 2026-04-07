@@ -1,0 +1,29 @@
+﻿@model ClassAssignments.Models.UserWithAnnotations
+@using System.Linq
+
+<h1>User Details Page</h1>
+
+<div>
+    <h3>Id: @Model.Id</h3>
+    <h3>Name: @Model.Name</h3>
+    <h3>Email: @Model.Email</h3>
+    <h3>Password: @Model.Password</h3>
+    <h3>Age: @Model.Age</h3>
+    <h3>DoB: @Model.DateOfBirth.ToShortDateString()</h3>
+    <h3>Gender: @Model.Gender</h3>
+    <h3>
+        Hobbies:
+        @if (Model.Hobbies != null && Model.Hobbies.Any())
+        {
+            <span>
+                @string.Join(", ", Model.Hobbies)
+            </span>
+        }
+        else
+        {
+            <span>None</span>}
+    </h3>
+    <h3>City: @Model.City</h3>
+    <h3>Mobile: @Model.MobileNumber</h3>
+</div>
+

@@ -1,0 +1,514 @@
+﻿/*====================================== reset.css is here ========================================*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}
+
+.clear {
+    clear: both;
+    font-size: 1px;
+    line-height: 1px;
+    display: block;
+    height: 0;
+}
+
+.clrflt {
+    clear: both;
+}
+
+.last {
+    margin: 0 !important;
+}
+
+.pad_last {
+    padding: 0 !important;
+}
+
+.no_bg {
+    background: none !important;
+}
+/**************************************************************************************/
+a {
+    color: #000;
+    text-decoration: none;
+    outline: 0 none;
+}
+
+    a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+/*----------------------------------------------------------------------------------*/
+html {
+    height: 100%;
+}
+
+body {
+    color: #b1b1b1;
+    background: #efefef;
+}
+
+.flt_lt {
+    float: left;
+    display: inline;
+}
+
+.flt_rt {
+    float: right;
+    display: inline;
+}
+/* ---------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------------*/
+a.menu {
+    text-decoration: none;
+    color: #e2e2e2;
+}
+
+    a.menu:hover {
+        text-decoration: underline;
+        color: #e2e2e2;
+    }
+
+a.menu1 {
+    text-decoration: none;
+    color: #e2e2e2;
+}
+
+    a.menu1:hover {
+        text-decoration: underline;
+        color: #e2e2e2;
+    }
+
+
+a.menu2 {
+    text-decoration: none;
+    color: #e2e2e2;
+}
+
+    a.menu2:hover {
+        text-decoration: underline;
+        color: #e2e2e2;
+    }
+
+
+a.menu3 {
+    text-decoration: none;
+    color: #e2e2e2;
+}
+
+    a.menu3:hover {
+        text-decoration: underline;
+        color: #e2e2e2;
+    }
+
+
+
+a.menu4 {
+    text-decoration: none;
+    color: #e2e2e2;
+}
+
+    a.menu4:hover {
+        text-decoration: underline;
+        color: #e2e2e2;
+    }
+
+
+/* ---------------------------------------------------------------------------------*/
+
+/* ----------------------- layout ----------*/
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px 0 0 0;
+}
+
+.continer {
+    width: 978px;
+    margin: 0 auto;
+    background: #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.header {
+    width: 978px;
+    margin: 0 auto;
+    background: #f7f7f7;
+    border-top: 10px solid #7fb400;
+    background: #f7f7f7;
+}
+
+.banner {
+    width: 978px;
+    margin: 0 auto;
+    padding: 0 0 29px 0;
+    border-top: 1px solid #fff;
+}
+
+
+.content {
+    width: 978px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.footer {
+    width: 978px;
+    margin: 0 auto;
+    border-top: 6px solid #7fb400;
+    background: #fff;
+    padding: 1px 0 1px 0;
+}
+
+/*-------------------------------------------*/
+
+
+/* ------------------ HEADER HERE -------------------*/
+
+.logo {
+    float: left;
+    padding: 36px 0 0 20px;
+}
+
+    .logo a {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        color: #333333;
+        padding: 0px 0 0 0;
+    }
+
+/* ------------------------- NAVIGATION HERE ---------------*/
+#nav {
+    float: right;
+    padding: 60px 20px 20px 0
+}
+
+    #nav ul {
+        float: left;
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+    }
+
+        #nav ul li {
+            float: left;
+            display: inline-block;
+            padding: 0px 55px 0 0px;
+            margin: 0px;
+        }
+
+            #nav ul li a {
+                padding: 0px;
+                margin: 0px;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                color: #333333;
+            }
+
+                #nav ul li a:hover {
+                    color: #333333;
+                    text-decoration: underline;
+                }
+
+                #nav ul li a span {
+                }
+
+                #nav ul li a.active {
+                    color: #006633;
+                }
+
+/* ------------------ BANNER DETIALS HERE -------------------*/
+.typs {
+    width: 938px;
+    margin: 0 auto;
+    padding: 0 20px 30px 20px;
+}
+
+    .typs ul {
+        width: 938px;
+        padding: 0px 0 0px 0;
+        margin: 0px;
+        list-style: none;
+        float: left;
+        display: inline-block;
+    }
+
+        .typs ul li {
+            padding: 0 45px 0 0;
+            margin: 0px;
+            width: 282px;
+            float: left;
+            display: inline-block;
+        }
+
+            .typs ul li span {
+                padding: 15PX 0 6px 60px;
+                display: inline-block;
+                margin: 0px;
+                display: inline-block;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                font-size: 24px;
+                background: url(../images/type1.png) no-repeat left center;
+                color: #43424e;
+            }
+
+            .typs ul li p {
+                padding: 0px;
+                margin: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                color: #333333;
+                padding: 16px 0 27px 0;
+                line-height: 20px;
+            }
+
+            .typs ul li a {
+                padding: 0px;
+                display: inline-block;
+                margin: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                color: #fff;
+                background: #7fb400;
+                padding: 4px 4px;
+            }
+
+            .typs ul li span.type1 {
+                padding: 15PX 0 6px 60px;
+                display: inline-block;
+                margin: 0px;
+                display: inline-block;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                font-size: 24px;
+                background: url(../images/type1.png) no-repeat left center;
+                color: #43424e;
+            }
+
+            .typs ul li a:hover {
+                text-decoration: underline;
+            }
+
+            .typs ul li span.type2 {
+                padding: 15PX 0 6px 60px;
+                display: inline-block;
+                margin: 0px;
+                display: inline-block;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                font-size: 24px;
+                background: url(../images/type2.png) no-repeat left center;
+                color: #43424e;
+            }
+
+            .typs ul li span.type3 {
+                padding: 15PX 0 6px 60px;
+                display: inline-block;
+                margin: 0px;
+                display: inline-block;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                font-size: 24px;
+                background: url(../images/type3.png) no-repeat left center;
+                color: #43424e;
+            }
+
+
+/* ------------------ NEWS HERE -------------------*/
+.news {
+    width: 940px;
+    border-top: 1px solid #efefef;
+    border-bottom: 2px solid #fff;
+    margin: 0 auto;
+    padding: 25px 17px 5px 20px;
+    background: #f7f7f7;
+}
+
+    .news h2 {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        color: #333333;
+        padding: 0 0 18px 0;
+    }
+
+    .news p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #333333;
+        line-height: 20px;
+        padding: 0 0 25px 0;
+    }
+
+        .news p span {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #333333;
+            line-height: 20px;
+            display: block;
+        }
+
+            .news p span a {
+                text-decoration: underline;
+            }
+/* ------------------ FOOTER HERE -------------------*/
+.footer_top {
+    padding: 0 0 26px 0;
+}
+
+.footer_continer {
+    width: 938px;
+    margin: 0 auto;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background: #f7f7f7;
+    padding: 0px 20px 0px 20px;
+}
+
+.footer_nav {
+    width: 295px;
+    padding: 27px 0 0 0;
+    float: left;
+}
+
+    .footer_nav ul {
+        float: left;
+        display: inline-block;
+        float: left;
+        width: 310px;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+    }
+
+        .footer_nav ul li {
+            float: left;
+            display: inline-block;
+            float: left;
+            padding: 0px;
+            margin: 0px;
+            background: url(../images/nav_line.jpg) no-repeat right center;
+        }
+
+            .footer_nav ul li a {
+                padding: 0px;
+                margin: 0px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                color: #333333;
+                padding: 0 9px;
+            }
+
+                .footer_nav ul li a:hover {
+                    text-decoration: underline;
+                }
+
+.social {
+    float: right;
+    padding: 27px 0 0 0;
+}
+
+    .social a.tw {
+        display: inline-block;
+        margin: 0 11px 0 0;
+        background: url(../images/tw-icon.png) no-repeat left center;
+        padding: 1px 0 0 22px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #333333;
+    }
+
+    .social a.fb {
+        display: inline-block;
+        background: url(../images/fb-icon.png) no-repeat left center;
+        padding: 1px 0 0 22px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #333333;
+    }
+
+
+.copy {
+    width: 978px;
+    margin: 0 auto;
+    background: #f7f7f7;
+    padding: 28px 0px 30px 0px;
+}
+
+    .copy p {
+        padding: 0px 0px 0px 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        color: #333333;
+    }
+
+    .copy a {
+        padding: 0px 0px 0px 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        color: #333333;
+        display: inline-block;
+        text-decoration: underline;
+    }
+
+/* ------------------ FOOTER END -------------------*/

@@ -1,0 +1,57 @@
+﻿@model Sample11.Models.Student
+
+
+<style>
+    div > h1 {
+        font-size: 1rem;
+    }
+</style>
+
+<h1>Student details</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("Student ID: ")
+        @Html.EditorFor(student => student.Id)
+    </div>
+
+    <div>
+        @Html.Label("Student Name: ")
+        @Html.EditorFor(student => student.Name)
+    </div>
+    <div>
+        @Html.Label("Maths Marks: ")
+        @Html.EditorFor(student => student.MathsMarks)
+    </div>
+    <div>
+        @Html.Label("Science Marks: ")
+        @Html.EditorFor(student => student.ScienceMarks)
+    </div>
+    <div>
+        @Html.Label("Social Marks: ")
+        @Html.EditorFor(student => student.SocialMarks)
+    </div>
+    <br />
+    <div>
+        <h1>
+            @Html.Label("Total Marks: ")
+            @Html.DisplayFor(student => student.TotalMarks)
+        </h1>
+    </div>
+    <div>
+        <h1>
+            @Html.Label("Average Marks: ")
+            @Html.DisplayFor(student => student.AverageMarks)
+        </h1>
+    </div>
+    <div>
+        <h1>
+            @Html.Label("Percentage: ")
+            @Html.DisplayFor(student => student.Percentage)
+        </h1>
+    </div>
+    <br />
+
+    <button type="submit">Submit</button>
+}

@@ -1,0 +1,33 @@
+﻿@model ClassAssignments.Models.User
+
+<h1>ViewData Exaple</h1>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(user => user.Username)
+        @Html.EditorFor(user => user.Username)
+    </div>
+
+    <div>
+        @Html.LabelFor(user => user.Email)
+        @Html.EditorFor(user => user.Email)
+    </div>
+
+    <div>
+        @Html.LabelFor(user => user.Password)
+        @Html.PasswordFor(user => user.Password)
+    </div>
+
+    <div>
+        <button type="submit">Save</button>
+    </div>
+
+    <div>
+        UserName: @ViewData["uname"]<br />
+        Email: @ViewData["email"]
+    </div>
+
+
+}

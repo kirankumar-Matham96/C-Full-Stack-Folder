@@ -1,0 +1,20 @@
+﻿
+<h1>Keshav Page</h1>
+
+<div>
+    @*<h3>Id: @ViewBag.id</h3>
+        <h3>Name: @ViewBag.name</h3>
+        <h3>Age: @ViewBag.age</h3>
+        <h3>Lcation: @ViewBag.loc</h3>*@
+
+    @*<h3>Id: @Session["id"]</h3>
+        <h3>Name: @Session["name"]</h3>
+        <h3>Age: @Session["age"]</h3>
+        <h3>Lcation: @Session["loc"]</h3>*@
+
+    <h3>Id: @HttpContext.Current.Application["id"]</h3>
+    <h3>Name: @HttpContext.Current.Application["name"]</h3>
+    <h3>Age: @HttpContext.Current.Application["age"]</h3>
+    <h3>Lcation: @HttpContext.Current.Application["loc"]</h3>
+
+</div>

@@ -1,0 +1,24 @@
+﻿@model LabExcercises.Models.Lab4_3
+
+<h1>User Login</h1>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(user => user.Username)
+        @Html.EditorFor(user => user.Username)
+        @Html.ValidationMessageFor(user => user.Username)
+    </div>
+
+    <div>
+        @Html.LabelFor(user => user.Password)
+        @Html.PasswordFor(user => user.Password)
+        @Html.ValidationMessageFor(user => user.Password)
+    </div>
+
+    <div>
+        <button tpe="submit">Submit</button>
+    </div>
+
+}

@@ -1,0 +1,45 @@
+﻿@model LabExcercises.Models.Lab4_2
+
+<h1>Emploee Form</h1>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(emp => emp.Id)
+        @Html.EditorFor(emp => emp.Id)
+        @Html.ValidationMessageFor(emp => emp.Id)
+    </div>
+
+    <div>
+        @Html.LabelFor(emp => emp.Name)
+        @Html.EditorFor(emp => emp.Name)
+        @Html.ValidationMessageFor(emp => emp.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(emp => emp.BasicSalary)
+        @Html.EditorFor(emp => emp.BasicSalary)
+        @Html.ValidationMessageFor(emp => emp.BasicSalary)
+    </div>
+
+    <div>
+        @Html.LabelFor(emp => emp.Da)
+        @Html.DisplayFor(emp => emp.Da)
+    </div>
+
+    <div>
+        @Html.LabelFor(emp => emp.Hra)
+        @Html.DisplayFor(emp => emp.Hra)
+    </div>
+
+    <div>
+        @Html.LabelFor(emp => emp.TotalSalary)
+        @Html.DisplayFor(emp => emp.TotalSalary)
+    </div>
+
+    <div>
+        <button type="submit">Calculate Total</button>
+    </div>
+
+}

@@ -1,0 +1,64 @@
+﻿@model MVC_CRUD2.Models.User
+
+<h1>Add User</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(model => model.Username)
+        @Html.EditorFor(model => model.Username)
+        @Html.ValidationMessageFor(model => model.Username)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Password)
+        @Html.PasswordFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Password)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.City)
+        @Html.DropDownListFor(model => model.City, new List<SelectListItem>()
+        {
+            new SelectListItem() { Text = "-- Select --", Value = "", Selected = true },
+            new SelectListItem() { Text = "Hyderabad", Value = "hyderabad" },
+            new SelectListItem() { Text = "Pune", Value = "pune" },
+            new SelectListItem() { Text = "Chennai", Value = "chennai" },
+            new SelectListItem() { Text = "Vishakhapatnam", Value = "vishakhapatnam" }
+        })
+        @Html.ValidationMessageFor(model => model.City)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Gender)
+        @Html.RadioButtonFor(model => model.Gender, "male") Male
+        @Html.RadioButtonFor(model => model.Gender, "female") Female
+        @Html.RadioButtonFor(model => model.Gender, "others") Others
+        @Html.ValidationMessageFor(model => model.Gender)
+    </div>
+
+    <div>
+        <label>Hobbies:</label>
+
+        @for (int i = 0; i < Model.Hobbies.Count; i++)
+        {
+            <div style="margin-bottom:5px;">
+                @Html.HiddenFor(m => m.Hobbies[i].Id)
+
+                @Html.CheckBoxFor(m => m.Hobbies[i].IsSelected)
+
+                <span style="margin-left:5px;">
+                    @Model.Hobbies[i].Name
+                </span>
+            </div>
+        }
+    </div>
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    <div>
+        <span style="color: red">
+            @Html.ValidationSummary(true, "", new {@class="text-danger"})
+        </span>
+    </div>
+}

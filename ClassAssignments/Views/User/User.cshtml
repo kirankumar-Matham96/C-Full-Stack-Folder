@@ -1,0 +1,80 @@
+﻿@model ClassAssignments.Models.UserWithAnnotations
+
+<h1>User Form (With Annotations)</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(user => user.Id)
+        @Html.EditorFor(user => user.Id)
+        @Html.ValidationMessageFor(user => user.Id)
+    </div>
+    <div>
+        @Html.LabelFor(user => user.Name)
+        @Html.EditorFor(user => user.Name)
+        @Html.ValidationMessageFor(user => user.Name)
+    </div>
+    <div>
+        @Html.LabelFor(user => user.Email)
+        @Html.EditorFor(user => user.Email)
+        @Html.ValidationMessageFor(user => user.Email)
+    </div>
+    <div>
+        @Html.LabelFor(user => user.Password)
+        @Html.PasswordFor(user => user.Password)
+        @Html.ValidationMessageFor(user => user.Password)
+    </div>
+    <div>
+        @Html.LabelFor(user => user.ConfirmPassword)
+        @Html.PasswordFor(user => user.ConfirmPassword)
+        @Html.ValidationMessageFor(user => user.ConfirmPassword)
+    </div>
+    <div>
+        @Html.LabelFor(user => user.DateOfBirth)
+        @Html.EditorFor(user => user.DateOfBirth)
+        @Html.ValidationMessageFor(user => user.DateOfBirth)
+    </div>
+    <div>
+        @Html.LabelFor(user => user.Age)
+        @Html.EditorFor(user => user.Age)
+        @Html.ValidationMessageFor(user => user.Age)
+    </div>
+
+    <div>
+        @Html.LabelFor(user => user.MobileNumber)
+        @Html.EditorFor(user => user.MobileNumber)
+        @Html.ValidationMessageFor(user => user.MobileNumber)
+    </div>
+    <div>
+        @Html.LabelFor(user => user.City)
+        @Html.DropDownListFor(user => user.City, new List<SelectListItem>() {
+            new SelectListItem() { Text="-- Select --", Value="", Selected=true },
+            new SelectListItem() { Text="Hyderabad", Value="hyd" },
+            new SelectListItem() { Text="Vihayawada", Value="vwda" },
+            new SelectListItem() { Text="Nellor", Value="nlr" },
+            new SelectListItem() { Text="Varangal", Value="vrgl" },
+            new SelectListItem() { Text="Adilabad", Value="adbd" },
+            new SelectListItem() { Text="Vikarabad", Value="vkb" }
+        })
+        @Html.ValidationMessageFor(user => user.City)
+    </div>
+    <div>
+        @Html.LabelFor(user => user.Gender)
+        @Html.RadioButtonFor(user => user.Gender, ClassAssignments.Models.UserWithAnnotations.GenderType.Male) Male
+        @Html.RadioButtonFor(user => user.Gender, ClassAssignments.Models.UserWithAnnotations.GenderType.Female) Female
+        @Html.RadioButtonFor(user => user.Gender, ClassAssignments.Models.UserWithAnnotations.GenderType.Others) Others
+        @Html.ValidationMessageFor(user => user.Gender)
+    </div>
+    <div>
+        @Html.Label("Hobbies: ")
+        @foreach (var hobby in ViewBag.Hobbies)
+        {
+            <input type="checkbox" name="Hobbies" value="@hobby" /> @hobby
+        }
+
+    </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+}
+

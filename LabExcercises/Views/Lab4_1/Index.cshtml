@@ -1,0 +1,41 @@
+﻿@model LabExcercises.Models.Lab4_1
+
+<h1>Student Details Form</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(std => std.Id)
+        @Html.EditorFor(std => std.Id)
+        @Html.ValidationMessageFor(std => std.Id)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Name)
+        @Html.EditorFor(std => std.Name)
+        @Html.ValidationMessageFor(std => std.Name)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Marks1)
+        @Html.EditorFor(std => std.Marks1)
+        @Html.ValidationMessageFor(std => std.Marks1)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Marks2)
+        @Html.EditorFor(std => std.Marks2)
+        @Html.ValidationMessageFor(std => std.Marks2)
+    </div>
+    <div>
+        @Html.LabelFor(std => std.Marks3)
+        @Html.EditorFor(std => std.Marks3)
+        @Html.ValidationMessageFor(std => std.Marks3)
+    </div>
+    <br />
+    <div>
+        <button type="submit">Save</button>
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(std => std.TotalMarks)
+        @Html.DisplayFor(std => std.TotalMarks)
+    </div>
+}

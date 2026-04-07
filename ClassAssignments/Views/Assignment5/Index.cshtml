@@ -1,0 +1,40 @@
+﻿@model ClassAssignments.Models.AnnotatedMovie
+
+<h1>Using Annotations</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(movie => movie.ID)
+        @Html.EditorFor(movie => movie.ID)
+        @Html.ValidationMessageFor(movie => movie.ID)
+    </div>
+    <div>
+        @Html.LabelFor(movie => movie.Title)
+        @Html.EditorFor(movie => movie.Title)
+        @Html.ValidationMessageFor(movie => movie.Title)
+    </div>
+    <div>
+        @Html.LabelFor(movie => movie.ReleaseDate)
+        @Html.EditorFor(movie => movie.ReleaseDate)
+        @Html.ValidationMessageFor(movie => movie.ReleaseDate)
+    </div>
+    <div>
+        @Html.LabelFor(movie => movie.Genre)
+        @Html.EditorFor(movie => movie.Genre)
+        @Html.ValidationMessageFor(movie => movie.Genre)
+    </div>
+    <div>
+        @Html.LabelFor(movie => movie.Price)
+        @Html.EditorFor(movie => movie.Price)
+        @Html.ValidationMessageFor(movie => movie.Price)
+    </div>
+    <div>
+        @Html.LabelFor(movie => movie.Rating)
+        @Html.EditorFor(movie => movie.Rating)
+        @Html.ValidationMessageFor(movie => movie.Rating)
+    </div>
+    <div>
+        <input type="submit" value="save" />
+    </div>
+}

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "NewLayout";
+    Layout = "~/Views/Shared/KeshavLayout.cshtml";
+}
+
+<h2>NewLayout</h2>
+
+@* Heading *@
+@{Html.RenderPartial("Heading");}
+
+@* Paragraph *@
+@{Html.RenderPartial("Para");}
+
+@* image *@
+@{ Html.RenderPartial("Images");}

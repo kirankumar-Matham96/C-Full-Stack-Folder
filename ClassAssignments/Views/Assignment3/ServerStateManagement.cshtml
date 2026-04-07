@@ -1,0 +1,23 @@
+﻿@model ClassAssignments.Models.User
+
+<h1>User Login with Server Side State Management</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("UserName: ")
+        @Html.EditorFor(user => user.Username)
+    </div>
+
+    <div>
+        @Html.Label("Email: ")
+        @Html.EditorFor(user => user.Email)
+    </div>
+    <div>
+        @Html.Label("Password: ")
+        @Html.PasswordFor(user => user.Password)
+    </div>
+    <div>
+        <input type="submit" value="Login" />
+    </div>
+}

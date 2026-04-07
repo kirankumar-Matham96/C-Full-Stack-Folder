@@ -1,0 +1,13 @@
+﻿
+@{
+    List<string> images = new List<string>()
+    {
+        "~/Content/images/alien-romulus-dark-4000x2400-18262.jpg",
+        "~/Content/images/berserk-knight-guts-5120x2880-18713.jpg"
+    };
+
+    foreach (var image in images)
+    {
+        <img src="@Url.Content(image)" width="150" />
+    }
+}

@@ -1,0 +1,11 @@
+﻿<h1>TempData Usage</h1>
+
+<h3>Username from the other page: @TempData["uname"]</h3>
+<h3>Username from the other page: @ViewBag.uname</h3>
+<br />
+
+
+@* How to read an object here? *@
+@foreach(var key in TempData["user"].ToString()) {  @* This is not working... *@
+    <h3>Username from the other page: @key</h3>
+}

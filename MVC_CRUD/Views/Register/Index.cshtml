@@ -1,0 +1,35 @@
+﻿@model MVC_CRUD.Models.Register
+
+<h1>Register</h1>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(model => model.Email)
+        @Html.EditorFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Password)
+        @Html.PasswordFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Password)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.CPassword)
+        @Html.PasswordFor(model => model.CPassword)
+        @Html.ValidationMessageFor(model => model.CPassword)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Phone)
+        @Html.EditorFor(model => model.Phone)
+        @Html.ValidationMessageFor(model => model.Phone)
+    </div>
+
+    <div>
+        <button type="submit">Register</button>
+    </div>
+}

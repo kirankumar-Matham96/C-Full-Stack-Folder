@@ -1,0 +1,19 @@
+﻿@model Sample10.Models.User
+
+<h1>Index View</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("Username: ")
+        @Html.EditorFor(user => user.Username)
+    </div>
+    <div>
+        @Html.Label("Password: ")
+        @Html.PasswordFor(user => user.Password)
+    </div>
+
+    <button type="submit">
+        Save
+    </button>
+}

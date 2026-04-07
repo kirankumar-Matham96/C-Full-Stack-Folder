@@ -1,0 +1,9 @@
+﻿
+<h1>welcome @ViewBag.course</h1>
+
+<p>Courses Selected: </p>
+@foreach(var c in ViewBag.courses.ToString().ToList()) { 
+    <li>@c</li>
+}
+<p>Track Selected: @ViewBag.course.Track</p>
+

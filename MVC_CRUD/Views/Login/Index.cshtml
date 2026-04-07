@@ -1,0 +1,21 @@
+﻿@model MVC_CRUD.Models.Login
+
+<h1>Login Page</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(model => model.Username)
+        @Html.EditorFor(model => model.Username)
+        @Html.ValidationMessageFor(model => model.Username)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Password)
+        @Html.PasswordFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Password)
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+    <span>@ViewBag.Message</span>
+}

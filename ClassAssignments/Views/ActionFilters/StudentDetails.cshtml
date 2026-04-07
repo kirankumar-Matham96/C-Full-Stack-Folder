@@ -1,0 +1,38 @@
+﻿@model ClassAssignments.Models.Student
+
+<h1>Student Details</h1>
+
+<table>
+    <tr>
+        <th>Student Id: </th>
+        <td>@TempData.Peek("id")</td>
+    </tr>
+    <tr>
+        <th>Student Name: </th>
+        <td>@TempData.Peek("name")</td>
+    </tr>
+    <tr>
+        <th>Student Email: </th>
+        <td>@TempData.Peek("email")</td>
+    </tr>
+    <tr>
+        <th>Student Password: </th>
+        <td>*****************</td>
+    </tr>
+    <tr>
+        <th>Student Maths: </th>
+        <td>@TempData.Peek("maths")</td>
+    </tr>
+    <tr>
+        <th>Student Phsics: </th>
+        <td>@TempData.Peek("phsics")</td>
+    </tr>
+    <tr>
+        <th>Student Chemistr: </th>
+        <td>@TempData.Peek("chemistry")</td>
+    </tr>
+    <tr>
+        <th>Student Total: </th>
+        <td>@TempData.Peek("total")</td>
+    </tr>
+</table>

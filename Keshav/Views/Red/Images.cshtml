@@ -1,0 +1,14 @@
+﻿
+@{ 
+    var images = new List<string> {
+        "~/Content/Images/agnes-unicorn-7680x4320-18707.jpg",
+        "~/Content/Images/alien-romulus-dark-4000x2400-18262.jpg",
+        "~/Content/Images/anime-girl-night-5120x2880-25111.jpg",
+        "~/Content/Images/avatar-fire-and-ash-5120x2880-23494.jpg",
+    };
+}
+
+
+@foreach (var img in images) { 
+    <img src="@Url.Content(img)" alt="@img" width="500"/>    
+}
