@@ -4,10 +4,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Net;
-using System.Security.Principal;
-using System.Web;
-using System.Web.Razor.Tokenizer;
 
 namespace MVC_CRUD2.DataAccess
 {
@@ -20,7 +16,7 @@ namespace MVC_CRUD2.DataAccess
             db = dbHelper;
         }
 
-        public string AddUser(User user)
+        public int AddUser(User user)
         {
             using (SqlConnection connection = db.GetDBConnection())
             {
@@ -31,7 +27,7 @@ namespace MVC_CRUD2.DataAccess
                     // Insert User
                     SqlCommand command = new SqlCommand("sp_insert_users", connection, transaction);
                     command.CommandType = CommandType.StoredProcedure;
-                    
+
                     command.Parameters.AddWithValue("@username", user.Username);
                     command.Parameters.AddWithValue("@pwd", user.Password);
                     command.Parameters.AddWithValue("@gender", user.Gender);
@@ -60,7 +56,7 @@ namespace MVC_CRUD2.DataAccess
 
                     transaction.Commit();
 
-                    return "ok";
+                    return userId;
                 }
                 catch (Exception ex)
                 {
@@ -104,5 +100,63 @@ namespace MVC_CRUD2.DataAccess
             }
         }
 
+        public User GetUsersWithHobbies(int userId)
+        {
+            User user = null;
+
+            using (SqlConnection connection = db.GetDBConnection())
+            {
+                try
+                {
+                    SqlCommand command = new SqlCommand("sp_GetUserWithHobbies_all", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@userId", userId);
+
+                    connection.Open();
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    List<Hobby> hobbies = new List<Hobby>();
+
+                    while (reader.Read())
+                    {
+
+                        if (user == null)
+                        {
+                            user = new User()
+                            {
+                                Username = reader["username"].ToString(),
+                                Gender = reader["gender"].ToString(),
+                                City = reader["city"].ToString(),
+                                Hobbies = new List<Hobby>()
+                            };
+                        }
+
+                        if (reader["HobbyId"] != DBNull.Value)
+                        {
+                            hobbies.Add(new Hobby()
+                            {
+                                Id = Convert.ToInt32(reader["HobbyId"]),
+                                Name = reader["HobbyName"].ToString(),
+                                IsSelected = true
+                            });
+                        }
+                    }
+
+                    if (user != null)
+                    {
+                        user.Hobbies = hobbies;
+                    }
+
+                    Console.WriteLine("user object: "+user);
+                    return user;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    throw;
+                }
+            }
+        }
     }
 }

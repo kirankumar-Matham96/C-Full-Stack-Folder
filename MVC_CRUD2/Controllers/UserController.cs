@@ -2,6 +2,7 @@
 using MVC_CRUD2.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -45,9 +46,8 @@ namespace MVC_CRUD2.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    userRepo.AddUser(userModel);
-                    TempData["user"] = userModel;
-                    return RedirectToAction("GetUserData");
+                    int userId = userRepo.AddUser(userModel);
+                    return RedirectToAction("GetUserData", new { id = userId});
                 }
                 foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
                 {
@@ -60,20 +60,14 @@ namespace MVC_CRUD2.Controllers
                 ModelState.AddModelError("", ex.Message);
             }
 
-            HttpCookie cookie = new HttpCookie("uname");
-            cookie.Value = userModel.Username;
-
-            Response.Cookies.Add(cookie);
-
             userModel.Hobbies = userRepo.GetAllHobbies();
             return View(userModel);
         }
 
-        public ActionResult GetUserData()
+        public ActionResult GetUserData(int id)
         {
-            var user = TempData["user"] as User;
+            var user = userRepo.GetUsersWithHobbies(id);
             return View(user);
         }
-
     }
 }

@@ -2,15 +2,16 @@
 <h1>User Details</h1>
 
 <h3>Name: @Model.Username</h3>
-<h3>Password: @Model.Password</h3>
 <h3>Gender: @Model.Gender</h3>
 <h3>City: @Model.City</h3>
 
 <h3>Hobbies: </h3>
+<ul>
+    @foreach (var hobby in Model.Hobbies.Where(h => h.IsSelected))
+    {
+        <li>
+            @hobby.Name
+        </li>
 
-@foreach (var hobby in Model.Hobbies.Where(h => h.IsSelected))
-{
-    <p>
-        @hobby.Name
-    </p>
-}
+    }
+</ul>
