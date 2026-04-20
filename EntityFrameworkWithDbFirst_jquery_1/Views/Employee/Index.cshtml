@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+</head>
+<body>
+    <form>
+        <label>Search: <input type="search" id="search" placeholder="Search..." /> </label>
+        <button type="submit" id="searchBtn">Search</button>
+        <table id="table" border="1"></table>
+    </form>
+
+    <script src="/Scripts/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#searchBtn").click(getEmployees);
+        })
+
+        function getEmployees(event) {
+            event.preventDefault();
+            $.ajax({
+                url: "/Employee/SearchEmp?str=" + $("#search").val().toLowerCase(),
+                type: "Get",
+                success: responseSuccess,
+                error: responseFailure
+            });
+        }
+
+        function responseSuccess(response) {
+            console.log(JSON.stringify(response));
+            $("#table").html("<tr><th>Emp ID</th><th>Emp Name</th><th>Salar</th></tr>");
+
+            response.forEach(emp =>
+                $("#table").append("<tr><td>" + emp.id + "</td><td>" + emp.name + "</td><td>" + emp.salary + "</td></tr>"));
+        }
+
+        function responseFailure(xhr) {
+            alert(xhr.responseText);
+            console.log(xhr.responseText);
+        }
+    </script>
+</body>
+</html>

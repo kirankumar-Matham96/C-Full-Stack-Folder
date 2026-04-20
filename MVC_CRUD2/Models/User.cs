@@ -8,6 +8,8 @@ namespace MVC_CRUD2.Models
 {
     public class User
     {
+        public int Id { get; set; }
+
         [Required]
         [StringLength(30, MinimumLength = 3)]
         public string Username { get; set; }

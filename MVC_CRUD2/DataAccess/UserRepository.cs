@@ -148,12 +148,111 @@ namespace MVC_CRUD2.DataAccess
                         user.Hobbies = hobbies;
                     }
 
-                    Console.WriteLine("user object: "+user);
+                    Console.WriteLine("user object: " + user);
                     return user;
                 }
                 catch (SqlException ex)
                 {
                     Console.WriteLine(ex.Message);
+                    throw;
+                }
+            }
+        }
+
+        public User GetUserForEdit(int userId)
+        {
+            User user = null;
+
+            using (SqlConnection connection = db.GetDBConnection())
+            {
+
+                SqlCommand command = new SqlCommand("sp_GetUserWithHobbies_all", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@userId", userId);
+
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                List<int> selectedHobbyIds = new List<int>();
+
+                while (reader.Read())
+                {
+                    if (user == null)
+                    {
+                        user = new User()
+                        {
+                            Username = reader["username"].ToString(),
+                            Gender = reader["gender"].ToString(),
+                            City = reader["city"].ToString()
+                        };
+                    }
+                    if (reader["HobbyId"] != DBNull.Value)
+                    {
+
+                        selectedHobbyIds.Add(Convert.ToInt32(reader["HobbyId"]));
+                    }
+                    reader.Close();
+
+                    // getting all hobbies
+                    var allHobbies = GetAllHobbies();
+
+                    // marking selected allHobbies
+                    foreach (var hobby in allHobbies)
+                    {
+                        hobby.IsSelected = selectedHobbyIds.Contains(hobby.Id);
+                    }
+
+                    user.Hobbies = allHobbies;
+                }
+                return user;
+            }
+        }
+
+        public void UpdateUser(User user, int userId)
+        {
+            using (SqlConnection connection = db.GetDBConnection())
+            {
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+                {
+                    SqlCommand command = new SqlCommand("sp_update_users", connection, transaction);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@id", userId);
+                    command.Parameters.AddWithValue("@username", user.Username);
+                    command.Parameters.AddWithValue("@pwd", user.Password);
+                    command.Parameters.AddWithValue("@gender", user.Gender);
+                    command.Parameters.AddWithValue("@city", user.City);
+
+                    command.ExecuteNonQuery();
+
+                    // Deleting old hobbies
+                    SqlCommand deleteHobbiesCommand = new SqlCommand("sp_delete_userHobbies", connection, transaction);
+                    deleteHobbiesCommand.CommandType = CommandType.StoredProcedure;
+
+                    deleteHobbiesCommand.Parameters.AddWithValue("@userId", userId);
+                    deleteHobbiesCommand.ExecuteNonQuery();
+
+                    // inserting new hobies
+                    foreach (var hobby in user.Hobbies.Where(h => h.IsSelected))
+                    {
+                        SqlCommand insertHobbyCommand = new SqlCommand("sp_insert_userHobbies", connection, transaction);
+                        insertHobbyCommand.CommandType = CommandType.StoredProcedure;
+
+                        insertHobbyCommand.Parameters.AddWithValue("@userId", userId);
+                        insertHobbyCommand.Parameters.AddWithValue("@hobbyId", hobby.Id);
+
+                        insertHobbyCommand.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                }
+                catch (SqlException ex)
+                {
+                    transaction.Rollback();
                     throw;
                 }
             }

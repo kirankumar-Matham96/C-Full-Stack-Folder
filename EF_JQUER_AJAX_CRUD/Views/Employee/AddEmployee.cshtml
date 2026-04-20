@@ -1,0 +1,52 @@
+﻿<form>
+    <label>
+        Employee ID:
+        <input type="text" id="id" />
+    </label>
+    <label>
+        Employee Name:
+        <input type="text" id="name" />
+    </label>
+    <label>
+        Employee Salary:
+        <input type="text" id="salary" />
+    </label>
+    <button type="submit" id="subBtn">Add</button>
+</form>
+
+
+<script src="/Scripts/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(() => {
+        $("form").submit(handleSubmit);
+    });
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const employeeData = {
+            id: $("#id").val(),
+            name: $("#name").val(),
+            salary: $("#salary").val(),
+        };
+
+        $.ajax({
+            url: "/Employee/AddEmployee",
+            type: "POST",
+            data: employeeData,
+            success: addEmployee,
+            error: failedAddingEmployee
+        });
+    }
+
+    function addEmployee(response) {
+        alert("User added successfully")
+        console.log(response);
+        window.location.href = "/Employee/Index";
+    }
+
+    function failedAddingEmployee(xhr) {
+        console.log(xhr.responseText);
+    }
+
+</script>

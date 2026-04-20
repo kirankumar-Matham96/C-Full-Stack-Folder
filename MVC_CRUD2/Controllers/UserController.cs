@@ -19,8 +19,6 @@ namespace MVC_CRUD2.Controllers
             userRepo = new UserRepository(helper);
         }
 
-
-
         // GET: User
         public ActionResult Index()
         {
@@ -47,7 +45,7 @@ namespace MVC_CRUD2.Controllers
                 if (ModelState.IsValid)
                 {
                     int userId = userRepo.AddUser(userModel);
-                    return RedirectToAction("GetUserData", new { id = userId});
+                    return RedirectToAction("GetUserData", new { id = userId });
                 }
                 foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
                 {
@@ -67,6 +65,40 @@ namespace MVC_CRUD2.Controllers
         public ActionResult GetUserData(int id)
         {
             var user = userRepo.GetUsersWithHobbies(id);
+            return View(user);
+        }
+
+        public ActionResult EditUser(int id)
+        {
+            var user = userRepo.GetUserForEdit(id);
+            return View("Index", user);
+        }
+
+        [HttpPost]
+        public ActionResult EditUser(int id, User user)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    userRepo.UpdateUser(user, id);
+                    return RedirectToAction("GetUserData", new { id = id });
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
+
+            var allHobbies = userRepo.GetAllHobbies();
+
+            foreach (var hobby in allHobbies)
+            {
+                hobby.IsSelected = user.Hobbies.Any(h => h.Id == hobby.Id && h.IsSelected);
+            }
+
+            user.Hobbies = allHobbies;
             return View(user);
         }
     }

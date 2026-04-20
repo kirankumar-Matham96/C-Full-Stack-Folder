@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EntityFramework_3.Models.Employee>
+
+<style>
+    table {
+        width: 100%;
+    }
+    tr {
+/*        border: 1px 0 1px 0 solid;*/
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
+    th, td {
+        text-align: center;
+    }
+</style>
+
+<h1>Read</h1>
+<div>
+    @Html.ActionLink("Create", "Create")
+</div>
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.eno)</th>
+        <th>@Html.DisplayNameFor(model => model.ename)</th>
+        <th>@Html.DisplayNameFor(model => model.job)</th>
+        <th>@Html.DisplayNameFor(model => model.salary)</th>
+        <th>@Html.DisplayNameFor(model => model.deptno)</th>
+    </tr>
+    @foreach(var emp in Model){
+    <tr>
+        <td>@Html.DisplayFor(model => emp.eno)</td>
+        <td>@Html.DisplayFor(model => emp.ename)</td>
+        <td>@Html.DisplayFor(model => emp.job)</td>
+        <td>@Html.DisplayFor(model => emp.salary)</td>
+        <td>@Html.DisplayFor(model => emp.deptno)</td>
+        <td>
+            <p>@Html.ActionLink("Edit", "Update", new {id = emp.eno}) | @Html.ActionLink("Delete", "Delete", new {id = emp.eno}, new {onclick = $"return confirm('Are you sure you want to delete employee {emp.eno} ?')"})</p>
+        </td>
+    </tr>
+    }
+</table>

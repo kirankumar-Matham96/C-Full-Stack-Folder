@@ -117,6 +117,14 @@ BEGIN
 	INSERT INTO UserHobbies VALUES(@userId, @hobbyId);
 END;
 
+--deleting user related hobbies
+CREATE PROCEDURE sp_delete_userHobbies
+	@userId INT
+AS
+BEGIN
+	DELETE FROM UserHobbies WHERE userId = @userId;
+END;
+
 /* Get all the data of a user */
 CREATE PROCEDURE sp_getAllUsersWithHobbies
 	--@userId
@@ -144,6 +152,25 @@ BEGIN
 	GROUP BY u.id, u.username, u.gender, u.city;
 END
  
+/* Get single user with hobbies by id */
+CREATE PROCEDURE sp_GetUserWithHobbies_all
+	@userId INT
+AS
+BEGIN
+	SELECT 
+		u.id,
+		u.username,
+		u.password,
+		u.gender,
+		u.city,
+		h.id AS HobbyId,
+		h.name AS HobbyName
+	FROM Users u
+	LEFT JOIN UserHobbies uh ON u.id = uh.userId
+	LEFT JOIN Hobbies h ON h.id = uh.hobbyId
+	WHERE u.id = @userId
+END;
+
 /* Executions */
 
 -- start (execute these 3 statements at once)
@@ -178,3 +205,4 @@ EXEC sp_insert_userHobbies 2, 5
 EXEC sp_getAllUsersWithHobbies -- basic (compatible for MVC)
 EXEC sp_getUsersWithHobbies_Formatted --Advanced (Not compatible for MVC)
 
+EXEC sp_GetUserWithHobbies_all 2; -- get the user by id along with his/her hobbies

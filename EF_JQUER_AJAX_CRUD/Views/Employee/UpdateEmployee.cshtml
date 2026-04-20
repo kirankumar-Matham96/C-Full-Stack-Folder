@@ -1,0 +1,72 @@
+﻿<form>
+    <label>
+        Employee ID:
+        <input type="text" id="id" readonly />
+    </label>
+    <label>
+        Employee Name:
+        <input type="text" id="name" />
+    </label>
+    <label>
+        Employee Salary:
+        <input type="text" id="salary" />
+    </label>
+    <button type="submit" id="subBtn">Update</button>
+</form>
+
+<script src="~/Scripts/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(() => {
+
+        const url = new URL(window.location.href);
+        const id = url.searchParams.get("id");
+
+        $.ajax({
+            url: "/Employee/GetEmployeeById?id=" + id,
+            type: "GET",
+            success: loadForm,
+            error: errorLoadForm
+        });
+
+        $("#subBtn").click(submitHandle);
+    })
+
+    function loadForm(response) {
+        console.log(response);
+
+        $("#id").val(response.id);
+        $("#name").val(response.name);
+        $("#salary").val(response.salary);
+    }
+
+    function errorLoadForm(xhr) {
+        console.log(xhr.resposneText);
+    }
+
+    function submitHandle(event) {
+        event.preventDefault();
+
+        // add data here to send
+        const empData = {
+            id: $("#id").val(),
+            name: $("#name").val(),
+            salary: $("#salary").val()
+        };
+
+        $.ajax({
+            url: "/Employee/UpdateEmployee",
+            type: "POST",
+            data: empData,
+            success: (response) => {
+                if (response.success) {
+                    alert(response.message);
+                    return window.location.href = "/Employee/Index";
+                }
+                alert(response.message);
+            },
+            error: (error) => console.log(error.responseText)
+        });
+    }
+
+
+</script>

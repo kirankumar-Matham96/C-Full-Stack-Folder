@@ -1,0 +1,156 @@
+﻿@model UserRegistrationWithEF_EDM_DB_First_CRUD.Models.User
+
+<div class="container mt-4">
+    <div class="card shadow p-4">
+        <h3 class="mb-3">Create User</h3>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger mb-3" })
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.Username, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.Firstname, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.Firstname, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Firstname, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.Lastname, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.Lastname, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Lastname, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.Label("Gender", new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9 pt-2">
+                    @Html.RadioButtonFor(m => m.Gender, "male") Male
+                    @Html.RadioButtonFor(m => m.Gender, "female", new { @class = "ms-3" }) Female
+                    @Html.RadioButtonFor(m => m.Gender, "others", new { @class = "ms-3" }) Others
+                    <br />
+                    @Html.ValidationMessageFor(m => m.Gender, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.Phone, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.Age, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.Age, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Age, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.MaritalStatus, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.RadioButtonFor(m => m.MaritalStatus, "single") Single
+                    @Html.RadioButtonFor(m => m.MaritalStatus, "married", new { @class = "ms-3" }) Married
+                    @Html.ValidationMessageFor(m => m.MaritalStatus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.DateOfSubscription, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.EditorFor(m => m.DateOfSubscription, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.DateOfSubscription, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.State, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.DropDownListFor(m => m.State,
+                        new SelectList(new[] {
+                            "--SELECT--","Telangana","Andhra Pradesh","Tamilnadu","Karnataka","Kerala","Delhi","Maharashtra","Madhya Pradesh"
+                        }),
+                        new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.State, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.Hobbies, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.ListBox("Hobbies", new List<SelectListItem> {
+                        new SelectListItem { Text="Coding", Value="coding"},
+                        new SelectListItem { Text="Gaming", Value="gaming"},
+                        new SelectListItem { Text="Movies", Value="movies"},
+                        new SelectListItem { Text="Sports", Value="sports"},
+                        new SelectListItem { Text="Hiking", Value="hiking"},
+                        new SelectListItem { Text="Drawing", Value="drawing"}
+                    }, new { @class = "form-control", size = "5" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.Address, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.TextAreaFor(m => m.Address, new { @class = "form-control", rows = 3 })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.RegistrationFee, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.RegistrationFee, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.RegistrationFee, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                @Html.LabelFor(m => m.ReceiveNewsLetters, new { @class = "col-md-3 col-form-label" })
+                <div class="col-md-9">
+                    @Html.EditorFor(m => m.ReceiveNewsLetters, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.ReceiveNewsLetters, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="text-end">
+                <input type="submit" value="Create User" class="btn btn-primary px-4" />
+                @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-secondary ms-2" })
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

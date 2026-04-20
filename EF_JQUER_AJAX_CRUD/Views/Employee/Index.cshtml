@@ -1,0 +1,69 @@
+﻿
+<html>
+<head>
+    <title>JQuer Page</title>
+    <style>
+        table, th, tr, td {
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <a href="/Employee/AddEmployee" class="btn btn-outline-primary">Add New User</a>
+        <table id="table"></table>
+    </main>
+
+    <script src="/Scripts/jquery-3.7.1.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            getEmplyoees();
+        })
+
+        function getEmplyoees() {
+            $("#table").html("<tr><th>ID</th><th>Name</th><th>Salary</th></tr>");
+
+            $.ajax({
+                url: "/Employee/GetEmployees",
+                type: "GET",
+                success: getSuccess,
+                error: (err) => console.log(err.responseText)
+            });
+        }
+
+        function getSuccess(response) {
+            console.log(JSON.stringify(response));
+            console.log(response);
+            response.forEach(emp => {
+                const editUrl = "/Employee/UpdateEmployee?id=" + emp.id;
+                const deleteUrl = "/Employee/DeleteEmployyee?id=" + emp.id;
+                $("#table").append("<tr><td>" + emp.id + "</td><td>" + emp.name + "</td><td>" + emp.salary + "</td><td><a href='" + editUrl + "' class='btn btn-outline-primary border-0'>Edit</a>|<button onclick='deleteUser(" + emp.id + ")' class='btn btn-outline-danger border-0'>Delete</button></td></tr>")
+            })
+        }
+
+        function deleteUser(id) {
+            const confirmDelete = confirm("Do ou reall want to delete this user?");
+            if (confirmDelete) {
+                $.ajax({
+                    url: "/Employee/DeleteEmployee?id=" + id,
+                    type: "POST",
+                    success: response => {
+                        alert(response.message);
+                        getEmplyoees();
+                    },
+                    error: err => console.log(err.responseText)
+                });
+            }
+        }
+
+    </script>
+
+</body>
+</html>

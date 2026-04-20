@@ -1,0 +1,50 @@
+﻿@model EntityFramework2.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deptno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deptno)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.eno }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
